@@ -59,3 +59,11 @@ def print_report(student_name: str, result: dict) -> None:
     print(f"\n{'By source':<22}{'Precision':>10}{'Recall':>9}{'F1':>12}")
     for source, s in result["by_source"].items():
         print(f"{source:<22}{s['precision']:>10.1%}{s['recall']:>9.1%}{s['f1']:>12.1%}")
+
+
+if __name__ == "__main__":
+    from prism.baselines import keyword_rules
+    from prism.data import load_questions
+
+    questions = load_questions("data/eval.csv")
+    print_report("keyword rules", evaluate(keyword_rules, questions))
