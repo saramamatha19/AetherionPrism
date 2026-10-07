@@ -1,0 +1,1201 @@
+id,question,labels,question_type,origin,split
+q02601,Loop in Sarah to our ongoing dialogue about the testing plan.,slack,Names the source,Hard cases (generated),eval
+q02602,Can guests post or upload content on a site without being members?,kb,Implied source,WixQA,eval
+q02603,Only some tables get imported from a mysqldump .sql file on the remote server - what was the advice in the help channel?,slack,Names the source,Ubuntu help chat,eval
+q02604,What did Marketing suggest during giving feedback for the prototype of the remote?,notion,Implied source,QMSum,eval
+q02605,What was the date of birth for the person who Thomas Hancock was the uncle of?,web,Implied source,ConcurrentQA,eval
+q02606,"a customer sent me a dm on instagram, should I reply",kb,Misleading keyword,Hard cases (hand-written),eval
+q02607,"the notion app keeps crashing on my laptop, who fixes IT problems",jira,Misleading keyword,Hard cases (hand-written),eval
+q02608,How do I access the dashboard to my live website,kb,Implied source,WixQA,eval
+q02609,"the customer own words, not our internal notes",gmail,Excludes a source,Hard cases (hand-written),eval
+q02610,our internal process for handling an outage,confluence,Unclear source,Hard cases (hand-written),eval
+q02611,Interactive queries v2 throwing ConcurrentModificationException while accessing tasks — which release fixed that?,jira,Implied source,Apache Kafka Jira,eval
+q02612,Review the details of that thing we're tracking.,kb|notion,Multiple sources,Hard cases (generated),eval
+q02613,find unread emails received from peter today olly,gmail,Names the source,MASSIVE,eval
+q02614,Why did Industrial Designer recommend the FPGA when talking about industrial working design?,notion,Implied source,QMSum,eval
+q02615,Retrieve the gmail email from the client about the deployment timeline adjustments.,gmail,Names the source,Hard cases (generated),eval
+q02616,"Jerome Whitehead played basketball for the Clippers, Utah Jazz, Dallas Mavericks, Cleveland Cavaliers, Golden State Warriors, and a team who play their home games at which arena?",web,Implied source,ConcurrentQA,eval
+q02617,Does the kb have a FAQ section on account suspensions?,kb,Names the source,Hard cases (generated),eval
+q02618,Is the timeline in the epic consistent with the meeting notes?,jira|notion,Multiple sources,Hard cases (generated),eval
+q02619,what did people say about the outage,slack,Unclear source,Hard cases (hand-written),eval
+q02620,Need to locate the contract discussions with our supplier in gimail.,gmail,Implied source,Hard cases (generated),eval
+q02621,did the design team finalize the new logo files on slcak?,slack,Implied source,Hard cases (generated),eval
+q02622,Was there a discussion about network manager showing no devices after a partial upgrade?,slack,Implied source,Ubuntu help chat,eval
+q02623,"Why were SSE streaming connections getting cleanly closed after about 60 seconds only when going through the edge proxy, and what heartbeat change was implemented to mitigate it?",slack,Unclear source,EnterpriseRAG-Bench,eval
+q02624,is there a cap on team members,kb|confluence,Multiple sources,Hard cases (hand-written),eval
+q02625,Summarize the discussion about the conclusion on the prototype.,notion,Implied source,QMSum,eval
+q02626,who played the mother in the black stallion,web,Implied source,Natural Questions,eval
+q02627,see you again soon,,Small talk,CLINC150,eval
+q02628,What did the group talk about as their reflection on the meetings and their progress?,notion,Implied source,QMSum,eval
+q02629,Summarize the discussion about choosing a stylish fruit for remote design.,notion,Implied source,QMSum,eval
+q02630,Please clarify that last part.,,Small talk,Hard cases (generated),eval
+q02631,Check if the client feedback from the recent design review session has been uploaded.,notion,Names the source,Hard cases (generated),eval
+q02632,"What are the target price, target cost and target profit of remote control when discussing the design of the remote control?",notion,Implied source,QMSum,eval
+q02633,what is the sla on support requests,kb,Unclear source,Hard cases (hand-written),eval
+q02634,Can we stop the foreign key join from creating the subscription-store changelog topic?,jira,Implied source,Apache Kafka Jira,eval
+q02635,all sources except slack for the incident timeline,kb|jira|confluence|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q02636,Jump into our current message stream about the customer escalation.,slack,Names the source,Hard cases (generated),eval
+q02637,Skip the jira issue; I need the proposal adding a last-applied-image-latency metric on brokers.,confluence,Excludes a source,Apache Kafka Confluence,eval
+q02638,telemetry reporter spamming debug logs during system tests — did they trim that?,jira,Implied source,Apache Kafka Jira,eval
+q02639,locate what was done about that recurring problem,slack|notion,Multiple sources,Hard cases (generated),eval
+q02640,How would you summarize that?,,Small talk,Hard cases (generated),eval
+q02641,"After our last sync-up, who volunteered to lead the new feature rollout management?",slack,Implied source,Hard cases (generated),eval
+q02642,Can you point me to our internal onboarding process for remote employees?,confluence,Implied source,Hard cases (generated),eval
+q02643,"Look up the product launch timeline discussion in the product management group, and let me know if legal sent over the draft contract yet.",slack|gmail,Multiple sources,Hard cases (generated),eval
+q02644,Look up design review guidelines in notion. Are there any FAQs about this process in the kb?,kb|notion,Multiple sources,Hard cases (generated),eval
+q02645,What is the phased rollout plan for the change that smooths dedicated autoscaling signals and adds an advisory gateway-to-controller backpressure mechanism?,jira,Implied source,EnterpriseRAG-Bench,eval
+q02646,"finding what's listening on port 3000 - skip the runbook, what commands did ppl actually suggest",slack,Excludes a source,Ubuntu help chat,eval
+q02647,what is the password complexity requirement,kb,Unclear source,Hard cases (hand-written),eval
+q02648,Can you rephrase that last paragraph for clarity?,,Small talk,Hard cases (generated),eval
+q02649,did we ever resolve the naming debate,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q02650,the engineering design behind sso enrollment,confluence,Unclear source,Hard cases (hand-written),eval
+q02651,setting up direct deposit,kb,Implied source,CLINC150,eval
+q02652,What was the conclusion and summary that Project Manager extracted after the three presentations from team members?,notion,Implied source,QMSum,eval
+q02653,"Is there a ticket open for the server downtime issue, and do we have a runbook on handling system outages?",jira|confluence,Multiple sources,Hard cases (generated),eval
+q02654,find any recent customer escalation emails in gmail and match them against troubleshooting steps in the kb.,kb|gmail,Multiple sources,Hard cases (generated),eval
+q02655,"not the tickets, everything else about the migration",kb|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q02656,Can someone upload the latest QA test plans to Noton?,notion,Implied source,Hard cases (generated),eval
+q02657,Do the deliverables from the latest design review match what's in the meeting notes?,slack|notion,Multiple sources,Hard cases (generated),eval
+q02658,"In the recent Friday all-hands notes, what was the reported median latency improvement attributed to continuous batching?",slack,Unclear source,EnterpriseRAG-Bench,eval
+q02659,Over a vnc session the dash won't appear with the mouse or super key. What came up as options?,slack,Implied source,Ubuntu help chat,eval
+q02660,Are the bug priorities consistent between the team chat and the backlog tickets?,jira|slack,Multiple sources,Hard cases (generated),eval
+q02661,onboarding checklist,confluence,Implied source,Hard cases (generated),eval
+q02662,can users update their payment info themselves?,kb,Implied source,Hard cases (generated),eval
+q02663,what is the current thinking on multi region,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q02664,"Im having trouble updating a PDF on my website using the dashboard CMS. After replacing the PDF in the collection, it doesnt update on the website. I need guidance on enabling sandbox collections and syncing them with live collections to resolve this issue.",kb,Implied source,WixQA,eval
+q02665,did i get any emails from sam today,gmail,Names the source,MASSIVE,eval
+q02666,I want to know where to find Marketing Integrations in my sites dashboard to connect tools like Google Tag Manager and Google Analytics.,kb,Implied source,WixQA,eval
+q02667,find info about that situation with the new policy.,jira|slack,Multiple sources,Hard cases (generated),eval
+q02668,what came out of the architecture review,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q02669,how would the volkswagen golf car look like,web,Implied source,MASSIVE,eval
+q02670,What did Industrial Designer say about the appearance during the discussion about the design of the prototype?,notion,Implied source,QMSum,eval
+q02671,"After the Feb 22, 2026 SEV-2 where Console rollout actions caused a rollback loop, which HTTP status code was wrongly treated as retryable, what server-side idempotency change was added for rollback requests, and (per the Dedicated staged rollouts audit-log spec) which service must emit the canonical audit events and what identifiers are used to de-duplicate retries?",confluence,Names the source,EnterpriseRAG-Bench,eval
+q02672,Summarize the discussion about voice-unvoice detection,notion,Implied source,QMSum,eval
+q02673,Can I migrate a site from the Editor to the Studio Editor?,kb,Implied source,WixQA,eval
+q02674,Is there a jira about the docker build test script skipping the sanity tests when you pass a local archive?,jira,Names the source,Apache Kafka Jira,eval
+q02675,who is the new york state senate majority leader,web,Implied source,Natural Questions,eval
+q02676,What are the required fields that each entry in the contract conformance results ledger must include?,confluence,Unclear source,EnterpriseRAG-Bench,eval
+q02677,"In an ops day log about GPU rebalancing and brief west region network instability, what was the target slot capacity for the small hosted pool in the slot metrics dashboard?",notion,Names the source,EnterpriseRAG-Bench,eval
+q02678,See what’s happening with the plan we discussed.,kb|notion,Multiple sources,Hard cases (generated),eval
+q02679,any movement on the export timeout,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q02680,"In the recent observability change for tool invocation tracking, what is the staged rollout schedule and the temporary kill switch name used to gate it?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02681,"In the proposal for an anchor-based trace drilldown panel that pins a span or request correlation, what is the MVP limitation on how many anchors can be pinned in a workspace?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02682,How did the team come up with these features of the new TV remote controls?,notion,Implied source,QMSum,eval
+q02683,"Our consumer connected to a broker in a different cluster after a pod IP got reused, telemetry sticky node maybe? Which fix version?",jira,Implied source,Apache Kafka Jira,eval
+q02684,What solutions did the team come up with to help people better locate the remote?,notion,Implied source,QMSum,eval
+q02685,"docs martin recommended a specialist, do we cover that cost",kb,Misleading keyword,Hard cases (hand-written),eval
+q02686,do i have any mails,gmail,Implied source,MASSIVE,eval
+q02687,sprint backlog updates,jira,Implied source,Hard cases (generated),eval
+q02688,how did paris hilton become famous,web,Implied source,MASSIVE,eval
+q02689,has the export timeout been closed,jira,Unclear source,Hard cases (hand-written),eval
+q02690,Find out who’s handling the current deployment issue and see if we’ve documented any blockers in the ongoing sprint.,jira|slack,Multiple sources,Hard cases (generated),eval
+q02691,Compatibility plan for switching the topics tool from ZooKeeper connections to the admin client?,confluence,Implied source,Apache Kafka Confluence,eval
+q02692,any chatter about the deploy failing,slack,Unclear source,Hard cases (hand-written),eval
+q02693,was the data loss incident ever explained,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q02694,"I’m not sure I understood, could you explain differently?",,Small talk,Hard cases (generated),eval
+q02695,who has not been assigned a ticket this sprint,jira,Excludes a source,Hard cases (hand-written),eval
+q02696,who plays the mom on the tv show mom,web,Implied source,Natural Questions,eval
+q02697,goodbye for now ai,,Small talk,CLINC150,eval
+q02698,Not the ticket — I want the actual design for having ConfigDef resolve external config providers automatically.,confluence,Excludes a source,Apache Kafka Confluence,eval
+q02699,Can the CheckStyle version be passed as a gradle parameter now?,jira,Implied source,Apache Kafka Jira,eval
+q02700,"In our GPU inference runtime, what change was introduced to cut the worst-case temporary device-memory spike when short and long requests are interleaved, especially for attention-heavy ops that used to grab per-op temp buffers?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02701,how do you say zest for life in french,web,Implied source,Natural Questions,eval
+q02702,what did we settle on for the pricing tiers,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q02703,when was the last easter that fell on april 1st,web,Implied source,Natural Questions,eval
+q02704,"In the sandbox onboarding demo with NimbusApps, what median and p95 latency did the 50-concurrency 1-minute performance run report?",notion,Names the source,EnterpriseRAG-Bench,eval
+q02705,What did Marketing think of repetitive strain injury when discussing functional requirements?,notion,Implied source,QMSum,eval
+q02706,"slack tide today, good conditions for sailing",,Small talk,Hard cases (hand-written),eval
+q02707,who sent me emails this week,gmail,Names the source,MASSIVE,eval
+q02708,how does sso enrollment work,kb,Unclear source,Hard cases (hand-written),eval
+q02709,Could you summarize the key points from our chat?,,Small talk,Hard cases (generated),eval
+q02710,change password instructions,kb,Implied source,Hard cases (generated),eval
+q02711,what is the lowest population per square mile in africa,web,Implied source,MASSIVE,eval
+q02712,"the log export is capped at 50 kb, has anyone raised that",jira,Misleading keyword,Hard cases (hand-written),eval
+q02713,Is there ongoing work to cut CPU time in validating zstd compressed batches on append?,jira,Implied source,Apache Kafka Jira,eval
+q02714,Can you confirm receipt of this message?,,Small talk,Hard cases (generated),eval
+q02715,I need to know how to clear my browser cache.,kb,Implied source,WixQA,eval
+q02716,i need to know when i get paid next,kb,Implied source,CLINC150,eval
+q02717,"During the November 2025 us-east incident where streaming chat responses were dropping, what was the internal start and mitigation time that support shared with the affected customer?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02718,"Did we confirm the updated pricing model with the team, and is the UI redesign ticket still open?",jira|slack,Multiple sources,Hard cases (generated),eval
+q02719,What's the latest slack message regarding contract renewals with our main vendor?,slack,Names the source,Hard cases (generated),eval
+q02720,Show me all documentation and chat about the recent security audit process.,jira|confluence|slack,Multiple sources,Hard cases (generated),eval
+q02721,"I like the notion of shipping weekly, did we agree to that in standup",slack,Misleading keyword,Hard cases (hand-written),eval
+q02722,Check if there's an update from support@techtools.com in the star section today.,gmail,Names the source,Hard cases (generated),eval
+q02723,what did we agree about code review size,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q02724,which channel is the match on tonight,web,Misleading keyword,Hard cases (hand-written),eval
+q02725,Need a bit more context here.,,Small talk,Hard cases (generated),eval
+q02726,Can you check if the bug #145 is resolved and link me to instructions on returning products?,kb|jira,Multiple sources,Hard cases (generated),eval
+q02727,"During a late morning April 2025 incident, why did an interactive response feed start arriving in long bursts with 15 to 30 second silences for many users, and what immediate workaround was recommended to keep conversations responsive?",gmail,Unclear source,EnterpriseRAG-Bench,eval
+q02728,"In the security incident about leaked encrypted log fragments in a partners cloud storage archive, what steps were listed in the triage checklist?",slack,Unclear source,EnterpriseRAG-Bench,eval
+q02729,What did Carol Shillabeer think about how to meet the capacity to deliver when answering a question about neurodevelopmental service?,notion,Implied source,QMSum,eval
+q02730,do you know any trivia about ostriches,web,Implied source,CLINC150,eval
+q02731,was this ever formally documented,confluence,Unclear source,Hard cases (hand-written),eval
+q02732,could you please give me the birthday of mahatma gandhiji,web,Implied source,MASSIVE,eval
+q02733,Check if the budget details shared over DM align with the vendor's email proposal.,slack|gmail,Multiple sources,Hard cases (generated),eval
+q02734,"mail merge for the customer newsletter, is there a template",confluence,Misleading keyword,Hard cases (hand-written),eval
+q02735,What's the status of the sprint related to the mobile app update and can you find the meeting notes from the last planning session?,jira|notion,Multiple sources,Hard cases (generated),eval
+q02736,what's a cool and interesting thing about dogs,web,Implied source,CLINC150,eval
+q02737,when will be the next holiday here,kb,Implied source,CLINC150,eval
+q02738,"I need a full breakdown on our recent incident response. Look for team chats, tickets, and any relevant documentation.",jira|confluence|slack,Multiple sources,Hard cases (generated),eval
+q02739,incident runbook,confluence,Implied source,Hard cases (generated),eval
+q02740,What is the sampling policy for request routes of different telemetry priority levels in the new path-based observability change?,jira,Implied source,EnterpriseRAG-Bench,eval
+q02741,"not the email, was there a slack thread about the vendor delay",slack,Excludes a source,Hard cases (hand-written),eval
+q02742,I remember a conversation about caching,slack,Unclear source,Hard cases (hand-written),eval
+q02743,Why add the jwt-bearer grant type for OAuth when client_credentials already exists?,confluence,Implied source,Apache Kafka Confluence,eval
+q02744,"not slack pls, which ticket covers controllers reporting kraft.version 0 in ApiVersions after standalone format?",jira,Excludes a source,Apache Kafka Jira,eval
+q02745,points outside the production possibilities curve represent combinations of products that are,web,Implied source,Natural Questions,eval
+q02746,Could you circle back in the group discussion with your take on the security patch?,slack,Names the source,Hard cases (generated),eval
+q02747,who is the creator of this ai,,Small talk,CLINC150,eval
+q02748,"we sprint to the finish every quarter, is that written down anywhere",confluence,Misleading keyword,Hard cases (hand-written),eval
+q02749,Check slack for any updates on the design review meeting and see if there's a summary in notion.,slack|notion,Multiple sources,Hard cases (generated),eval
+q02750,any updates on the thing from last Friday?,jira|slack,Multiple sources,Hard cases (generated),eval
+q02751,who played marius in the movie les miserables,web,Implied source,Natural Questions,eval
+q02752,"I'm attempting to redesign the product page of my Store. I need guidance on customizing the layout, image display & button text.",kb,Implied source,WixQA,eval
+q02753,"a thread came loose on my office chair, who handles repairs",slack,Misleading keyword,Hard cases (hand-written),eval
+q02754,instructions for setting up two-factor authentication,kb,Implied source,Hard cases (generated),eval
+q02755,Did we come up with a temporary solution for the server downtime during our last brisk exchange?,slack,Implied source,Hard cases (generated),eval
+q02756,Can someone remind me what decision was made about holiday shifts during last week's spontaneous team chat?,slack,Implied source,Hard cases (generated),eval
+q02757,are you an automated assistance,,Small talk,CLINC150,eval
+q02758,What did User Interface think of the price of this prototype when comparing it with the same-shaped phone?,notion,Implied source,QMSum,eval
+q02759,What happened with the idea of reordering build.gradle so publishing is configured last for the shadow plugin?,jira,Implied source,Apache Kafka Jira,eval
+q02760,how do we handle duplicate accounts,kb|confluence,Multiple sources,Hard cases (hand-written),eval
+q02761,what subjects are you familiar with,,Small talk,CLINC150,eval
+q02762,Find when the downtime announcement was posted in the slack channel. Need to know who responded.,slack,Names the source,Hard cases (generated),eval
+q02763,Where's the work on a dynamic metrics.verbosity config for partition-level metrics at?,jira,Implied source,Apache Kafka Jira,eval
+q02764,What was the consensus on the font changes after our design conversation the other day?,slack,Implied source,Hard cases (generated),eval
+q02765,"the refund rules we tell customers, not our internal policy doc",kb,Excludes a source,Hard cases (hand-written),eval
+q02766,please give me a really impressive piece of trivia about bubble gum,web,Implied source,CLINC150,eval
+q02767,Summarize the recap of the last meeting.,notion,Implied source,QMSum,eval
+q02768,Was there any discussion about the tar 'cannot read: is a directory' error when unpacking sound card drivers?,slack,Implied source,Ubuntu help chat,eval
+q02769,tickets that were never triaged,jira,Excludes a source,Hard cases (hand-written),eval
+q02770,emails from the vendor that we did not answer,gmail,Excludes a source,Hard cases (hand-written),eval
+q02771,Verify if the proposed timeline in the project plan links up with the dates confirmed in our email with the vendor.,confluence|gmail,Multiple sources,Hard cases (generated),eval
+q02772,"Did we finalize the agreement with the new cloud vendor from last week's email, and can you find the latest version of the deployment checklist in our internal docs?",confluence|gmail,Multiple sources,Hard cases (generated),eval
+q02773,has the flaky test been triaged,jira,Unclear source,Hard cases (hand-written),eval
+q02774,Find kb articles related to API rate limiting.,kb,Names the source,Hard cases (generated),eval
+q02775,what is happening with the checkout regression,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q02776,I would be surprised if nobody documented the migration runbook,confluence,Excludes a source,Hard cases (hand-written),eval
+q02777,What did Project Manager think of the symbol and colour of the remote when discussing the design of the remote?,notion,Implied source,QMSum,eval
+q02778,Look up the latest discussion on server upgrade timings and find out which engineer is assigned to the critical bug.,jira|slack,Multiple sources,Hard cases (generated),eval
+q02779,Is there a spec for letting the JSON converter use an external schema instead of embedding it in each message?,confluence,Implied source,Apache Kafka Confluence,eval
+q02780,"Gather every piece of info on the Acme Corp onboarding process. Include conversations, assigned tasks, and any help articles we have.",kb|jira|slack,Multiple sources,Hard cases (generated),eval
+q02781,tell me how to roll over my 401k,kb,Implied source,CLINC150,eval
+q02782,Locate all messages under 'Promotions' that discuss the partner discount program.,gmail,Names the source,Hard cases (generated),eval
+q02783,what is the uptime guarantee,kb,Unclear source,Hard cases (hand-written),eval
+q02784,please show new emails,gmail,Names the source,MASSIVE,eval
+q02785,channels that have not been archived,slack,Excludes a source,Hard cases (hand-written),eval
+q02786,Could you search gmail for that email thread about the new pricing strategy and check if there’s any discussion on slack about it?,slack|gmail,Multiple sources,Hard cases (generated),eval
+q02787,can you gather all discussions and docs about project falcon including any info from email chains?,confluence|slack|gmail,Multiple sources,Hard cases (generated),eval
+q02788,Can you provide more context for that statement?,,Small talk,Hard cases (generated),eval
+q02789,Not the jira — design for exactly-once semantics in MirrorMaker2 built on Connect?,confluence,Excludes a source,Apache Kafka Confluence,eval
+q02790,Who handled the recent server outage investigation?,jira,Implied source,Hard cases (generated),eval
+q02791,Any progress on the jira sprint for Q4 features?,jira,Names the source,Hard cases (generated),eval
+q02792,"In the key rotation runbook, what is the recommended default rotation interval for per-tenant key encryption keys used to wrap data keys?",notion,Names the source,EnterpriseRAG-Bench,eval
+q02793,"Can you find all discussions, notes, and tickets related to the Q4 marketing campaign?",jira|slack|notion,Multiple sources,Hard cases (generated),eval
+q02794,"I do not need the ticket, I need the postmortem",confluence,Excludes a source,Hard cases (hand-written),eval
+q02795,the ticket barrier at the station was broken this morning,,Small talk,Hard cases (hand-written),eval
+q02796,"In the Unified Inference Consumption Paradigm overview, what are the two unit primitives used for billing, and where is the referenced Confluence file that contains the pricing catalog and token definitions for them?",confluence,Names the source,EnterpriseRAG-Bench,eval
+q02797,Current progress on the user profile redesign?,jira,Implied source,Hard cases (generated),eval
+q02798,How can I remove my credit card information entirely from my account?,kb,Implied source,WixQA,eval
+q02799,"In our long conversation serving experiments, what mitigation is suggested for the tendency to start making up references right after a retrieval step when older context has been aggressively shrunk to save memory?",notion,Unclear source,EnterpriseRAG-Bench,eval
+q02800,What was the suspected root cause behind the brief p99 latency spikes on the hosted chat inference route during small burst traffic?,notion,Unclear source,EnterpriseRAG-Bench,eval
+q02801,please check email from mom,gmail,Names the source,MASSIVE,eval
+q02802,urgent ticket priority,jira,Implied source,Hard cases (generated),eval
+q02803,look into what we did for that last time,slack|notion,Multiple sources,Hard cases (generated),eval
+q02804,tell me your age,,Small talk,CLINC150,eval
+q02805,who was elected president in mexico in 2000,web,Implied source,Natural Questions,eval
+q02806,Summarize what was said about the digits recordings,notion,Implied source,QMSum,eval
+q02807,What county includes a small part of the city whose tallest building is a 24 story structure housing a Bank of America branch?,web,Implied source,ConcurrentQA,eval
+q02808,Where is the finalized timeline for the next product launch?,confluence,Implied source,Hard cases (generated),eval
+q02809,Why did Project Manager agree with Marketing when assessing the criteria of matching the operating behaviour of the user?,notion,Implied source,QMSum,eval
+q02810,"In the security review call about buying an LLM inference service through AWS Marketplace, what was said about whether cross-region failover is enabled by default for the hosted endpoint?",notion,Names the source,EnterpriseRAG-Bench,eval
+q02811,Temporary failure in name resolution but pinging IPs works fine. What troubleshooting step was suggested?,slack,Implied source,Ubuntu help chat,eval
+q02812,how can the web hosting be removed from the plan and just keep the domain name plan,kb,Implied source,WixQA,eval
+q02813,I need the current API integration documentation and steps for troubleshooting login issues are also required.,kb|confluence,Multiple sources,Hard cases (generated),eval
+q02814,I need to find the area where the engineering team discusses feature feasibility.,notion,Names the source,Hard cases (generated),eval
+q02815,Can you rephrase that for me?,,Small talk,Hard cases (generated),eval
+q02816,please review the ongoing task we discussed.,jira|slack,Multiple sources,Hard cases (generated),eval
+q02817,"i could use a laugh, got any jokes",,Small talk,CLINC150,eval
+q02818,Does anyone remember what time the meeting was rescheduled to from our quick back-and-forth earlier today?,slack,Implied source,Hard cases (generated),eval
+q02819,"What caused the savings $/day estimates in Optimization Suggestions beta to not match Arkadia Finance billing, and what UI or API changes should we make to prevent this confusion going forward?",jira|slack,Multiple sources,EnterpriseRAG-Bench,eval
+q02820,Where in the kb can I find information about our refund policy?,kb,Names the source,Hard cases (generated),eval
+q02821,what is hair made up of,web,Implied source,MASSIVE,eval
+q02822,is there an agreed approach to feature flags,confluence|slack,Multiple sources,Hard cases (hand-written),eval
+q02823,Search jira for open blockers on the deployment and any slack discussion regarding night shifts for the fix.,jira|slack,Multiple sources,Hard cases (generated),eval
+q02824,i cant see a visual representation of a page on my site in the Editor,kb,Implied source,WixQA,eval
+q02825,I need the details on our quarterly goals and KPIs. Can you show me that?,confluence,Implied source,Hard cases (generated),eval
+q02826,How can I change my Premium plan on our platform?,kb,Implied source,WixQA,eval
+q02827,"How should clients behave when the bootstrap server hostname can't be resolved, per the design?",confluence,Implied source,Apache Kafka Confluence,eval
+q02828,clients fail instantly if the bootstrap hostnames aren't in DNS yet. was there a fix so they retry?,jira,Implied source,Apache Kafka Jira,eval
+q02829,the customer facing wording for the enterprise tier,kb,Unclear source,Hard cases (hand-written),eval
+q02830,open my new emails,gmail,Names the source,MASSIVE,eval
+q02831,What's the conclusion of the discussion about battery versus kinetic when presenting on components?,notion,Implied source,QMSum,eval
+q02832,Initiate a private message with HR to discuss my onboarding status.,slack,Names the source,Hard cases (generated),eval
+q02833,Turning a .vcd into an .iso to burn - any tools mentioned? Rather the chat answers than the wiki,slack,Excludes a source,Ubuntu help chat,eval
+q02834,"Love the support, thanks!",,Small talk,Hard cases (generated),eval
+q02835,features in the rfc that we decided not to build,confluence,Excludes a source,Hard cases (hand-written),eval
+q02836,"the spec of my new laptop, where is the hardware list",kb,Misleading keyword,Hard cases (hand-written),eval
+q02837,who is the father of genetics and what did he study,web,Implied source,Natural Questions,eval
+q02838,"I got a parking ticket outside the office, do we reimburse that",kb,Misleading keyword,Hard cases (hand-written),eval
+q02839,"the wiki page on my neighbourhood is wrong, can we fix it",,Small talk,Hard cases (hand-written),eval
+q02840,Need that pricing strategy proposal from Noton for next quarter.,notion,Implied source,Hard cases (generated),eval
+q02841,"Can someone link the product roadmap, and I also need to know how customers can update their payment info?",kb|confluence,Multiple sources,Hard cases (generated),eval
+q02842,hey do i have any new emails,gmail,Names the source,MASSIVE,eval
+q02843,would you like to introduce yourself,,Small talk,CLINC150,eval
+q02844,What did Marketing think about choosing a stylish fruit for remote design?,notion,Implied source,QMSum,eval
+q02845,What did the group discuss about the detailed design of the product?,notion,Implied source,QMSum,eval
+q02846,What's the update from the marketing agency in gmial?,gmail,Implied source,Hard cases (generated),eval
+q02847,What is the recommended liability cap language in the procurement legal triage SOP for vendor contracts (including the key exceptions and how the cap amount is determined)?,confluence,Names the source,EnterpriseRAG-Bench,eval
+q02848,What did Heather McPherson think about restoring Canadian businesses during the pandemic?,notion,Implied source,QMSum,eval
+q02849,the backlog of unread books on my desk is getting silly,,Small talk,Hard cases (hand-written),eval
+q02850,Was there anything on slack about changing our security policies recently?,slack,Names the source,Hard cases (generated),eval
+q02851,was the on call rotation ever written down,confluence,Unclear source,Hard cases (hand-written),eval
+q02852,Find all information on the last design review meeting for the mobile app UI updates.,kb|jira|notion,Multiple sources,Hard cases (generated),eval
+q02853,Has anyone proposed batching offset translation in RemoteClusterUtils for MirrorMaker setups?,confluence,Implied source,Apache Kafka Confluence,eval
+q02854,how to check subscription renewal date,kb,Implied source,Hard cases (generated),eval
+q02855,Where can I find the latest employee onboarding guidelines and how do I reset my password as reported by users?,kb|confluence,Multiple sources,Hard cases (generated),eval
+q02856,reset billing cycle,kb,Implied source,Hard cases (generated),eval
+q02857,deploy status update,slack,Implied source,Hard cases (generated),eval
+q02858,Thanks for the quick response.,,Small talk,Hard cases (generated),eval
+q02859,In which region of Wales is the mountain whose summit has a trig point on an uneven grassy plateau,web,Implied source,ConcurrentQA,eval
+q02860,"What is the company's end-to-end internal process for launching a new third-party LLM into the Hosted API model catalog-from intake to post-launch monitoring-including every required gate, owner, and artifact?",confluence,Implied source,EnterpriseRAG-Bench,eval
+q02861,Look up any informal discussions about the deployment timeline and locate the user research summary for the new feature.,confluence|slack,Multiple sources,Hard cases (generated),eval
+q02862,where can i find a w2 form,kb,Implied source,CLINC150,eval
+q02863,What procurement target date did ClearPath Health give for signing an agreement after the streaming model benchmark and security review?,gmail,Implied source,EnterpriseRAG-Bench,eval
+q02864,why use nanoTime in the producer perf tool,confluence,Implied source,Apache Kafka Confluence,eval
+q02865,let me know how you are doing,,Small talk,CLINC150,eval
+q02866,"page 47 of the vendor contract, do we have a copy",gmail,Misleading keyword,Hard cases (hand-written),eval
+q02867,what is the situation with the failing builds,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q02868,"Has anyone confirmed the database downtime on the #devops channel, and do we have any response from the vendor about the issue in my email?",slack|gmail,Multiple sources,Hard cases (generated),eval
+q02869,Check if any tasks are currently blocked for the mobile app release.,jira,Names the source,Hard cases (generated),eval
+q02870,"notion labs raised a round, is that in our competitor doc",confluence,Misleading keyword,Hard cases (hand-written),eval
+q02871,"excluding jira, what do we have on the login regression",confluence|slack,Excludes a source,Hard cases (hand-written),eval
+q02872,look into the recent problem we talked about.,jira|slack,Multiple sources,Hard cases (generated),eval
+q02873,Any progress on making the authorizer's authorize() call asynchronous?,jira,Implied source,Apache Kafka Jira,eval
+q02874,Who did Marketing think the remote control should target and why?,notion,Implied source,QMSum,eval
+q02875,What’s your feedback on what I just said?,,Small talk,Hard cases (generated),eval
+q02876,"Why do some long range analytics charts in the US East production console briefly show zero or outdated values and the drill through to traces disappears, then fixes itself after about 10 to 30 minutes?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02877,hey how's it hanging,,Small talk,CLINC150,eval
+q02878,nagios3 install failing with dpkg error code 1 - what did people have them check?,slack,Implied source,Ubuntu help chat,eval
+q02879,figure out the next steps we agreed upon,slack|notion,Multiple sources,Hard cases (generated),eval
+q02880,"our team entered the sprint triathlon, is there a signup sheet",slack,Misleading keyword,Hard cases (hand-written),eval
+q02881,Who’s assigned to jira bug report #9872?,jira,Names the source,Hard cases (generated),eval
+q02882,Find the onboarding checklist for new hires in notion. Verify if there's a support article in the kb explaining the employee portal.,kb|notion,Multiple sources,Hard cases (generated),eval
+q02883,"What is the company policy for how long contractor access should last by default before it expires, according to the access and permissions playbook?",confluence,Names the source,EnterpriseRAG-Bench,eval
+q02884,describe a starfish,web,Implied source,MASSIVE,eval
+q02885,"Unhiding a folder that windows treats as hidden, from linux, for an mp3 player. Was that discussed in slack?",slack,Names the source,Ubuntu help chat,eval
+q02886,"Who owns the mixed-priority cgroup and soft-quota playbook for multi-tenant inference, and what is the best email or Slack channel to contact for rollout coordination?",confluence,Misleading keyword,EnterpriseRAG-Bench,eval
+q02887,how many years have you been on,,Small talk,CLINC150,eval
+q02888,"In our GPU inference service that merges many request streams, what change was made to cut worst case latency spikes that happened when the attention memory footprint abruptly shifted during batch formation, while keeping median latency nearly flat?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02889,"we need to page the on-call engineer, where is the rota",confluence,Misleading keyword,Hard cases (hand-written),eval
+q02890,"Which template telemetry header format are we standardizing on for KPI tracking, and how do the quickstart templates behave by default when a corporate proxy blocks those headers?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02891,Appreciate your help on this!,,Small talk,Hard cases (generated),eval
+q02892,"After exactly-once v1 removal, is there cleanup planned for the multiple commit-needed flags in Streams?",jira,Implied source,Apache Kafka Jira,eval
+q02893,"Get all conversations, notes, and issue tracking related to our billing system overhaul.",jira|slack|notion,Multiple sources,Hard cases (generated),eval
+q02894,"my home inbox is full of junk mail, nothing work related",,Small talk,Hard cases (hand-written),eval
+q02895,I need to switch my business type from sole prop to LLC in order to use an EIN.,kb,Implied source,WixQA,eval
+q02896,jira: which tasks are still open from the last sprint review?,jira,Names the source,Hard cases (generated),eval
+q02897,What did Project Manager think of the special button design for game players when discussing keypad and ergonomic design of the new remote control?,notion,Implied source,QMSum,eval
+q02898,when did the newest macbook pro come out,web,Implied source,Natural Questions,eval
+q02899,"our own position on gdpr deletion, not what we tell users",confluence,Unclear source,Hard cases (hand-written),eval
+q02900,Verify that the troubleshooting guide is consistent with the support FAQ responses.,kb|confluence,Multiple sources,Hard cases (generated),eval
+q02901,Look into the thing we talked about earlier today.,kb|notion,Multiple sources,Hard cases (generated),eval
+q02902,Summarize the evaluation process on the prototype.,notion,Implied source,QMSum,eval
+q02903,"From a late July 2025 call with a vendor, what was the specific console tuning recommendation for the search route that included both a suggested batch size and a quantization setting?",notion,Names the source,EnterpriseRAG-Bench,eval
+q02904,where is the w-2 form located,kb,Implied source,CLINC150,eval
+q02905,I want to know how to add a full PDF to my portfolio site,kb,Implied source,WixQA,eval
+q02906,Who do we contact for guidance on the latest design system updates?,confluence,Implied source,Hard cases (generated),eval
+q02907,"Check slack to see if there's any conversation about the sprint planning. Also, what's the current sprint status on jira?",jira|slack,Multiple sources,Hard cases (generated),eval
+q02908,the spec sections that are not finished yet,confluence,Excludes a source,Hard cases (hand-written),eval
+q02909,"in their deck faq means fully automated quality, where is that deck",confluence,Misleading keyword,Hard cases (hand-written),eval
+q02910,How many Fireflies sales-call transcripts mention a customer requirement for data residency (keeping data in a specific region/country)?,notion,Names the source,EnterpriseRAG-Bench,eval
+q02911,Are there any outstanding actions for the customer feedback form project?,jira,Implied source,Hard cases (generated),eval
+q02912,What approaches were considered for the analysis?,notion,Implied source,QMSum,eval
+q02913,Check if the kb has instructions for setting up two-factor authentication.,kb,Names the source,Hard cases (generated),eval
+q02914,"Which occurrence happened more recently, the Patti Starr affair or the Merinda-Pam Burridge collision?",web,Implied source,ConcurrentQA,eval
+q02915,whats the deprecation plan for delete-config in the topics command since it's a no-op,confluence,Implied source,Apache Kafka Confluence,eval
+q02916,"issue 47 of that design magazine, do we have a subscription",gmail,Misleading keyword,Hard cases (hand-written),eval
+q02917,can you tell me what the next holiday is,kb,Implied source,CLINC150,eval
+q02918,who has the most sacks in college football,web,Implied source,Natural Questions,eval
+q02919,What does the kb say about integrating third-party services?,kb,Names the source,Hard cases (generated),eval
+q02920,how did early humans make use of stones during the prehistoric period,web,Implied source,Natural Questions,eval
+q02921,needed libperl5.8 but a newer perl-base is installed and removing it would rip out tons of packages. what was the workaround,slack,Implied source,Ubuntu help chat,eval
+q02922,"Find everything related to the SLX feature design review. Check for conversations, issue logs, and knowledge articles.",kb|jira|slack,Multiple sources,Hard cases (generated),eval
+q02923,Which ticket covers adding the push interval to the client telemetry receiver context?,jira,Names the source,Apache Kafka Jira,eval
+q02924,please check my mails,gmail,Implied source,MASSIVE,eval
+q02925,Can I get a summary of completed items for last week's performance improvements?,jira,Implied source,Hard cases (generated),eval
+q02926,I doubt this is not covered in the help centre,kb,Excludes a source,Hard cases (hand-written),eval
+q02927,What is the API endpoint to start a Unified Capacity Transition migration?,confluence|notion,Multiple sources,EnterpriseRAG-Bench,eval
+q02928,do i have any new emails from kellogg,gmail,Names the source,MASSIVE,eval
+q02929,progress on the migration bug,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q02930,who is the drummer for guns and roses,web,Implied source,Natural Questions,eval
+q02931,it was nice to chat,,Small talk,CLINC150,eval
+q02932,"What was the decision for when and how to roll out the new lattice scheduler into a limited canary, and what condition would allow expanding it to higher traffic models?",notion,Unclear source,EnterpriseRAG-Bench,eval
+q02933,Summarize Industrial Designer's desire about remote control working design.,notion,Implied source,QMSum,eval
+q02934,"do not check the docs, did anyone email about this",gmail,Excludes a source,Hard cases (hand-written),eval
+q02935,Search for the billing process workflow; I think it's detailed in notion and discussed in slack.,slack|notion,Multiple sources,Hard cases (generated),eval
+q02936,any updates in the slack DM from the hiring team about the new candidate's interview schedule?,slack,Names the source,Hard cases (generated),eval
+q02937,Could you give me a brief overview?,,Small talk,Hard cases (generated),eval
+q02938,Pull up gmail emails regarding the customer escalation with Phoenix Ltd.,gmail,Names the source,Hard cases (generated),eval
+q02939,decisions we did not write up in notion,notion,Excludes a source,Hard cases (hand-written),eval
+q02940,What was concluded on semantic specification?,notion,Implied source,QMSum,eval
+q02941,"Hey, I'm trying to remember if we had any updates from the vendor about the data integration issue, I think there might have been an email from last week, or maybe it was in those project notes we shared recently, can you check both for me?",notion|gmail,Multiple sources,Hard cases (generated),eval
+q02942,"On confluence, what's the policy for managing unstable features that span multiple releases?",confluence,Names the source,Apache Kafka Confluence,eval
+q02943,"How does the new v1 chat compatibility layer handle invalid tool or function schemas, and what HTTP status does it return when validation fails?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02944,Flash still says missing after copying adobe's archive into the browser folder; what was suggested?,slack,Implied source,Ubuntu help chat,eval
+q02945,"Not the sudo docs page, the chat explanation: why does sudo echo with >> into /etc/modules fail with permission denied?",slack,Excludes a source,Ubuntu help chat,eval
+q02946,"I am not saying there is no slack thread, I just cannot find it",slack,Excludes a source,Hard cases (hand-written),eval
+q02947,Find the latest usage guidelines for the export data feature.,kb,Names the source,Hard cases (generated),eval
+q02948,"In the planned controlled failover game day on 2026-01-15 (Hosted API us-east → eu-west), what caused the routing automation to oscillate (flip/rollback), and what follow-up ticket and target ship date were created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects?",confluence,Misleading keyword,EnterpriseRAG-Bench,eval
+q02949,Why parse addresses in bootstrap.servers and similar configs more strictly?,confluence,Implied source,Apache Kafka Confluence,eval
+q02950,Why was the project fit to be included in a conference paper?,notion,Implied source,QMSum,eval
+q02951,Where can I read the walkthrough for integrating with third-party APIs?,kb,Names the source,Hard cases (generated),eval
+q02952,"How do we turn observed production workload patterns for inference routes into defensible latency SLO targets and cost sensitivity guidance, including clustering and profiling steps?",confluence,Implied source,EnterpriseRAG-Bench,eval
+q02953,let me know any new emails i've received,gmail,Names the source,MASSIVE,eval
+q02954,how do password resets work,kb,Unclear source,Hard cases (hand-written),eval
+q02955,Wiki page on letting custom principal builders access the SSL principal mapper and kerberos short namer?,confluence,Names the source,Apache Kafka Confluence,eval
+q02956,how to reconnect a domain without affecting email after accidentally changing the CNAME record,kb,Misleading keyword,WixQA,eval
+q02957,what do i need to set up direct deposit,kb,Implied source,CLINC150,eval
+q02958,Look up the incident report from last month's meeting notes and whether the customer has responded to the bug fix update we sent.,notion|gmail,Multiple sources,Hard cases (generated),eval
+q02959,are you a real human,,Small talk,CLINC150,eval
+q02960,someone brought up error budgets the other day,slack,Unclear source,Hard cases (hand-written),eval
+q02961,has jane doe emailed me,gmail,Implied source,MASSIVE,eval
+q02962,"In the February 2026 update to our inference tuning product, what change caused older route configuration payloads to start getting rejected with a 400 error, and what field needs to be removed to fix it?",confluence,Unclear source,EnterpriseRAG-Bench,eval
+q02963,please check for new email,gmail,Names the source,MASSIVE,eval
+q02964,"the mail has not arrived at the office, who signs for packages",slack,Misleading keyword,Hard cases (hand-written),eval
+q02965,"Can you find any recent emails about our upcoming pricing changes, and also see if there's a knowledge base article on the updated subscription tiers?",kb|gmail,Multiple sources,Hard cases (generated),eval
+q02966,Who is the lead on the new security protocol implementation?,jira,Implied source,Hard cases (generated),eval
+q02967,"NPE in ApiVersions handling during controller failover, featuresPublisher is null. anyone on it?",jira,Implied source,Apache Kafka Jira,eval
+q02968,can you confirm if the deployment timeline is listed in jita?,jira,Implied source,Hard cases (generated),eval
+q02969,Summarize the presentation on the working design.,notion,Implied source,QMSum,eval
+q02970,"slack is down, how else can I reach the team",gmail,Misleading keyword,Hard cases (hand-written),eval
+q02971,"every source except tickets, what do we know about the outage",kb|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q02972,Accessing an ntfs partition from inside a win7 virtualbox guest: what setting did they recommend?,slack,Implied source,Ubuntu help chat,eval
+q02973,"Hey, so I'm trying to figure out if there's a list somewhere of the known issues with the latest software update, as there was a customer complaining about a specific bug and I'm not sure if it's already logged or we're overlooking something else entirely; if you could find anything related to that, it would be super helpful, especially if there are workaround suggestions or maybe a timeline for fixing.",kb|jira,Multiple sources,Hard cases (generated),eval
+q02974,How would anchored punctuation let Streams schedule callbacks at specific wall-clock times?,confluence,Implied source,Apache Kafka Confluence,eval
+q02975,what is the process for data export requests,kb|confluence,Multiple sources,Hard cases (hand-written),eval
+q02976,"Thanks, that really helped!",,Small talk,Hard cases (generated),eval
+q02977,What did Marketing think about functional requirements about remote control?,notion,Implied source,QMSum,eval
+q02978,sharing a laptop's wifi connection with a phone when you don't control the access point - what ideas came up,slack,Implied source,Ubuntu help chat,eval
+q02979,"I need everything on the recent security breach, including the incident report and follow-up actions.",kb|jira|confluence,Multiple sources,Hard cases (generated),eval
+q02980,built pure-ftpd from source and can't figure out how to start it... what did they say in the help channel,slack,Names the source,Ubuntu help chat,eval
+q02981,"my flight ticket got cancelled, can I get the booking details",gmail,Misleading keyword,Hard cases (hand-written),eval
+q02982,What's the main point of that?,,Small talk,Hard cases (generated),eval
+q02983,"What is the default wait time used by the new tool-call batching invoker, and how does it differ between hosted and dedicated tiers?",jira,Implied source,EnterpriseRAG-Bench,eval
+q02984,the whole workspace minus the knowledge base for retention,jira|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q02985,What are the collection limits in Store?,kb,Implied source,WixQA,eval
+q02986,"the doc signed me off for a week, who do I notify",gmail,Misleading keyword,Hard cases (hand-written),eval
+q02987,our internal legal position on data processing,confluence,Unclear source,Hard cases (hand-written),eval
+q02988,Formatting storage directories is a manual step for KRaft; why make it automatic?,confluence,Implied source,Apache Kafka Confluence,eval
+q02989,Anyone know if there was ever an answer for the GLIBCXX_3.4.21 not found error?,slack,Implied source,Ubuntu help chat,eval
+q02990,How can I get a printed receipt for Mobile POS.,kb,Implied source,WixQA,eval
+q02991,"In the Confluence doc on abandoned connectors and tasks, which new worker config is proposed?",confluence,Names the source,Apache Kafka Confluence,eval
+q02992,Why do we see spurious 'Did not delete ConfigResource' errors when deleting topics during the ZK migration?,jira,Implied source,Apache Kafka Jira,eval
+q02993,"In our last exchange about the office move, what date did we agree on for packing up?",slack,Implied source,Hard cases (generated),eval
+q02994,Can the kb provide steps for resolving 500 server errors?,kb,Names the source,Hard cases (generated),eval
+q02995,SocketServer metrics collide when multiple socket servers run in one JVM because they lack distinguishing tags. Is anyone working on that?,jira,Implied source,Apache Kafka Jira,eval
+q02996,Where's the versioning scheme for features that lets clients discover supported feature versions?,confluence,Implied source,Apache Kafka Confluence,eval
+q02997,"Can you find all details on the Q4 product launch? I need discussions, tasks, and any support articles.",kb|jira|slack,Multiple sources,Hard cases (generated),eval
+q02998,who has won the most f1 grand prix,web,Implied source,Natural Questions,eval
+q02999,Jira ticket link,jira,Implied source,Hard cases (generated),eval
+q03000,Has anyone updated the bug status on jira and discussed on slack about the recent login issue?,jira|slack,Multiple sources,Hard cases (generated),eval
+q03001,Why can the transaction coordinator hand back INVALID_TXN_STATE right after a broker loses leadership of the transaction state partition?,jira,Implied source,Apache Kafka Jira,eval
+q03002,who were the three elves who got rings,web,Implied source,Natural Questions,eval
+q03003,everything except the wiki on onboarding,kb|jira|slack|gmail,Excludes a source,Hard cases (hand-written),eval
+q03004,Did we discuss customer complaints on slack this week? Need the summary for my report.,slack,Names the source,Hard cases (generated),eval
+q03005,Look in gmail for any security compliance questions from partners and cross-reference with the notion compliance guidelines.,notion|gmail,Multiple sources,Hard cases (generated),eval
+q03006,i would like to know what type of things you can help me with,,Small talk,CLINC150,eval
+q03007,"attachments over 500 kb bounce, is that documented for users",kb,Misleading keyword,Hard cases (hand-written),eval
+q03008,guide to managing notification settings,kb,Implied source,Hard cases (generated),eval
+q03009,Find out if the team decision on product launch date matches what the partner was told via email.,slack|gmail,Multiple sources,Hard cases (generated),eval
+q03010,Why archive a folder as tar.gz instead of just gzipping it? I think this got explained in slack,slack,Names the source,Ubuntu help chat,eval
+q03011,"Im experiencing trouble with the website editor. Theres a stray logo on the published version that doesnt show up in the editor, making it impossible to correct.",kb,Implied source,WixQA,eval
+q03012,Check what's been done regarding that item we noted.,kb|notion,Multiple sources,Hard cases (generated),eval
+q03013,please tell me your date of birth,,Small talk,CLINC150,eval
+q03014,"In the 3-hour customer workshop plan for taking a team from initial evaluation to a proof of concept, what are the three types of go/no-go acceptance gates?",notion,Names the source,EnterpriseRAG-Bench,eval
+q03015,who sings i'm going to soak up the sun,web,Implied source,Natural Questions,eval
+q03016,I need to rename a our platform file with an inappropriate name. The provided instructions were ghastly.,kb,Implied source,WixQA,eval
+q03017,What was the professor's take on the 12 second mean?,notion,Implied source,QMSum,eval
+q03018,Can you explain that differently?,,Small talk,Hard cases (generated),eval
+q03019,Can you check if the design review feedback was posted in the UI/UX chat and see if the client's latest email includes any logo assets?,slack|gmail,Multiple sources,Hard cases (generated),eval
+q03020,did anyone write up the postmortem yet,confluence,Unclear source,Hard cases (hand-written),eval
+q03021,how do i direct deposit my check,kb,Implied source,CLINC150,eval
+q03022,What did the team think about DAT?,notion,Implied source,QMSum,eval
+q03023,Why did Project Manager think of the advanced technology design when presenting the technical functions?,notion,Implied source,QMSum,eval
+q03024,what type of joint connects the incus with the malleus,web,Implied source,Natural Questions,eval
+q03025,what are bulls used for on a farm,web,Implied source,Natural Questions,eval
+q03026,someone wanted to downgrade because the upgrade from precise to trusty found nothing - what did folks ask them to check?,slack,Implied source,Ubuntu help chat,eval
+q03027,"Can you confirm if we sent the performance metrics to the external partner we discussed, and where can I find the onboarding guide for new hires?",confluence|gmail,Multiple sources,Hard cases (generated),eval
+q03028,"Find the conversation about the API rate limits in the engineering group, and also check my inbox for any updates from the API vendor.",slack|gmail,Multiple sources,Hard cases (generated),eval
+q03029,I would like to change my billing cycle from 2 years to monthly payments.,kb,Implied source,WixQA,eval
+q03030,what unread emails do i have,gmail,Names the source,MASSIVE,eval
+q03031,"do not bother with the knowledge base, I need the internal spec on rate limits",confluence,Excludes a source,Hard cases (hand-written),eval
+q03032,runbooks that were not reviewed this year,confluence,Excludes a source,Hard cases (hand-written),eval
+q03033,What did Carol Shillabeer find unexpected when talking about neurodevelopmental service?,notion,Implied source,QMSum,eval
+q03034,Revisit that conversation where we brainstormed the new feature set.,slack,Names the source,Hard cases (generated),eval
+q03035,put together all the details about recent compliance audits from all sources.,confluence|slack|gmail,Multiple sources,Hard cases (generated),eval
+q03036,"my specs broke, is there a vision benefit",kb,Misleading keyword,Hard cases (hand-written),eval
+q03037,"In the 2027 renewal email thread about moving a customer from four capacity bands to a two level reserved plus overflow setup, what p95 response time was promised for the reranking endpoint under the base reservation assumptions?",gmail,Names the source,EnterpriseRAG-Bench,eval
+q03038,What new consumer config is being proposed to cap how many bytes get fetched per partition from remote storage?,confluence,Implied source,Apache Kafka Confluence,eval
+q03039,"Are there any blockers on the security update ticket, and where can clients find details on pricing plans?",kb|jira,Multiple sources,Hard cases (generated),eval
+q03040,Updates on the ongoing integration with third-party APIs?,jira,Implied source,Hard cases (generated),eval
+q03041,Check if the new API documentation aligns with the latest user guide updates.,kb|confluence,Multiple sources,Hard cases (generated),eval
+q03042,Look for any unread messages with subject line 'Q3 Performance Review'.,gmail,Names the source,Hard cases (generated),eval
+q03043,how do i change my insurance policy,kb,Implied source,CLINC150,eval
+q03044,"For brokers that only validate OAUTHBEARER tokens, is a tokenless login class planned?",jira,Implied source,Apache Kafka Jira,eval
+q03045,Has the approval process been completed for the new feature design?,jira,Names the source,Hard cases (generated),eval
+q03046,"Pull the onboarding checklist from Notion, please.",notion,Names the source,Hard cases (generated),eval
+q03047,How is the circuit breaker for share group dead letter queue overflow meant to work?,confluence,Implied source,Apache Kafka Confluence,eval
+q03048,Can you verify if the QA guidelines discussed match our testing policies?,confluence|slack,Multiple sources,Hard cases (generated),eval
+q03049,Describing an empty consumer group shows no offsets; why change OffsetFetch for that?,confluence,Implied source,Apache Kafka Confluence,eval
+q03050,"How do we decide whether a streaming disconnect is a client abort or a platform-caused failure for SLO and error budget accounting, and how should that be reflected in the SLA availability calculation and the customer-facing Support response?",jira|confluence,Multiple sources,EnterpriseRAG-Bench,eval
+q03051,"That's all I need, thank you.",,Small talk,Hard cases (generated),eval
+q03052,"I’m looking for a comprehensive overview of how we're handling GDPR compliance. Include discussions, JIRA items, and support content.",kb|jira|slack,Multiple sources,Hard cases (generated),eval
+q03053,"In the chat about an office cat knocking over equipment and jokes about caching, what was the short bash command meme about forcefully ending a process named after a cat?",slack,Names the source,EnterpriseRAG-Bench,eval
+q03054,i want to thank you for helping,,Small talk,CLINC150,eval
+q03055,Update on jira story related to the mobile app redesign.,jira,Names the source,Hard cases (generated),eval
+q03056,Get me all documents and tickets concerning the infrastructure upgrade project.,kb|jira|confluence,Multiple sources,Hard cases (generated),eval
+q03057,new email notifications,gmail,Names the source,MASSIVE,eval
+q03058,are there any new emails,gmail,Names the source,MASSIVE,eval
+q03059,What is the seat of the administrative district in which the Polish village of Piecki is located?,web,Implied source,ConcurrentQA,eval
+q03060,what is the cancellation process,kb,Unclear source,Hard cases (hand-written),eval
+q03061,What attitude did Marketing hold towards the ''no teletext but internet'' requirement when commenting on new project requirements and why?,notion,Implied source,QMSum,eval
+q03062,"I would like to know how to customize the content in automated emails for Bookings (confirmation, cancellation and reminders for users)",kb,Misleading keyword,WixQA,eval
+q03063,What did Barry Hughes think about the legal framework when talking about the efficacy of the law?,notion,Implied source,QMSum,eval
+q03064,"In the team chat about posting jokes when an AI makes things up in production, what tagging requirement did someone propose for the memes?",slack,Names the source,EnterpriseRAG-Bench,eval
+q03065,Check for the update from Ben about our quarterly campaign with the marketing agency.,gmail,Implied source,Hard cases (generated),eval
+q03066,which bugs did not get fixed in the last sprint,jira,Excludes a source,Hard cases (hand-written),eval
+q03067,Can consecutive rebalances with zombie Streams instances corrupt changelogs? Is that being worked on?,jira,Implied source,Apache Kafka Jira,eval
+q03068,i want to sign up for a new allstate insurance plan,kb,Implied source,CLINC150,eval
+q03069,"For the tiny production experiment that tweaks how the model serving layer keeps and evicts attention memory, what are the concrete pass or fail thresholds for error rate and tail latency during the first hour?",notion,Unclear source,EnterpriseRAG-Bench,eval
+q03070,cast of law & order special victim unit,web,Implied source,Natural Questions,eval
+q03071,what are my new emails,gmail,Names the source,MASSIVE,eval
+q03072,where is the list of my insurance benefits,kb,Implied source,CLINC150,eval
+q03073,help articles without screenshots,kb,Excludes a source,Hard cases (hand-written),eval
+q03074,"In the Feb 12, 2026 incident where daily usage exports briefly overstated output tokens (while invoices stayed correct), what was the root cause and what mitigation + follow-up steps were taken to prevent a repeat?",confluence,Unclear source,EnterpriseRAG-Bench,eval
+q03075,Can I get all documentation and current status updates related to the new billing system overhaul?,kb|jira|confluence,Multiple sources,Hard cases (generated),eval
+q03076,how do i go about setting up paycheck direct deposit,kb,Implied source,CLINC150,eval
+q03077,Follow up on the recent update that came through.,kb|notion,Multiple sources,Hard cases (generated),eval
+q03078,what's a fun fact about elephants,web,Implied source,CLINC150,eval
+q03079,I want to turn off post approval for my forum,kb,Implied source,WixQA,eval
+q03080,I need info on third-party POS solutions that would work for businesses in the UK.,kb,Implied source,WixQA,eval
+q03081,"there is a bug in the office kitchen, who do I tell",slack,Misleading keyword,Hard cases (hand-written),eval
+q03082,Connect standby server shows an empty task list from the status API. Can you find the jira?,jira,Names the source,Apache Kafka Jira,eval
+q03083,"GUI gone after an update, only a text login, though startx works. What got it back?",slack,Implied source,Ubuntu help chat,eval
+q03084,Hi I would like to install blog,kb,Implied source,WixQA,eval
+q03085,someone mentioned a workaround last week,slack,Unclear source,Hard cases (hand-written),eval
+q03086,"slack had a vote on the feature toggle for the next release, can you find the outcome?",slack,Names the source,Hard cases (generated),eval
+q03087,what happens on payment failure,kb,Unclear source,Hard cases (hand-written),eval
+q03088,"WHAT is full form of cms, and benefits",kb,Implied source,WixQA,eval
+q03089,there cannot be no ticket for something this big,jira,Excludes a source,Hard cases (hand-written),eval
+q03090,Search notion for the latest security and compliance policy updates. Check kb for related customer questions.,kb|notion,Multiple sources,Hard cases (generated),eval
+q03091,"When the audit event buffer is full or the local durable queue hits its size limit, what should happen to must-log admin actions and what HTTP status is returned?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03092,how can we accept payments as a college council that is not a registered business,kb,Implied source,WixQA,eval
+q03093,"FailedPartitionsCount stays at zero even when a partition log file is corrupted, why?",jira,Implied source,Apache Kafka Jira,eval
+q03094,locate keeps returning paths that don't exist even after updatedb; what was recommended to check?,slack,Implied source,Ubuntu help chat,eval
+q03095,"Opening .rar archives on linux: which app came up, and was there help installing it?",slack,Implied source,Ubuntu help chat,eval
+q03096,"the epic scale of yesterday outage, is there a writeup",confluence,Misleading keyword,Hard cases (hand-written),eval
+q03097,Could you make that a bit simpler?,,Small talk,Hard cases (generated),eval
+q03098,Was the Defense of Marriage Act or the Immigration Reform and Control Act of 1986 enacted first?,web,Implied source,ConcurrentQA,eval
+q03099,After switching to gnome-fallback only the desktop background loads and nothing responds. What did people say to try?,slack,Implied source,Ubuntu help chat,eval
+q03100,"find the onboarding doc, not the help centre version",confluence,Excludes a source,Hard cases (hand-written),eval
+q03101,What config controls whether Connect creates its internal topics?,confluence,Implied source,Apache Kafka Confluence,eval
+q03102,check everything except my email for the pricing decision,kb|jira|confluence|slack|notion,Excludes a source,Hard cases (hand-written),eval
+q03103,Search notion for the onboarding checklist and verify if any revisions were mentioned in gmail by HR.,notion|gmail,Multiple sources,Hard cases (generated),eval
+q03104,I need to see the discussion on support SLAs that our team had with BluWave partners.,gmail,Implied source,Hard cases (generated),eval
+q03105,Check if the latest design feedback from the team got incorporated and find the notes from last week's planning meeting.,slack|notion,Multiple sources,Hard cases (generated),eval
+q03106,look in all of them apart from the help centre for the onboarding flow,jira|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q03107,Check if the new feature in the sprint matches the release notes in the help center.,kb|jira,Multiple sources,Hard cases (generated),eval
+q03108,I want to customize the email template for my thank you emails in automations.,kb,Misleading keyword,WixQA,eval
+q03109,"not my inbox, the shared team channel",slack,Excludes a source,Hard cases (hand-written),eval
+q03110,"Rejected alternatives to adding builders for the producer, consumer, admin client and Streams objects?",confluence,Implied source,Apache Kafka Confluence,eval
+q03111,for how many years was abraham lincoln president of united states,web,Implied source,MASSIVE,eval
+q03112,"the deploy runbook, not the ticket about the deploy",confluence,Excludes a source,Hard cases (hand-written),eval
+q03113,the decision on database sharding,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03114,Locate the exchange where Clara shared the latest security audit with the compliance consultant.,gmail,Implied source,Hard cases (generated),eval
+q03115,How would dynamic reconfiguration of producers and consumers work without restarting them?,confluence,Implied source,Apache Kafka Confluence,eval
+q03116,SSL works with an empty endpoint identification algorithm but breaks with https on 2.8 clients — what was the issue there?,jira,Implied source,Apache Kafka Jira,eval
+q03117,where were you given birth,,Small talk,CLINC150,eval
+q03118,Is there a resource that explains our data retention policy?,kb,Implied source,Hard cases (generated),eval
+q03119,Can you confirm if the customer requirements document matches what was discussed in the email chain with the client?,confluence|gmail,Multiple sources,Hard cases (generated),eval
+q03120,jira: Is there a dependency issue with current backend tasks?,jira,Names the source,Hard cases (generated),eval
+q03121,Why did Marketing and Industrial Designer appreciate the design of keys when talking about the propotype presentation about the buttons and main features of the remote control?,notion,Implied source,QMSum,eval
+q03122,where did we land on the retry policy,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03123,"Summarize the last message, please.",,Small talk,Hard cases (generated),eval
+q03124,Find details on that pending task we mentioned.,kb|notion,Multiple sources,Hard cases (generated),eval
+q03125,what's the latest email i have,gmail,Names the source,MASSIVE,eval
+q03126,Pull up the negotiation details for our cloud storage renewal with StoragePlus.,gmail,Implied source,Hard cases (generated),eval
+q03127,how does billing work for annual plans,kb|confluence,Multiple sources,Hard cases (hand-written),eval
+q03128,"Hey, does anyone remember where we keep that document on security protocols for third-party integrations, especially the section on compliance with international standards, or do we have a summary that customers can access somewhere?",kb|confluence,Multiple sources,Hard cases (generated),eval
+q03129,search all the docs and tickets but skip chat for the deploy failure,jira|confluence,Excludes a source,Hard cases (hand-written),eval
+q03130,is there any follow-up on the recent adjustment?,jira|slack,Multiple sources,Hard cases (generated),eval
+q03131,"the issue of trust came up at the offsite, was that minuted",notion,Misleading keyword,Hard cases (hand-written),eval
+q03132,I need to track the status of chargeback #1124381935-1.,kb,Implied source,WixQA,eval
+q03133,search gmail for compliance audit requests and cross-reference with kb standards for security policies.,kb|gmail,Multiple sources,Hard cases (generated),eval
+q03134,hard to believe there is not a runbook for this,confluence,Excludes a source,Hard cases (hand-written),eval
+q03135,let me know when a new email arrives from rachel,gmail,Names the source,MASSIVE,eval
+q03136,"During a multi region switchover, what is causing some customers to get bursty too many requests and occasional service unavailable responses because different parts of the traffic gatekeeper disagree briefly on the time boundary used for quota calculations?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03137,i've got to run now,,Small talk,CLINC150,eval
+q03138,What did the team say on alternative transcription tools?,notion,Implied source,QMSum,eval
+q03139,Look in jira for the sprint status updates and compare them with the project timeline in notion.,jira|notion,Multiple sources,Hard cases (generated),eval
+q03140,What's the proposed config prefix for passing admin client settings to the topic-based remote log metadata manager?,confluence,Implied source,Apache Kafka Confluence,eval
+q03141,What did Industrial Designer put the microphone and the switch on the side of the set when discussing two versions of the prototype?,notion,Implied source,QMSum,eval
+q03142,"In the engineering chat about a Go refactor PR, what did they change in the linter config to get CI passing when a gocritic rule complained about context parameter types in tests?",slack,Names the source,EnterpriseRAG-Bench,eval
+q03143,does the recent customer escalation regarding pricing discrepancies correspond with our help center info?,kb|gmail,Multiple sources,Hard cases (generated),eval
+q03144,cannot imagine the faq does not cover this,kb,Excludes a source,Hard cases (hand-written),eval
+q03145,what are the supported file formats,kb,Unclear source,Hard cases (hand-written),eval
+q03146,what is the meaning of altruism,web,Implied source,CLINC150,eval
+q03147,did we settle the timezone handling questiona,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03148,"After sudo su, how do you get back to your own user, and why was sudo -i recommended instead?",slack,Implied source,Ubuntu help chat,eval
+q03149,Full metadata requests throwing NoSuchElementException during the ZK migration — was that resolved?,jira,Implied source,Apache Kafka Jira,eval
+q03150,no chance this was not written into a spec,confluence,Excludes a source,Hard cases (hand-written),eval
+q03151,"Thanks, got it!",,Small talk,Hard cases (generated),eval
+q03152,"Thanks for the assist, really appreciate it!",,Small talk,Hard cases (generated),eval
+q03153,everything other than jira on the checkout redesign,kb|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q03154,"During the 2025-02-10 capacity incident, what two thresholds should trigger noisy-tenant detection in the runbook update, and how long were SLA targets breached?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03155,Where are the onboarding materials for new hires located? Are they up to date?,confluence,Names the source,Hard cases (generated),eval
+q03156,"there is too much slack in the release timeline, where is the schedule",confluence,Misleading keyword,Hard cases (hand-written),eval
+q03157,Are the feature requirements in the proposal the same as the user stories?,jira|confluence,Multiple sources,Hard cases (generated),eval
+q03158,am i talking to a real person,,Small talk,CLINC150,eval
+q03159,Does the server edition's live cd include a graphical mode? Someone asked this,slack,Implied source,Ubuntu help chat,eval
+q03160,"not the faq, the engineering explanation",confluence,Excludes a source,Hard cases (hand-written),eval
+q03161,Someone needed to know when a firefox update landed in the distro repos versus upstream; did anyone help?,slack,Implied source,Ubuntu help chat,eval
+q03162,"the published article, not the draft doc",kb,Excludes a source,Hard cases (hand-written),eval
+q03163,Where's the proposal to expose the group coordinator base class as a public API for things like schema registry?,confluence,Implied source,Apache Kafka Confluence,eval
+q03164,Details on resolved tasks for the mobile app update?,jira,Implied source,Hard cases (generated),eval
+q03165,so are you a bot,,Small talk,CLINC150,eval
+q03166,issue tracker for the community garden I volunteer at,web,Misleading keyword,Hard cases (hand-written),eval
+q03167,Where can I find the proposal for the Q4 marketing strategy in our internal workspace?,confluence,Names the source,Hard cases (generated),eval
+q03168,open my email account and check for new email,gmail,Names the source,MASSIVE,eval
+q03169,Is domain privacy included in the price of purchasing the domain and the yearly charge?,kb,Implied source,WixQA,eval
+q03170,"the epic poem in the lobby, who commissioned that",,Small talk,Hard cases (hand-written),eval
+q03171,"skip the help centre, what is our internal escalation path",confluence,Excludes a source,Hard cases (hand-written),eval
+q03172,Did I miss any key point about the upcoming code freeze in our latest group interaction?,slack,Implied source,Hard cases (generated),eval
+q03173,Where can I find procedures for installing the mobile app on Android devices?,kb,Names the source,Hard cases (generated),eval
+q03174,where jackie chan currently live,web,Implied source,MASSIVE,eval
+q03175,Do the ticket details align with the customer support FAQ on the same issue?,kb|jira,Multiple sources,Hard cases (generated),eval
+q03176,how did we decide the sprint length,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03177,Can we revisit that previous topic?,,Small talk,Hard cases (generated),eval
+q03178,What are the pass fail threshold percentages for the release guardrails for critical versus lower risk controls in the SSO and audit log compliance rollout plan?,jira,Unclear source,EnterpriseRAG-Bench,eval
+q03179,I couldn’t link PayPal to my site because the option to connect to PayPal was not available. I confirmed that I have a PayPal Business account and adjusted my business location in the our platform dashboard.,kb,Implied source,WixQA,eval
+q03180,Why do ISR changes stay stuck in-flight when the proposed ISR equals the current one?,jira,Implied source,Apache Kafka Jira,eval
+q03181,Gather all design and specification notes for the chatbot integration project.,kb|jira|confluence,Multiple sources,Hard cases (generated),eval
+q03182,What does the pluggable Connect exception handler design say about handling errors at specific processing stages?,confluence,Implied source,Apache Kafka Confluence,eval
+q03183,I do not see why there would not be a ticket for this,jira,Excludes a source,Hard cases (hand-written),eval
+q03184,all but jira for the release notes,kb|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q03185,Search Notion for the QA testing procedures.,notion,Names the source,Hard cases (generated),eval
+q03186,Pulling only nginx and php from the dotdeb repo without its mysql packages - what did people say about restricting a repository?,slack,Implied source,Ubuntu help chat,eval
+q03187,Check if the sprint goals outlined last week align with the strategy doc.,confluence|slack,Multiple sources,Hard cases (generated),eval
+q03188,the customers who never replied to our email,gmail,Excludes a source,Hard cases (hand-written),eval
+q03189,"What's the latest update from our data hosting provider, and are there instructions for setting up two-factor authentication in the help center?",kb|gmail,Multiple sources,Hard cases (generated),eval
+q03190,where has the cache invalidation got to,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03191,"Check slack for any updates on the project timeline, and look in gmail for the last email from the vendor about delivery delays.",slack|gmail,Multiple sources,Hard cases (generated),eval
+q03192,tell me something interesting about lake tahoe,web,Implied source,CLINC150,eval
+q03193,any source other than slack on the audit findings,kb|jira|confluence|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q03194,"the retry policy, not the jira ticket, the actual spec",confluence,Excludes a source,Hard cases (hand-written),eval
+q03195,The request handler idle percent metric shows about 2 in combined mode; what does the fix propose?,confluence,Implied source,Apache Kafka Confluence,eval
+q03196,incident report details,slack,Implied source,Hard cases (generated),eval
+q03197,we have a backlog of laundry in the office gym,,Small talk,Hard cases (hand-written),eval
+q03198,"From the internal sandbox microbench in the EU West lab around May 2029, what was the estimated dollars per one million tokens for the biggest model on a single 40GB GPU when using the no-batching low-latency mode on the long output workload (about 300 tokens per response)?",notion,Unclear source,EnterpriseRAG-Bench,eval
+q03199,where did we get to on the monorepo question,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03200,Where do we outline the process for setting up a new development environment?,confluence,Implied source,Hard cases (generated),eval
+q03201,Do the implementation details match between the ticket and the spec doc?,jira|confluence,Multiple sources,Hard cases (generated),eval
+q03202,Can you confirm if the sprint goals outlined in the team conversation agree with the ones on the board?,jira|slack,Multiple sources,Hard cases (generated),eval
+q03203,did anything come of the latency spike,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03204,Migration plan for replacing the old scala serializer Decoder with a Java one in the tools module?,confluence,Implied source,Apache Kafka Confluence,eval
+q03205,What does the Streams timeout and retry design propose instead of relying on the internal clients' retries?,confluence,Implied source,Apache Kafka Confluence,eval
+q03206,Find out more about the problem we faced last time.,kb|notion,Multiple sources,Hard cases (generated),eval
+q03207,would it not be odd if there is no email from the customer about this,gmail,Excludes a source,Hard cases (hand-written),eval
+q03208,Let me know if you have any further questions.,,Small talk,Hard cases (generated),eval
+q03209,"What is the recommended two-stage process for rotating the signing credentials used by GPU image build and promotion pipelines, including how to cut over safely and roll back if something goes wrong?",confluence,Implied source,EnterpriseRAG-Bench,eval
+q03210,Look up gmail emails relevant to the infrastructure performance monitoring tools.,gmail,Names the source,Hard cases (generated),eval
+q03211,who discovered that neural communication between cells occurs through chemicals,web,Implied source,Natural Questions,eval
+q03212,"In the cost-aware model routing proposal, what telemetry fields were suggested to emit so the team can analyze routing decisions and tradeoffs between spend and quality?",slack,Unclear source,EnterpriseRAG-Bench,eval
+q03213,do you know when our next day off is,kb,Implied source,CLINC150,eval
+q03214,"In an internal onboarding thread for a new language model, what was the estimated GPU memory used by the attention key value cache for a single 8192 token sequence (batch 1)?",slack,Names the source,EnterpriseRAG-Bench,eval
+q03215,Do the delivery timelines agreed in Slack match the ones in the client's email?,slack|gmail,Multiple sources,Hard cases (generated),eval
+q03216,Can you check if there’s an ETA for the bug fix from the last sprint planning and see what the team decided about remote work policies?,jira|slack,Multiple sources,Hard cases (generated),eval
+q03217,check for me new emails received from peter,gmail,Names the source,MASSIVE,eval
+q03218,"I need thread for the office sewing kit, who orders supplies",slack,Misleading keyword,Hard cases (hand-written),eval
+q03219,Please gather the full history and current status of the backend migration initiative.,jira|confluence|slack,Multiple sources,Hard cases (generated),eval
+q03220,The offset commit failure percentage metric for source connectors looks wrong since 2.8 — regression fixed yet?,jira,Implied source,Apache Kafka Jira,eval
+q03221,Im having trouble adjusting the page height in the Editor for a page without a footer. The section will not moving as expected.,kb,Implied source,WixQA,eval
+q03222,the faq entries that were never translated,kb,Excludes a source,Hard cases (hand-written),eval
+q03223,what kind of things can you help with,,Small talk,CLINC150,eval
+q03224,there is no way this was not discussed in a channel,slack,Excludes a source,Hard cases (hand-written),eval
+q03225,what is our accessibility conformance level,kb,Unclear source,Hard cases (hand-written),eval
+q03226,who played nicky on the drew carey show,web,Implied source,Natural Questions,eval
+q03227,"What is the name of the band of this American country singer who recorded the song ""Tell me something bad about Tulsa"" on his 1986 album?",web,Implied source,ConcurrentQA,eval
+q03228,are there any recent emails,gmail,Names the source,MASSIVE,eval
+q03229,can globalTable rekey records before populating the store like addGlobalStore does? need the design,confluence,Implied source,Apache Kafka Confluence,eval
+q03230,"Hey, I remember we had a long discussion somewhere about whether we should revamp our entire onboarding process for new hires because of the feedback we've been getting from them about the documentation being outdated and maybe someone mentioned updating the Notion page too—can you find what decision we reached on that?",slack|notion,Multiple sources,Hard cases (generated),eval
+q03231,Can you check if the bug about payment gateway errors has been assigned and also locate the latest spec document for the invoicing feature?,jira|confluence,Multiple sources,Hard cases (generated),eval
+q03232,notify me when joshua emails me,gmail,Names the source,MASSIVE,eval
+q03233,get info on the vendor situation we talked about,slack|notion,Multiple sources,Hard cases (generated),eval
+q03234,Can you pull up the project roadmap from Notion?,notion,Names the source,Hard cases (generated),eval
+q03235,search the whole workspace but not my inbox for the contract terms,kb|jira|confluence|slack|notion,Excludes a source,Hard cases (hand-written),eval
+q03236,how to reorder my product catalogue in Stores,kb,Implied source,WixQA,eval
+q03237,"the new gmail interface, did anyone complain about it",slack,Misleading keyword,Hard cases (hand-written),eval
+q03238,"In the design for tenant credit based routing that can spill over to hosted capacity, what are the hysteresis window durations used for the different credit tiers?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03239,check mail with subject,gmail,Names the source,MASSIVE,eval
+q03240,Locate the gmail conversation discussing the security compliance checklist updates.,gmail,Names the source,Hard cases (generated),eval
+q03241,how many years on the earth,,Small talk,CLINC150,eval
+q03242,look up etymology in google,web,Implied source,MASSIVE,eval
+q03243,The ZK-based controller goes into limbo after the ZooKeeper leader restarts. Is there a known fix?,jira,Implied source,Apache Kafka Jira,eval
+q03244,what things are you able to help me with,,Small talk,CLINC150,eval
+q03245,Streams stuck in REBALANCING and never reaches RUNNING if a rebalance happens while a stream thread is still shutting down. Fixed?,jira,Implied source,Apache Kafka Jira,eval
+q03246,the definition of affiliate is,web,Implied source,CLINC150,eval
+q03247,"white box in the corner, machine frozen at login, then an error starting the settings daemon... what did they ask for next",slack,Implied source,Ubuntu help chat,eval
+q03248,Upgrading from an end-of-life release to 14.04: clean install or the updater? Which was recommended?,slack,Implied source,Ubuntu help chat,eval
+q03249,bug triage dashboard,jira,Implied source,Hard cases (generated),eval
+q03250,jira: Check status of ticket JIRA-204 for the billing module issue resolution. kb: Do we have existing documentation for common billing errors?,kb|jira,Multiple sources,Hard cases (generated),eval
+q03251,"leave email out of it, what is the ticket status for the api bug",jira,Excludes a source,Hard cases (hand-written),eval
+q03252,Im having trouble finding the payments section in my our platform dashboard to refund a recurring payment made through Payments.,kb,Implied source,WixQA,eval
+q03253,"the story my manager told about the founding, is it documented",confluence,Misleading keyword,Hard cases (hand-written),eval
+q03254,"How many films did this Indian stage and film, who was born in 1928 and starred in the 1981 Indian film Keezh Vaanam Sivakkum alongside Saritha, Jaishankar, Menaka and Sarath Babu, act in?",web,Implied source,ConcurrentQA,eval
+q03255,"How do you stop cpu frequency scaling? I'm after the chat advice about blacklisting modules, not a jira ticket",slack,Excludes a source,Ubuntu help chat,eval
+q03256,does selena gomez has a scandal,web,Implied source,MASSIVE,eval
+q03257,what did we decide on the release cadence,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03258,Locate the contact form instructions for premium support users.,kb,Names the source,Hard cases (generated),eval
+q03259,"After the Northwind latency spike, what metric wording ended up approved for the public case study and what exactly can Sales share privately without triggering new legal approval?",jira|gmail,Multiple sources,EnterpriseRAG-Bench,eval
+q03260,Check recent gmail exchange regarding the new vendor contracts.,gmail,Names the source,Hard cases (generated),eval
+q03261,is there anything i can't ask you,,Small talk,CLINC150,eval
+q03262,Catch up on the conversation history for the last QA sync.,slack,Names the source,Hard cases (generated),eval
+q03263,the public wording on data processing,kb,Unclear source,Hard cases (hand-written),eval
+q03264,the incident ticket that was not escalated,jira,Excludes a source,Hard cases (hand-written),eval
+q03265,Locate the pricing strategy doc in Notion.,notion,Names the source,Hard cases (generated),eval
+q03266,any news on the slow query problem,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03267,the engineering rationale behind the rate limits,confluence,Unclear source,Hard cases (hand-written),eval
+q03268,"I already checked jira, look somewhere else for the payment bug context",slack,Excludes a source,Hard cases (hand-written),eval
+q03269,"In the OpenAI Responses v3 compatibility work, how are overly large user-provided seeds handled to keep determinism, and where is the original seed stored for auditing?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03270,bugs that did not reproduce,jira,Excludes a source,Hard cases (hand-written),eval
+q03271,was there a conclusion on the vendor choice,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03272,"Not on slack, I'm after the bug where the async consumer passes null offsets into the commit callback on failure.",jira,Excludes a source,Apache Kafka Jira,eval
+q03273,need the latest design review notes on Notion.,notion,Names the source,Hard cases (generated),eval
+q03274,"Hey, I'm trying to piece together what happened with last week’s deploy because it seems like something went wrong—was there a discussion in any of the team chats or did we receive any more details from the vendor directly via email?",slack|gmail,Multiple sources,Hard cases (generated),eval
+q03275,Couldn't find the xmms-wma package even with universe and multiverse enabled. What search command did they recommend?,slack,Implied source,Ubuntu help chat,eval
+q03276,I need help with switching my websites template to a new design.,kb,Implied source,WixQA,eval
+q03277,I would like a refund on my domain purchase. I do not want this domain. I want it removed from my account and a refund issued.,kb,Implied source,WixQA,eval
+q03278,Who's responsible for the authentication module review next week?,jira,Implied source,Hard cases (generated),eval
+q03279,you were made where,,Small talk,CLINC150,eval
+q03280,jira: Who's handling the security compliance epic? kb: Need compliance checklists or guidelines.,kb|jira,Multiple sources,Hard cases (generated),eval
+q03281,Let's continue our discussion on the design feedback in the ongoing chat.,slack,Names the source,Hard cases (generated),eval
+q03282,unlikely that no email went out about the outage,gmail,Excludes a source,Hard cases (hand-written),eval
+q03283,which channels have not posted a standup update,slack,Excludes a source,Hard cases (hand-written),eval
+q03284,Is there a slack message about moving the UX design review to next week? Confirm if it's updated in jira.,jira|slack,Multiple sources,Hard cases (generated),eval
+q03285,Is the refactor to call Connect plugins through wrapper classes still in progress?,jira,Implied source,Apache Kafka Jira,eval
+q03286,what did we conclude about on call rotation,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03287,"My business email in GMAIL suite is suspended and I dont know why or how to reactivate it. It says ""suspended by reseller.""",kb,Misleading keyword,WixQA,eval
+q03288,"not slack, is there a documented process for this",confluence,Excludes a source,Hard cases (hand-written),eval
+q03289,everything but the help centre on the pricing change,jira|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q03290,"the sprint distance for the charity run, do you know it",web,Misleading keyword,Hard cases (hand-written),eval
+q03291,Look for the approval from the CEO regarding the partnership terms with Alpha Solutions.,gmail,Implied source,Hard cases (generated),eval
+q03292,What extra member info does the DescribeGroups protocol enhancement add?,confluence,Implied source,Apache Kafka Confluence,eval
+q03293,Summarize the presentation on evaluation criteria.,notion,Implied source,QMSum,eval
+q03294,what to do if payment fails,kb,Implied source,Hard cases (generated),eval
+q03295,can you tell me if i've got any unread emails from today,gmail,Names the source,MASSIVE,eval
+q03296,"usb wifi dongle keeps needing several clicks on connect, was there a fix mentioned for auto reconnect",slack,Implied source,Ubuntu help chat,eval
+q03297,what is the latest on the mobile crash,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03298,would you consider yourself to be a bot,,Small talk,CLINC150,eval
+q03299,What was said in future work?,notion,Implied source,QMSum,eval
+q03300,What did Project Manager think of the creativeness of the team when discussing the process of the project?,notion,Implied source,QMSum,eval
+q03301,What is the expected turnaround time for security to approve access to a high risk internal tool role in the company's tool access governance process?,confluence,Implied source,EnterpriseRAG-Bench,eval
+q03302,jira ticket: need details on the delay for API integration.,jira,Names the source,Hard cases (generated),eval
+q03303,See if the project proposal from Zend Innovations shows up in the sent category.,gmail,Names the source,Hard cases (generated),eval
+q03304,Any updates on our hiring procedures for new software engineers?,confluence,Implied source,Hard cases (generated),eval
+q03305,How will Connect enforce tasks.max when a connector generates too many tasks?,confluence,Implied source,Apache Kafka Confluence,eval
+q03306,check for new emails,gmail,Names the source,MASSIVE,eval
+q03307,Who moved the performance optimization task to the 'done' column?,jira,Names the source,Hard cases (generated),eval
+q03308,"Where's KIP-54, the sticky partition assignment strategy for consumers?",confluence,Implied source,Apache Kafka Confluence,eval
+q03309,did the crash get sorted,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03310,"What is the complete SOP the company must follow to enable ""customer-managed audit log export"" (to the customer's cloud storage) across Hosted, Dedicated, and Private deployments-including required prerequisites, security approvals, configuration steps, validation, customer communication, and ongoing operations/ownership?",confluence,Names the source,EnterpriseRAG-Bench,eval
+q03311,can you check if the latest feature request from the client matches what's documented in the knowledge base?,kb|gmail,Multiple sources,Hard cases (generated),eval
+q03312,"Thanks, you're a lifesaver!",,Small talk,Hard cases (generated),eval
+q03313,who is currently assigned to the api errors,jira,Unclear source,Hard cases (hand-written),eval
+q03314,"What caused an enterprise tenant in Western Europe to suddenly get routed to a Southeast Asia edge during a short mid March 2026 load spike on the vectorization service, adding about 200ms and triggering ingestion timeouts, even though the tenant was supposed to stay in Europe?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03315,"get me all discussions, plans, and emails regarding the new pricing model rollout.",confluence|slack|gmail,Multiple sources,Hard cases (generated),eval
+q03316,find the security policy document in Notion.,notion,Names the source,Hard cases (generated),eval
+q03317,what is our position on open sourcing the sdk,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03318,"where did we discuss this, and I do not mean in email",slack,Excludes a source,Hard cases (hand-written),eval
+q03319,"Which teams are required to sign off on the dedicated capacity intake rubric, and what two follow-up dependencies were noted for the next steps work?",jira,Unclear source,EnterpriseRAG-Bench,eval
+q03320,Turning on tiered storage for a topic in the middle of a rolling restart caused problems for us. Is there a ticket on that?,jira,Names the source,Apache Kafka Jira,eval
+q03321,check the details on that recent update,slack|notion,Multiple sources,Hard cases (generated),eval
+q03322,how should I explain the refund policy to a customer,kb,Unclear source,Hard cases (hand-written),eval
+q03323,appreciate the help,,Small talk,CLINC150,eval
+q03324,read list of new emails,gmail,Names the source,MASSIVE,eval
+q03325,who did the central powers defeat on the eastern front before concentrating back on france,web,Implied source,Natural Questions,eval
+q03326,Who was supposed to finalize the presentation for the X client? I think it came up in our quick interaction yesterday.,slack,Implied source,Hard cases (generated),eval
+q03327,"Hey, sorry to bother you, but could you help me find the conversation from last week about the bug we discovered in the new app update—remember, the one that Brad brought up during the team call, I think he filed a ticket or something about it?",jira|slack,Multiple sources,Hard cases (generated),eval
+q03328,"In the customer docs plan for the opt-in quantization profile feature, what are the review roles required before the documentation can be merged?",confluence,Names the source,EnterpriseRAG-Bench,eval
+q03329,how many years has al been on earth,,Small talk,CLINC150,eval
+q03330,how do we describe sso to prospects,kb,Unclear source,Hard cases (hand-written),eval
+q03331,when is last time the astros won the world series,web,Implied source,Natural Questions,eval
+q03332,what is the story with the payment bug,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03333,do i have any emails from jane doe,gmail,Names the source,MASSIVE,eval
+q03334,how do customers reset their password?,kb,Implied source,Hard cases (generated),eval
+q03335,how does seat based pricing work,kb|confluence,Multiple sources,Hard cases (hand-written),eval
+q03336,Is there a draft saved for the pricing strategy memo I started last week?,gmail,Names the source,Hard cases (generated),eval
+q03337,"Find the security compliance policy in Notoin, please.",notion,Implied source,Hard cases (generated),eval
+q03338,"After the docs deploy failed due to mkdocs linkcheck reporting broken anchor fragments from an include refactor, what final deploy-bot status was reported once prod was updated?",slack,Implied source,EnterpriseRAG-Bench,eval
+q03339,who formed thou,,Small talk,CLINC150,eval
+q03340,threads nobody replied to,slack,Excludes a source,Hard cases (hand-written),eval
+q03341,When do reservations open for the new dedicated GPU option that is rolling out first in the EU Central and India South regions?,slack,Unclear source,EnterpriseRAG-Bench,eval
+q03342,instructions on deactivating an account,kb,Implied source,Hard cases (generated),eval
+q03343,Why did the Marketing disagree with the Industrial Design when discussing the possible advanced techniques on the remote control?,notion,Implied source,QMSum,eval
+q03344,Find all materials and tracking info for the new customer portal development.,jira|confluence|slack,Multiple sources,Hard cases (generated),eval
+q03345,what is the first step in the evolution of the eye,web,Implied source,Natural Questions,eval
+q03346,Is there a proposal to skip redundant auto-commits when the offsets haven't moved in subscribe mode?,jira,Implied source,Apache Kafka Jira,eval
+q03347,did we get approval on the vendor contract from legal in slcak?,slack,Implied source,Hard cases (generated),eval
+q03348,alexa how would you describe a ball,web,Implied source,MASSIVE,eval
+q03349,any update on the login failure,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03350,What did the group discuss about the sample sensor?,notion,Implied source,QMSum,eval
+q03351,define monetary for me please,web,Implied source,CLINC150,eval
+q03352,What does the design doc say about why timestamps were added to the message format?,confluence,Names the source,Apache Kafka Confluence,eval
+q03353,what are the api rate limits,kb|confluence,Multiple sources,Hard cases (hand-written),eval
+q03354,what is our approach to schema migrations,confluence|slack,Multiple sources,Hard cases (hand-written),eval
+q03355,how is the payment reconciliation going,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03356,Check if the onboarding checklist aligns with what HR sent in their welcome email.,confluence|gmail,Multiple sources,Hard cases (generated),eval
+q03357,what is our refund policy,kb,Unclear source,Hard cases (hand-written),eval
+q03358,"Found an open port from a game daemon that was uninstalled. Should I worry? I want the chat take, not the security wiki",slack,Excludes a source,Ubuntu help chat,eval
+q03359,"process for submitting design assets, is there a geature in slak about this?",kb,Implied source,Hard cases (generated),eval
+q03360,"I do not want the help article, where is the engineering runbook for outages",confluence,Excludes a source,Hard cases (hand-written),eval
+q03361,what do we publish about data deletion requests,kb,Unclear source,Hard cases (hand-written),eval
+q03362,rollover my 401k assistance,kb,Implied source,CLINC150,eval
+q03363,What support response time commitments did Acme approve for being shown in their AWS and Azure marketplace listing for incident priority levels?,gmail,Implied source,EnterpriseRAG-Bench,eval
+q03364,open email check messages,gmail,Names the source,MASSIVE,eval
+q03365,"not the jira comments, the actual decision that was made",slack,Excludes a source,Hard cases (hand-written),eval
+q03366,tell me interesting facts about lighthouses,web,Implied source,CLINC150,eval
+q03367,Im troubleshooting why my automated email isnt being sent after a form submission. Ive confirmed that Ive checked the automation statistics.,kb,Misleading keyword,WixQA,eval
+q03368,Can you check slack for the last design review feedback? Looking for some specific points that were discussed.,slack,Names the source,Hard cases (generated),eval
+q03369,show various plants in earth,web,Implied source,MASSIVE,eval
+q03370,"quick one, what did people use to burn an .iso image to disc",slack,Implied source,Ubuntu help chat,eval
+q03371,"skip notion, is there a ticket tracking the migration",jira,Excludes a source,Hard cases (hand-written),eval
+q03372,Can you put that in simpler terms?,,Small talk,Hard cases (generated),eval
+q03373,"If a Private upgrade fails on a Postgres migration lock timeout, what is the recommended operator path to recover or roll back, and what upgrade artifacts and audit events need to be captured for change management?",jira|confluence,Multiple sources,EnterpriseRAG-Bench,eval
+q03374,specs with no owner assigned,confluence,Excludes a source,Hard cases (hand-written),eval
+q03375,Are any tasks marked as 'in progress' but not showing updates for over 5 days?,jira,Names the source,Hard cases (generated),eval
+q03376,how can I purchase additional business emails with a specific domain,kb,Misleading keyword,WixQA,eval
+q03377,what was the final call on the rebrand,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03378,"What is the step by step readiness checklist for bringing up a new managed Kubernetes cluster in the Frankfurt secondary region with preemptible GPU workers for batch inference, including the key quota checks and the basic validation command to confirm the GPUs are usable?",slack,Unclear source,EnterpriseRAG-Bench,eval
+q03379,"Find status of the jira epic ""User Authentication"".",jira,Names the source,Hard cases (generated),eval
+q03380,Where are the latest UI mockups in noton?,notion,Implied source,Hard cases (generated),eval
+q03381,"Check jira for any open tickets related to the login page issue, and look in notion for the design specs.",jira|notion,Multiple sources,Hard cases (generated),eval
+q03382,did we agree to drop support for old browsers,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03383,check on the status of what we talked about earlier.,jira|slack,Multiple sources,Hard cases (generated),eval
+q03384,who did i email recently,gmail,Names the source,MASSIVE,eval
+q03385,who are the cast members of ncis new orleans,web,Implied source,Natural Questions,eval
+q03386,which integrations are available,kb,Unclear source,Hard cases (hand-written),eval
+q03387,what was the outcome of the pricing discussion,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03388,who have emailed me recently and what are the subjects of each email,gmail,Names the source,MASSIVE,eval
+q03389,is it payday,kb,Implied source,CLINC150,eval
+q03390,process for reporting a security vulnerability,kb,Implied source,Hard cases (generated),eval
+q03391,see what's happening with the usual report,slack|notion,Multiple sources,Hard cases (generated),eval
+q03392,deprecation plan for MX4J support - the confluence page please,confluence,Names the source,Apache Kafka Confluence,eval
+q03393,What did Claire Morgan talk about the skill development in early year settings?,notion,Implied source,QMSum,eval
+q03394,Check if the deployment dates in the project plan match the ones in the release channel discussion.,jira|slack,Multiple sources,Hard cases (generated),eval
+q03395,Check gmail for the latest client feedback on the design proposal and see if there are any updates in the notion spec document.,notion|gmail,Multiple sources,Hard cases (generated),eval
+q03396,Is the vendor contract in Notion updated?,notion,Names the source,Hard cases (generated),eval
+q03397,Im experiencing a 404 error when trying to access my store page. It occurs on multiple platforms and with other users.,kb,Implied source,WixQA,eval
+q03398,Is there a user guide for setting up multi-factor authentication?,kb,Names the source,Hard cases (generated),eval
+q03399,Look up recent security incidents reported in jria.,jira,Implied source,Hard cases (generated),eval
+q03400,"Okay, so I'm trying to get a sense of the current status on that big feature rollout we talked about in the last few meetings because I noticed there were some blockers mentioned somewhere, maybe in those project notes or tickets, so can someone point me to the most recent updates or decisions?",jira|notion,Multiple sources,Hard cases (generated),eval
+q03401,renewal contract details,gmail,Implied source,Hard cases (generated),eval
+q03402,Check gmall for the client feedback on the new invoice system.,gmail,Implied source,Hard cases (generated),eval
+q03403,search slck for James' updates on the customer escalation.,slack,Implied source,Hard cases (generated),eval
+q03404,slck: any updates from HR on the onboarding process revamp?,slack,Implied source,Hard cases (generated),eval
+q03405,show me recent emails,gmail,Names the source,MASSIVE,eval
+q03406,How do I show a client we have issued a refund,kb,Implied source,WixQA,eval
+q03407,Did we figure out who’s taking over Sarah’s responsibilities when we had that informal afternoon catch-up yesterday?,slack,Implied source,Hard cases (generated),eval
+q03408,What is the company's end-to-end process for rotating secrets and credentials used by production services (including emergency rotation)?,confluence,Implied source,EnterpriseRAG-Bench,eval
+q03409,have i received any emails in the last hour,gmail,Names the source,MASSIVE,eval
+q03410,look at all our internal sources but not the public help centre for the sla,jira|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q03411,Can you clarify your last response?,,Small talk,Hard cases (generated),eval
+q03412,when did i get my check last,kb,Implied source,CLINC150,eval
+q03413,"I have a ticket to the conference next week, do I need approval",kb,Misleading keyword,Hard cases (hand-written),eval
+q03414,please check for recent email study from this sender,gmail,Names the source,MASSIVE,eval
+q03415,i wanna know the types of subjects are you familiar with,,Small talk,CLINC150,eval
+q03416,how do you set up direct deposit,kb,Implied source,CLINC150,eval
+q03417,who does the voice of stewie family guy,web,Implied source,Natural Questions,eval
+q03418,Why should stream-stream joins use the plain-value-with-headers window store?,confluence,Implied source,Apache Kafka Confluence,eval
+q03419,Summarize their discussions on the amendments in group 3 that relate to the regulation-making powers in the Bill.,notion,Implied source,QMSum,eval
+q03420,tell me who the senders of my emails,gmail,Names the source,MASSIVE,eval
+q03421,"Summarise the top points, please.",,Small talk,Hard cases (generated),eval
+q03422,Check Notion for our quarterly meeting agenda.,notion,Names the source,Hard cases (generated),eval
+q03423,Is there a confluence writeup on cost attribution metrics for tiered storage?,confluence,Names the source,Apache Kafka Confluence,eval
+q03424,any new emails after five p. m.,gmail,Names the source,MASSIVE,eval
+q03425,What are the pending elements for the Q4 analytics deployment?,jira,Implied source,Hard cases (generated),eval
+q03426,Why bump the default graceful task shutdown timeout in Connect above 5 seconds?,confluence,Implied source,Apache Kafka Confluence,eval
+q03427,Are Mats Arehn and Tomas Alfredson of the same nationality?,web,Implied source,ConcurrentQA,eval
+q03428,what are the toll roads called in mexico,web,Implied source,Natural Questions,eval
+q03429,Find out where the product manager shared feedback from GoTech’s focus group on our new app feature.,gmail,Implied source,Hard cases (generated),eval
+q03430,who do i have the pleasure of speaking with,,Small talk,CLINC150,eval
+q03431,do mirrorsource metrics have a source cluster tag now?,jira,Implied source,Apache Kafka Jira,eval
+q03432,Find the section that gives an overview of our feature prioritization strategy.,confluence,Implied source,Hard cases (generated),eval
+q03433,What did Project Manager think of the call button suggested by User Interface?,notion,Implied source,QMSum,eval
+q03434,Do the blockers mentioned in the engineering channel align with the tickets flagged in the issue tracker?,jira|slack,Multiple sources,Hard cases (generated),eval
+q03435,"In the email thread about BrightPath considering a marketplace pilot versus a direct contract for an AI inference vendor, what lead time was given for getting marketplace entitlement after onboarding?",gmail,Names the source,EnterpriseRAG-Bench,eval
+q03436,What did the Marketing think of the external design of the remote control when discussing the material and function issue of it?,notion,Implied source,QMSum,eval
+q03437,who picked up the upload failures,jira,Unclear source,Hard cases (hand-written),eval
+q03438,tell me a funny joke about men,,Small talk,CLINC150,eval
+q03439,where’s the incident runbook in Notion?,notion,Names the source,Hard cases (generated),eval
+q03440,what is blocking the release,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03441,Is someone improving the integration tests for client telemetry?,jira,Implied source,Apache Kafka Jira,eval
+q03442,who has won the most masters green jackets,web,Implied source,Natural Questions,eval
+q03443,status of my inbox,gmail,Names the source,MASSIVE,eval
+q03444,Is there a vendor contract template in Notoin we can use?,notion,Implied source,Hard cases (generated),eval
+q03445,What did Industrial Designer think of triple A batteries when discussing battery issues and flip top design?,notion,Implied source,QMSum,eval
+q03446,"For the runtime 1.19 Dedicated canary, what TP watchdog mode and default timeouts should we start with, and what specific metrics or alert conditions should trigger an immediate rollback if we see false positives or drain storms?",jira|confluence|slack,Multiple sources,EnterpriseRAG-Bench,eval
+q03447,are there any recent emails from rohit,gmail,Names the source,MASSIVE,eval
+q03448,client feedback survey,gmail,Implied source,Hard cases (generated),eval
+q03449,What did User Interface introduce about the detailed design of the prototype?,notion,Implied source,QMSum,eval
+q03450,Search gmail for the latest discussion on the subscription pricing changes.,gmail,Names the source,Hard cases (generated),eval
+q03451,is anyone looking at the memory leak,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03452,"find all info on the billing update initiative, including discussions, docs, and any external correspondence.",confluence|slack|gmail,Multiple sources,Hard cases (generated),eval
+q03453,Why does the preferred leader election tool need an admin API instead of a --zookeeper flag?,confluence,Implied source,Apache Kafka Confluence,eval
+q03454,where are we on the timeout problem,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03455,is the mail from chris about work,gmail,Names the source,MASSIVE,eval
+q03456,confirm the decisions we made on that earlier,slack|notion,Multiple sources,Hard cases (generated),eval
+q03457,Look up tasks linked to the security enhancement initiative.,jira,Names the source,Hard cases (generated),eval
+q03458,how to remove preset social media icons and a statement from a program section in the Editor,kb,Implied source,WixQA,eval
+q03459,all sources bar email for the incident timeline,kb|jira|confluence|slack|notion,Excludes a source,Hard cases (hand-written),eval
+q03460,what should support agents tell users during an outage,kb,Unclear source,Hard cases (hand-written),eval
+q03461,Check the gmail correspondence with the legal team about the NDA revisions.,gmail,Names the source,Hard cases (generated),eval
+q03462,"What UI indicator did the team plan to show for tenants in escalation mode, and what default grace-window duration was chosen for the circuit-breaker?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03463,Mirrormaker with kerberos has some config bug; what's the workaround somebody posted?,jira,Implied source,Apache Kafka Jira,eval
+q03464,I want to take the home page of my copy site and make it the home page on my current site.,kb,Implied source,WixQA,eval
+q03465,it would be strange if no one had filed a bug by now,jira,Excludes a source,Hard cases (hand-written),eval
+q03466,Find the slack channel conversation on yesterday's incident report with the engineering team.,slack,Names the source,Hard cases (generated),eval
+q03467,"Usb ports work only intermittently on an inspiron 14z, with usbmount installed. What did helpers ask about?",slack,Implied source,Ubuntu help chat,eval
+q03468,what is the legal age for marriage in australia,web,Implied source,Natural Questions,eval
+q03469,when was the 50th star added to the united states flag,web,Implied source,Natural Questions,eval
+q03470,Just checking in on how this works.,,Small talk,Hard cases (generated),eval
+q03471,"On managed iPhones on corporate Wi-Fi, why do long-lived server push text streams sometimes reconnect after the app is backgrounded and then end with a few seconds of silence and a cut-off final JSON fragment instead of a clean end marker?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03472,"not in the docs, did someone mention the deadline in chat",slack,Excludes a source,Hard cases (hand-written),eval
+q03473,search everywhere except the docs for the rollback steps,kb|jira|slack|gmail,Excludes a source,Hard cases (hand-written),eval
+q03474,Look up if the kb explains how to update billing details.,kb,Names the source,Hard cases (generated),eval
+q03475,the help articles that do not mention the new pricing,kb,Excludes a source,Hard cases (hand-written),eval
+q03476,Was there a consensus on the preferred vendor for the new laptops after that quick team interaction?,slack,Implied source,Hard cases (generated),eval
+q03477,Find replies tagged with 'urgent' about the security audit findings.,gmail,Names the source,Hard cases (generated),eval
+q03478,it is not impossible there is a slack thread on it,slack,Excludes a source,Hard cases (hand-written),eval
+q03479,I cannot believe nobody raised an issue for the crash,jira,Excludes a source,Hard cases (hand-written),eval
+q03480,Reinstalling a package to regenerate deleted config files without removing everything that depends on it - what commands were tried?,slack,Implied source,Ubuntu help chat,eval
+q03481,did we choose a metrics vendor,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03482,who is the first president to be impeached,web,Implied source,Natural Questions,eval
+q03483,how does connect plan to report records that get dropped by SMT filters,confluence,Implied source,Apache Kafka Confluence,eval
+q03484,Im having trouble adding a page to the horizontal menu on my website.,kb,Implied source,WixQA,eval
+q03485,"look up slack decision on new QA testing tools, I need to update the documentation.",slack,Names the source,Hard cases (generated),eval
+q03486,What did the Project Manager think of the profit when discussing the financial issue and why?,notion,Implied source,QMSum,eval
+q03487,"During the Feb 14, 2026 APAC region outage where vector generation requests intermittently failed with server errors due to a cache layer getting overloaded by a scheduled warmup task, what immediate mitigation did the oncall apply to reduce the cascading retries across downstream nodes?",slack,Unclear source,EnterpriseRAG-Bench,eval
+q03488,"collect all the materials on our cloud migration project. include every conversation and document, plus related emails.",confluence|slack|gmail,Multiple sources,Hard cases (generated),eval
+q03489,how long is data retained for,kb,Unclear source,Hard cases (hand-written),eval
+q03490,it is not as if nobody filed a bug,jira,Excludes a source,Hard cases (hand-written),eval
+q03491,What's blocking the release for the new payment gateway?,jira,Implied source,Hard cases (generated),eval
+q03492,Can you break that down into steps?,,Small talk,Hard cases (generated),eval
+q03493,how many votes to approve supreme court justice,web,Implied source,Natural Questions,eval
+q03494,sort out the plan mentioned in the meeting,slack|notion,Multiple sources,Hard cases (generated),eval
+q03495,Review gmail emails from the management about the upcoming all-hands meeting agenda.,gmail,Names the source,Hard cases (generated),eval
+q03496,surely we did not fail to write a runbook for this,confluence,Excludes a source,Hard cases (hand-written),eval
+q03497,"I’m looking for everything on the AI integration project, including planning docs and task lists.",jira|confluence|slack,Multiple sources,Hard cases (generated),eval
+q03498,i need to know if you are a real person or an ai,,Small talk,CLINC150,eval
+q03499,Could you give me a brief overview of our conversation so far?,,Small talk,Hard cases (generated),eval
+q03500,what's the definition of diverse,web,Implied source,MASSIVE,eval
+q03501,"Appreciate the help, thank you!",,Small talk,Hard cases (generated),eval
+q03502,where can I find the onboarding guide in noton?,notion,Implied source,Hard cases (generated),eval
+q03503,Find the latest deploy incident discussion in slack and the related documentation in notion.,slack|notion,Multiple sources,Hard cases (generated),eval
+q03504,"Just checking in, did you get my last message?",,Small talk,Hard cases (generated),eval
+q03505,thanks for the reply,,Small talk,CLINC150,eval
+q03506,can you get the specifics of the latest feedback?,jira|slack,Multiple sources,Hard cases (generated),eval
+q03507,see about progress on that item we mentioned.,jira|slack,Multiple sources,Hard cases (generated),eval
+q03508,how's it going right now,,Small talk,CLINC150,eval
+q03509,status of the search indexing problem,jira,Unclear source,Hard cases (hand-written),eval
+q03510,Check jira for blocker on ticket ID-3456.,jira,Names the source,Hard cases (generated),eval
+q03511,What do you think about our current discussion?,,Small talk,Hard cases (generated),eval
+q03512,check gmail for the latest invoice updates from our billing vendors and verify with kb guidelines on processing invoices.,kb|gmail,Multiple sources,Hard cases (generated),eval
+q03513,Should the broker shut itself down when the remote log metadata manager hits an IOException?,jira,Implied source,Apache Kafka Jira,eval
+q03514,How do I reset my password in Noton?,kb,Implied source,Hard cases (generated),eval
+q03515,How did people suggest getting the boot loader to see an ext3 boot partition sitting on a raid1 volume?,slack,Implied source,Ubuntu help chat,eval
+q03516,who does eric end up with in that 70s show,web,Implied source,Natural Questions,eval
+q03517,Can you make that explanation more concise?,,Small talk,Hard cases (generated),eval
+q03518,Could you please expand on that topic a bit?,,Small talk,Hard cases (generated),eval
+q03519,"nothing from email please, everything else on the q3 roadmap",kb|jira|confluence|slack|notion,Excludes a source,Hard cases (hand-written),eval
+q03520,Find out who is leading the current sprint and pull up the onboarding checklist for new hires.,confluence|slack,Multiple sources,Hard cases (generated),eval
+q03521,tell me about the solar powered garden stakes,web,Implied source,MASSIVE,eval
+q03522,Search the trash bin for correspondence with IT about server downtime.,gmail,Names the source,Hard cases (generated),eval
+q03523,"In a backend inference engineer interview about multi-tenant GPU scheduling, what strategy did the candidate propose to reduce cold misses for growing attention cache in long chat histories?",notion,Names the source,EnterpriseRAG-Bench,eval
+q03524,What's the status of the task that was assigned to Michelle last week?,jira,Names the source,Hard cases (generated),eval
+q03525,"Before we re-enable paging and hook perf-canary into rollout gates, what exact baseline key, min-sample requirements, and incident-bot dedupe key should we enforce to avoid another false-positive alert storm?",confluence,Unclear source,EnterpriseRAG-Bench,eval
+q03526,How do I access the team’s retrospective from the last project?,notion,Names the source,Hard cases (generated),eval
+q03527,Not the release notes: where's the plan to move the Streams reset tool out of core?,confluence,Excludes a source,Apache Kafka Confluence,eval
+q03528,show me new email,gmail,Names the source,MASSIVE,eval
+q03529,jira: What's the progress on the UI redesign sprint? kb: Any design FAQs we can refer to?,kb|jira,Multiple sources,Hard cases (generated),eval
+q03530,Can you find tasks that need review by the QA team?,jira,Names the source,Hard cases (generated),eval
+q03531,Was there a discussion about the latest ati catalyst driver performing badly versus the xorg driver?,slack,Implied source,Ubuntu help chat,eval
+q03532,who played the beast in the movie beauty and the beast,web,Implied source,Natural Questions,eval
+q03533,what happens when a trial expires,kb,Unclear source,Hard cases (hand-written),eval
+q03534,"the customer's actual email, not our summary doc",gmail,Excludes a source,Hard cases (hand-written),eval
+q03535,How many weekly status updates for Project Orion marked the project as 'At Risk'?,confluence,Unclear source,EnterpriseRAG-Bench,eval
+q03536,Why add a dedicated DescribeCluster API to the admin client?,confluence,Implied source,Apache Kafka Confluence,eval
+q03537,emails we never followed up on,gmail,Excludes a source,Hard cases (hand-written),eval
+q03538,"I'm trying to find that long email thread from last month, you know the one where we discussed the billing disputes with that particularly difficult customer, because I need to cross-reference it with the help center article on invoice adjustments to clarify something for them today.",kb|gmail,Multiple sources,Hard cases (generated),eval
+q03539,"she has a knack for spotting bugs in logic, is that in her review",notion,Misleading keyword,Hard cases (hand-written),eval
+q03540,Who approves terminating STALE-ORPHAN test instances after the 72h grace window-infra manager or cost-ops?,jira,Unclear source,EnterpriseRAG-Bench,eval
+q03541,"Can you find the onboarding checklist in notion, and see if there are related jira tasks?",jira|notion,Multiple sources,Hard cases (generated),eval
+q03542,Looking for the area where the product vision statement is laid out; has it been updated?,confluence,Names the source,Hard cases (generated),eval
+q03543,what time can you legally buy alcohol in michigan,web,Implied source,Natural Questions,eval
+q03544,verify if the email from the vendor about the integration requirements aligns with our support article details.,kb|gmail,Multiple sources,Hard cases (generated),eval
+q03545,what is our data processing agreement,kb,Unclear source,Hard cases (hand-written),eval
+q03546,who invented the printing press and in what year,web,Implied source,Natural Questions,eval
+q03547,what is going on with the upload failures,jira|slack,Multiple sources,Hard cases (hand-written),eval
+q03548,yo la tengo theres a riot going on release date,web,Implied source,Natural Questions,eval
+q03549,look up whether my 401k may be rolled over,kb,Implied source,CLINC150,eval
+q03550,Please let me know if I missed anything here.,,Small talk,Hard cases (generated),eval
+q03551,"In the security review meeting about private cloud upgrades for a financial services customer, what was the stated minimum audit log retention period they wanted?",notion,Names the source,EnterpriseRAG-Bench,eval
+q03552,"anywhere but the knowledge base, what is our stance on data retention",jira|confluence|slack|notion|gmail,Excludes a source,Hard cases (hand-written),eval
+q03553,Do the setup instructions in the onboarding doc match the steps in the help center?,kb|confluence,Multiple sources,Hard cases (generated),eval
+q03554,"In a the company Private (VPC/on-prem) upgrade using the private installer, the UI has been stuck on ""Running migrations"" for over an hour and the migration pod logs repeatedly say it's waiting on a Postgres advisory lock (the Postgres database is externally managed, not the in-cluster StatefulSet). What's the underlying cause, what Support-guided action resolved it, and what specific logs/artifacts should be collected before attempting a retry or rollback?",jira|confluence,Multiple sources,EnterpriseRAG-Bench,eval
+q03555,jira search: bug fixes for release version 5.2,jira,Names the source,Hard cases (generated),eval
+q03556,"Please provide all materials on the Q4 product launch, from planning to execution details.",kb|jira|confluence,Multiple sources,Hard cases (generated),eval
+q03557,What's the status of the latest sprint tasks and how do customers reset their passwords?,kb|jira,Multiple sources,Hard cases (generated),eval
+q03558,I would like to change the text size.,kb,Implied source,WixQA,eval
+q03559,Tropical Forest Research Institute is situated in a city assigned what tier number in the state of Madhya Pradesh?,web,Implied source,ConcurrentQA,eval
+q03560,invoice from vendor,gmail,Implied source,Hard cases (generated),eval
+q03561,"Look in gmail for Helen’s email about the testing schedule, and confirm if anything was mentioned on slack about changes.",slack|gmail,Multiple sources,Hard cases (generated),eval
+q03562,how many times have the winter olympics been in the usa since 1924,web,Implied source,Natural Questions,eval
+q03563,let me know new emails from john,gmail,Names the source,MASSIVE,eval
+q03564,did i receive any new emails from dan,gmail,Names the source,MASSIVE,eval
+q03565,Machine lagging and disk thrashing switching between netbeans and chrome despite 4GB RAM; what did people say about memory and caching?,slack,Implied source,Ubuntu help chat,eval
+q03566,Streams app logs 'Global thread has died' as an ERROR even on normal shutdown with GlobalKTables. Can you find the ticket?,jira,Names the source,Apache Kafka Jira,eval
+q03567,which browsers are supported,kb,Unclear source,Hard cases (hand-written),eval
+q03568,"Please compile all available data on the new pricing model initiative. I need team exchanges, tracked work, and any knowledge base materials.",kb|jira|slack,Multiple sources,Hard cases (generated),eval
+q03569,exactly what does altruism mean,web,Implied source,CLINC150,eval
+q03570,"leave the wiki out of it, was there a channel discussion",slack,Excludes a source,Hard cases (hand-written),eval
+q03571,lvm2 installed but no service shows up in init.d - what were people's responses?,slack,Implied source,Ubuntu help chat,eval
+q03572,later!,,Small talk,CLINC150,eval
+q03573,you came from where,,Small talk,CLINC150,eval
+q03574,who does marge's voice on the simpsons,web,Implied source,Natural Questions,eval
+q03575,Can you retrieve the final pricing details for the Watson project collaboration with their team lead?,gmail,Implied source,Hard cases (generated),eval
+q03576,it is not unlikely that someone documented the rollback runbook,confluence,Excludes a source,Hard cases (hand-written),eval
+q03577,How do I update a solution document to reflect the latest software patch?,kb,Names the source,Hard cases (generated),eval
+q03578,is there a way to view billing history?,kb,Implied source,Hard cases (generated),eval
+q03579,"Can a huge createPartitions request still OOM the broker, or is there a limit like for topic creation now?",jira,Implied source,Apache Kafka Jira,eval
+q03580,What did the team discuss about the most noisy cases?,notion,Implied source,QMSum,eval
+q03581,What did the user interface designer propose in the discussion about industrial components?,notion,Implied source,QMSum,eval
+q03582,find the status on that thing we flagged,slack|notion,Multiple sources,Hard cases (generated),eval
+q03583,"thanks, i appreciate it",,Small talk,CLINC150,eval
+q03584,hey can you check my email and see if there are any new messages,gmail,Names the source,MASSIVE,eval
+q03585,what is the highest mountain in asia,web,Implied source,MASSIVE,eval
+q03586,I recall chatting about the build system,slack,Unclear source,Hard cases (hand-written),eval
+q03587,please check my emails for me,gmail,Names the source,MASSIVE,eval
+q03588,Look for the gmail communication with the design team about the logo revamp feedback.,gmail,Names the source,Hard cases (generated),eval
+q03589,what did we decide internally about refunds,notion,Unclear source,Hard cases (hand-written),eval
+q03590,who got the most rings in the nba,web,Implied source,Natural Questions,eval
+q03591,when did it become law to stand for the national anthem,web,Implied source,Natural Questions,eval
+q03592,are there any email updates,gmail,Names the source,MASSIVE,eval
+q03593,"story time at my kids school, can I take the afternoon",kb,Misleading keyword,Hard cases (hand-written),eval
+q03594,"In the meeting about Zephyrus Labs unit cost and deployment options, what utilization threshold was mentioned as the point where a dedicated reserved setup typically becomes cheaper than hosted?",notion,Names the source,EnterpriseRAG-Bench,eval
+q03595,Is there anything else you need from me?,,Small talk,Hard cases (generated),eval
+q03596,Search the kb for details on our data retention policy.,kb,Names the source,Hard cases (generated),eval
+q03597,"i need everything related to the alpha incident response. look through all chats, documents, and emails.",confluence|slack|gmail,Multiple sources,Hard cases (generated),eval
+q03598,"Need to find conversations about the delayed shipment of processors from TechSupplies, from our procurement department.",gmail,Implied source,Hard cases (generated),eval
+q03599,"I need the last conversation with the vendor about our VPN solutions, and is there a guide for troubleshooting VPN connectivity issues in the support articles?",kb|gmail,Multiple sources,Hard cases (generated),eval
+q03600,"that was an epic fail on the demo, did anyone write a postmortem",confluence,Misleading keyword,Hard cases (hand-written),eval
+q03601,What was the temporary workaround used to prevent the Windows 11 imaging task sequence from failing when a provisioning script breaks under certain non-default locale collation settings?,jira,Implied source,EnterpriseRAG-Bench,eval
+q03602,How do I reset my password using the steps in the kb?,kb,Names the source,Hard cases (generated),eval
+q03603,"In the Slack chat about a desk plant rap contest, where was the remaining sticker stock said to be stored?",slack,Names the source,EnterpriseRAG-Bench,eval
+q03604,can you grab the latest figures for that project,slack|notion,Multiple sources,Hard cases (generated),eval
+q03605,what is the definition of pda,web,Implied source,MASSIVE,eval
+q03606,"According to the industrial manager, what characteristics possessed by the tiger were worthy of being studied by the products' design?",notion,Implied source,QMSum,eval
+q03607,which ticket was not closed before the release,jira,Excludes a source,Hard cases (hand-written),eval
+q03608,"the sso decision, not the slack thread, the written doc",confluence,Excludes a source,Hard cases (hand-written),eval
+q03609,Locate the conversation about the client escalation issue and see if there's a compliance guide related to GDPR.,kb|slack,Multiple sources,Hard cases (generated),eval
+q03610,need insights on the thing we dealt with last team call.,jira|slack,Multiple sources,Hard cases (generated),eval
+q03611,directions for exporting account data,kb,Implied source,Hard cases (generated),eval
+q03612,Look up the incident response SOP and provide the FAQ section for billing errors.,kb|confluence,Multiple sources,Hard cases (generated),eval
+q03613,Get the info from the conversation last week.,kb|notion,Multiple sources,Hard cases (generated),eval
+q03614,Summarize the decision discussion about key remote control concepts.,notion,Implied source,QMSum,eval
+q03615,"In 2015, what was the population of the area containing the Euphrates-Tigris basin?",web,Implied source,ConcurrentQA,eval
+q03616,Recover the communication that includes final licensing terms with XYZ Software.,gmail,Implied source,Hard cases (generated),eval
+q03617,Need ndiswrapper but the wireless card is the only network device. Who was helping with that?,slack,Implied source,Ubuntu help chat,eval
+q03618,how can I connect my Squarespace domain to our platform,kb,Implied source,WixQA,eval
+q03619,you've been a great help,,Small talk,CLINC150,eval
+q03620,Verify if the bug fix documentation corresponds with the knowledge base update.,kb|jira,Multiple sources,Hard cases (generated),eval
+q03621,hey how old are you,,Small talk,CLINC150,eval
+q03622,Thanks for the update!,,Small talk,Hard cases (generated),eval
+q03623,check email today,gmail,Names the source,MASSIVE,eval
+q03624,Search for communication regarding the May invoice dispute with GreenHosting from our finance manager.,gmail,Implied source,Hard cases (generated),eval
+q03625,Why did we need the next generation consumer rebalance protocol from KIP-848?,confluence,Implied source,Apache Kafka Confluence,eval
+q03626,any word on what happened with the sales change?,jira|slack,Multiple sources,Hard cases (generated),eval
+q03627,Could you look into that recent situation?,kb|notion,Multiple sources,Hard cases (generated),eval
+q03628,"Back before 0.8.2, producers could ask for acks from N replicas; why was that option removed?",confluence,Implied source,Apache Kafka Confluence,eval
+q03629,how long do backups last,kb,Unclear source,Hard cases (hand-written),eval
+q03630,I need everything we've stored about the mobile app redesign project. Check all resources.,jira|confluence|slack|notion,Multiple sources,Hard cases (generated),eval
+q03631,"Can you check our last year's holiday calendar shared in the team docs, and has the client replied to our latest proposal?",confluence|gmail,Multiple sources,Hard cases (generated),eval
+q03632,Are there any documents on resolving payment gateway errors?,kb,Names the source,Hard cases (generated),eval
+q03633,"Where is the latest QA report on the new chat module, and can you link me to the design review document for the UI improvements?",jira|confluence,Multiple sources,Hard cases (generated),eval
+q03634,where did we land on error budgets,slack|notion,Multiple sources,Hard cases (hand-written),eval
+q03635,is there a formal record on feature flags,confluence,Unclear source,Hard cases (hand-written),eval
+q03636,sprint retrospective notes,notion,Implied source,Hard cases (generated),eval
+q03637,what is don quixote's horse's name,web,Implied source,Natural Questions,eval
+q03638,locate my w-2 form,kb,Implied source,CLINC150,eval
+q03639,"For the Northwind Analytics long-context latency regression after enabling Runtime 1.21 kernel auto-selection v2 on L40S, what mitigations were applied and what is the recommended plan and criteria to safely re-enable v2?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03640,what were people saying about the latency spike,slack,Unclear source,Hard cases (hand-written),eval
+q03641,"What config flag controls enabling the bandwidth-aware fanout planner for TP allreduce on heterogeneous link clusters, and what other new components are called out in the release notes as helping reduce comm and compute stalls?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03642,Dynamic changes to broker thread pool sizes sometimes never get processed — is there a fix?,jira,Implied source,Apache Kafka Jira,eval
+q03643,What city in Alachua County is home to the University of Florida Gators?,web,Implied source,ConcurrentQA,eval
+q03644,"In the HyperOnboard 30-60-90 onboarding template, what are the escalation conditions that should trigger an email to people ops and the hiring manager?",notion,Misleading keyword,EnterpriseRAG-Bench,eval
+q03645,is there a written record of the security review,confluence,Unclear source,Hard cases (hand-written),eval
+q03646,Debezium connectors on Connect emitted zombie records during a rebalance and broke ordering downstream. Anyone looking at this?,jira,Implied source,Apache Kafka Jira,eval
+q03647,See if there’s any progress on that project we spoke about.,kb|notion,Multiple sources,Hard cases (generated),eval
+q03648,"After our single sign on provider URL changed, access approvals look successful in the internal approval UI but engineers still get a forbidden error when trying to open privileged operational tools; what caused the approval to not actually translate into permissions?",jira,Implied source,EnterpriseRAG-Bench,eval
+q03649,"wiki says our founder was 22, is our about page right",kb|web,Misleading keyword,Hard cases (hand-written),eval
+q03650,Show me the latest guidelines on our code review process.,confluence,Implied source,Hard cases (generated),eval
+q03651,can you see if the ux review feedback is updated in jra?,jira,Implied source,Hard cases (generated),eval
+q03652,Can you give an example?,,Small talk,Hard cases (generated),eval
+q03653,Can you find where we discuss the API authentication protocols for our mobile app?,confluence,Implied source,Hard cases (generated),eval
+q03654,Need to review the architecture blueprint we drafted—where is it stored?,confluence,Names the source,Hard cases (generated),eval
+q03655,"In the late Q3 email thread about rescuing a near-lost senior platform hire for a customer-facing performance pipeline, what one-time pay-range exception did People Ops approve (how far above the midpoint)?",gmail,Names the source,EnterpriseRAG-Bench,eval
+q03656,"Which award-winning film starred Andrea Kay ""Missi"" Pyle and was directed by Tim Burton and written by John August?",web,Implied source,ConcurrentQA,eval
+q03657,do we support sso on the free tier,kb,Unclear source,Hard cases (hand-written),eval
+q03658,"gmail keeps logging me out, is that a known problem",jira,Misleading keyword,Hard cases (hand-written),eval
+q03659,i want to transfer my google workspace account from our platform to myself,kb,Implied source,WixQA,eval
+q03660,"I would like to know how to customize the text in automated emails for Bookings (confirmation, cancellation and reminders for users)",kb,Misleading keyword,WixQA,eval
+q03696,Is there a ticket for moving the edge gateway from active-passive to active-active regional failover?,jira,Implied source,EnterpriseRAG company topics,eval
+q03697,What's the root cause of the missing hourly buffer credits after the us-east to eu-west fallback on an embedding batch?,jira,Implied source,EnterpriseRAG company topics,eval
+q03698,Who owns the cross-region mesh golden-signal pipeline for probabilistic admission?,jira,Implied source,EnterpriseRAG company topics,eval
+q03699,status of the eviction prioritizer + canary harness for multi-region shedding?,jira,Implied source,EnterpriseRAG company topics,eval
+q03700,"In jira, is the tenant attribute sync bug that misbinds sessions during HA failover fixed yet?",jira,Names the source,EnterpriseRAG company topics,eval
+q03701,What does the RBAC risk scoring doc say about cross-region entitlements?,confluence,Implied source,EnterpriseRAG company topics,eval
+q03702,Skip the tickets — where's the geo routing control plane architecture page covering GeoDNS/Anycast failover?,confluence,Excludes a source,EnterpriseRAG company topics,eval
+q03703,What's the documented responder workflow and postmortem scaffold we use for incidents?,confluence,Implied source,EnterpriseRAG company topics,eval
+q03704,What does the GPU infra change simulator design say about validating NAT gateway failover for multi-account bursting?,confluence,Implied source,EnterpriseRAG company topics,eval
+q03705,"per the confluence runbook, how are failover and model fallback exercises run for enterprise tenants?",confluence,Names the source,EnterpriseRAG company topics,eval
+q03706,What did the team say about region-aware routing and compatible model fallbacks for the smart routing PRD?,slack,Implied source,EnterpriseRAG company topics,eval
+q03707,Did anyone in incidents figure out why tenant isolation broke during the edge failover?,slack,Implied source,EnterpriseRAG company topics,eval
+q03708,what was said in slack about failover guarantees for dedicated capacity during the rolling kernel CVE patch,slack,Names the source,EnterpriseRAG company topics,eval
+q03709,Who volunteered in the thread to fix the ~5 minute regional routing fallback found in the DR sim?,slack,Implied source,EnterpriseRAG company topics,eval
+q03710,Not the runbook itself — what action list did people post after the regional failover game day?,slack,Excludes a source,EnterpriseRAG company topics,eval
+q03711,Did the customer email about the EU edge 502/503 spike and APAC failover amplifying retries?,gmail,Names the source,EnterpriseRAG company topics,eval
+q03712,Did the prospect reply with available times for the tiering and failover rules workshop?,gmail,Implied source,EnterpriseRAG company topics,eval
+q03713,What did the customer's legal ops ask about the onshore fallback and the new CDN subprocessor in the DPA?,gmail,Implied source,EnterpriseRAG company topics,eval
+q03714,Any update by mail on providing KV warm-start traces from a recent failover test for the SOC2 review?,gmail,Names the source,EnterpriseRAG company topics,eval
+q03715,What did the SI partner propose for the onboarding lab day on hosted-to-dedicated failover routing?,gmail,Implied source,EnterpriseRAG company topics,eval
+q03716,my notes on the client side circuit breaker and warmup sequense for canaries?,notion,Implied source,EnterpriseRAG company topics,eval
+q03717,What did we settle on for routing policy precedence in the multi-region control-plane playbook?,notion,Implied source,EnterpriseRAG company topics,eval
+q03718,"In the scaling failsafe PRD draft, what did we propose for graceful failover lanes when capacity is tight?",notion,Implied source,EnterpriseRAG company topics,eval
+q03719,My notes on trust messaging — how are we pitching layered fallbacks and multi-region routing to buyers?,notion,Implied source,EnterpriseRAG company topics,eval
+q03720,What's in the content backlog from the SDK mini-workshop planning notes?,notion,Implied source,EnterpriseRAG company topics,eval
+q03721,What are the steps from the shift playbook for handling a partial eu-west degradation during the regional handoff?,kb,Implied source,EnterpriseRAG company topics,eval
+q03722,What's the policy for HSM failover and emergency key rotation in a BYO-HSM private deployment?,kb,Implied source,EnterpriseRAG company topics,eval
+q03723,How do I collect audit evidence during an incident when cross-region data residency constraints apply?,kb,Implied source,EnterpriseRAG company topics,eval
+q03724,"What's the procedure for staggered GPU capacity provisioning across NA, EU and APAC regions?",kb,Implied source,EnterpriseRAG company topics,eval
+q03725,"not the chat thread, how much spare capacity are we supposed to hold per region for gpu fleet failover",kb,Excludes a source,EnterpriseRAG company topics,eval
+q03726,What is the difference between active-active and active-passive failover?,web,Implied source,EnterpriseRAG company topics,eval
+q03727,How does GeoDNS reroute traffic during a regional outage?,web,Implied source,EnterpriseRAG company topics,eval
+q03728,what do RTO and RPO mean in disaster recovery,web,Implied source,EnterpriseRAG company topics,eval
+q03729,How does Anycast help with cross-region failover?,web,Implied source,EnterpriseRAG company topics,eval
+q03730,What are best practices for multi-region failover on AWS?,web,Implied source,EnterpriseRAG company topics,eval
+q04210,Is there a ticket for the contracted canary orchestrator that auto-creates issues for postmortems?,jira,Implied source,EnterpriseRAG company topics,eval
+q04211,status of the call-stack snapshot propagator for annotated postmortems?,jira,Implied source,EnterpriseRAG company topics,eval
+q04212,"What was the root cause of the cross-region variant misassignment incident, and who owns the post-incident fixes?",jira,Implied source,EnterpriseRAG company topics,eval
+q04213,"Not the postmortem doc itself, is the safe failure-replay CLI for post-incident debugging merged?",jira,Excludes a source,EnterpriseRAG company topics,eval
+q04214,What's the jira follow-up for the orchestrator peering incident with session thrash in EU-West-1?,jira,Names the source,EnterpriseRAG company topics,eval
+q04215,What does the rapid stabilization cadre kit say about the postmortem rubric for sprint incidents?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04216,Where's the documented incident lifecycle and operator runloop for model serving?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04217,which customer-impacting incidents are on the 2026 H1 incident review rollup page,confluence,Implied source,EnterpriseRAG company topics,eval
+q04218,What's the documented procedure for building a provenance ledger during a regression hunt?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04219,"Not the slack thread, the wiki doc on operator escape hatches — what did recent postmortems flag?",confluence,Excludes a source,EnterpriseRAG company topics,eval
+q04220,Who took the backfill job after the billing ingest postmortem in the finance channel?,slack,Names the source,EnterpriseRAG company topics,eval
+q04221,What did the weekly announcement say about the root cause of the cache-eviction incident?,slack,Implied source,EnterpriseRAG company topics,eval
+q04222,did anyone claim the KV cache leak action from the postmortem action slate in chat,slack,Implied source,EnterpriseRAG company topics,eval
+q04223,What alert tuning items did oncall split up in chat after last night's pager postmortem?,slack,Implied source,EnterpriseRAG company topics,eval
+q04224,"Not confluence, what did the architecture channel propose about switchback gates and postmortem telemetry?",slack,Excludes a source,EnterpriseRAG company topics,eval
+q04225,Did the customer's security team email asking for the pentest report after the incident?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04226,What did the closure summary email say about the preventative plan after the service incident?,gmail,Names the source,EnterpriseRAG company topics,eval
+q04227,any reply on the SLA restitution and credit calc after the oct 15 incident postmortem,gmail,Implied source,EnterpriseRAG company topics,eval
+q04228,Did the fintech customer email requesting our incident response plan and SOC 2 inputs after the auth anomaly?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04229,What did their legal team ask by email about post-incident cooperation windows and subprocessor handover?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04230,What did we agree in the heatmap demo about using trace stitching to speed incident handoffs?,notion,Implied source,EnterpriseRAG company topics,eval
+q04231,"My summit travel notes, where did I put the per-diem and expense workflow?",notion,Implied source,EnterpriseRAG company topics,eval
+q04232,Action items from the KMS rotation postmortem review meeting?,notion,Names the source,EnterpriseRAG company topics,eval
+q04233,what did we decide in the token throttle sync about root-cause repro and SLO changes,notion,Implied source,EnterpriseRAG company topics,eval
+q04234,"My notes on the 90-day SLO mini-pilot, what's on the ops handoff checklist?",notion,Implied source,EnterpriseRAG company topics,eval
+q04235,How do I produce stakeholder-facing postmortem artifacts for long-tail regressions?,kb,Implied source,EnterpriseRAG company topics,eval
+q04236,What's the procedure for post-incident follow-up after a dedicated capacity surge?,kb,Implied source,EnterpriseRAG company topics,eval
+q04237,"not the incident rollup, is there an official template for postmortem writeups and exec summaries",kb,Excludes a source,EnterpriseRAG company topics,eval
+q04238,What are the first steps to triage a perf regression and collect artifacts for a postmortem?,kb,Implied source,EnterpriseRAG company topics,eval
+q04239,How do I run an expansion conversation when a customer asks for SLA guarantees post-incident?,kb,Implied source,EnterpriseRAG company topics,eval
+q04240,What makes a postmortem blameless?,web,Implied source,EnterpriseRAG company topics,eval
+q04241,what's the 5 whys technique for root cause analysis,web,Implied source,EnterpriseRAG company topics,eval
+q04242,How does Google's SRE book recommend writing incident postmortems?,web,Implied source,EnterpriseRAG company topics,eval
+q04243,"What is the difference between MTTR, MTTD and MTTA in incident management?",web,Implied source,EnterpriseRAG company topics,eval
+q04244,What should a public incident report on a status page include?,web,Implied source,EnterpriseRAG company topics,eval
+q04245,Is there a ticket for the min-throughput allocator that replaces token-bucket rate limiting with a staged overload shedder?,jira,Implied source,EnterpriseRAG company topics,eval
+q04246,what's the status of the PR adding a per-tenant leaky bucket sample-rate limiter for noisy tenants?,jira,Implied source,EnterpriseRAG company topics,eval
+q04247,Who's assigned the Org Join Governor work with team-level invite throttles?,jira,Implied source,EnterpriseRAG company topics,eval
+q04248,Has the admin proxy that stops noisy retries and throttling against control planes been merged yet?,jira,Implied source,EnterpriseRAG company topics,eval
+q04249,"In jira, is the switchback operator with rate-limited reconciliation done, or are checklist items still open?",jira,Names the source,EnterpriseRAG company topics,eval
+q04250,What does the SDK design guidance say about handling global rate-limit storms with tenant-scoped local fallbacks?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04251,Where's the design doc for the GPU egress proxy shim that does tenant-aware egress shaping?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04252,What does the ADR specify for re-notification thresholds when routing PLG signals into HubSpot?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04253,Pull up the wiki runbook for first responders handling API rate-limit surges and KV cache eviction storms.,confluence,Names the source,EnterpriseRAG company topics,eval
+q04254,What does the Incident Bot Diagnostics v2 spec say gets attached about quotas and config diffs?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04255,did anyone in incidents figure out why the VPC peering flap caused rate-limited retransmits during KV sync?,slack,Implied source,EnterpriseRAG company topics,eval
+q04256,Skip the support ticket — what did SRE folks suggest in chat about the repeated 429s and autoscaler bouncing?,slack,Excludes a source,EnterpriseRAG company topics,eval
+q04257,"Not the PRD itself, what did people say in chat about adding a rate limit error-state example to the docs?",slack,Excludes a source,EnterpriseRAG company topics,eval
+q04258,"In the customer-success channel, which accounts were flagged for 429 rate-limit errors in the weekly health pulse?",slack,Names the source,EnterpriseRAG company topics,eval
+q04259,What was the quick fix someone shared when rate-limiter-v2 canary started throwing a 429 spike?,slack,Implied source,EnterpriseRAG company topics,eval
+q04260,Did the customer's head of SRE email asking for temporary rate limits or a region shift during the AZ1 token churn?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04261,What did our account rep say by mail about concurrency and streaming UX in the Finly performance summary?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04262,any update by email on the HealthOps LLM vendor dependency assessment next steps?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04263,"Not chat, the email: did the customer reply about a sandbox quota uplift to avoid rate limits during the 48h rehearsal?",gmail,Excludes a source,EnterpriseRAG company topics,eval
+q04264,Check the email thread on gateway adapter onboarding — what's in the rate-safety playbook they sent?,gmail,Names the source,EnterpriseRAG company topics,eval
+q04265,My notes on tiered eval guardrails mention more generous rate limits from cheaper variants — what thresholds did we propose?,notion,Implied source,EnterpriseRAG company topics,eval
+q04266,What's on the backlog from our throttle visibility explorations for the console quota pages?,notion,Implied source,EnterpriseRAG company topics,eval
+q04267,Action items from the onboarding bridgework sync on the intermittent 429s seen in staging?,notion,Implied source,EnterpriseRAG company topics,eval
+q04268,What did my investigation notes conclude about burst allocation OOMs on multi-tenant pools?,notion,Implied source,EnterpriseRAG company topics,eval
+q04269,oncall hackbook notes — what temp fixes did we jot down for client 429 rate surges?,notion,Implied source,EnterpriseRAG company topics,eval
+q04270,How do I use the rolling coverage checklist during short throttle blips or capacity constraints?,kb,Implied source,EnterpriseRAG company topics,eval
+q04271,What guardrails like rate limits does the ops and econ stability playbook recommend before launch?,kb,Implied source,EnterpriseRAG company topics,eval
+q04272,What are the steps in the Console onboarding checklist to reach a first successful API call?,kb,Implied source,EnterpriseRAG company topics,eval
+q04273,Not what people said in slack — how do I officially triage a sudden 429 storm per the oncall quick-playbook?,kb,Excludes a source,EnterpriseRAG company topics,eval
+q04274,What's the policy for rate-controlling egress with GPU burst credit pooling per tenant?,kb,Implied source,EnterpriseRAG company topics,eval
+q04275,What is the difference between token bucket and leaky bucket rate limiting algorithms?,web,Implied source,EnterpriseRAG company topics,eval
+q04276,what does HTTP status 429 Too Many Requests mean and what's the Retry-After header for,web,Implied source,EnterpriseRAG company topics,eval
+q04277,How does sliding window rate limiting work compared to fixed window counters?,web,Implied source,EnterpriseRAG company topics,eval
+q04278,Why should API clients use exponential backoff with jitter when rate limited?,web,Implied source,EnterpriseRAG company topics,eval
+q04279,How do distributed rate limiters typically use Redis to share counters across servers?,web,Implied source,EnterpriseRAG company topics,eval
+q04350,Is there a ticket for the Responses compatibility mismatches in streaming events and structured output embedding?,jira,Implied source,EnterpriseRAG company topics,eval
+q04351,Not the slack discussion — what's the ticket status of the fair-queueing provisioner for embedding throughput?,jira,Excludes a source,EnterpriseRAG company topics,eval
+q04352,who's assigned the automated gating for multilingual reranker cross-encoder upgrades,jira,Implied source,EnterpriseRAG company topics,eval
+q04353,What's the root cause of CORS preflight requests counting against quota during bulk embed uploads?,jira,Implied source,EnterpriseRAG company topics,eval
+q04354,Check jira: is the embedding queue compaction fix for p99 spikes merged yet?,jira,Names the source,EnterpriseRAG company topics,eval
+q04355,What does the shadowing lab protocol say about using embedding cosine similarity to measure retrieval fidelity?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04356,Where's the lab notebook for heterogeneous GPU fleet shaping experiments?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04357,What does the multi-cloud GPU bursting doc say about handling embeddings and reranking traffic during bursts?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04358,What does the service contract versioning manual say about capacity for embedding backfills?,confluence,Implied source,EnterpriseRAG company topics,eval
+q04359,Pull up the schema migration ADR on the wiki — how are embeddings payloads handled across services?,confluence,Names the source,EnterpriseRAG company topics,eval
+q04360,what did the ml channel say about using embedding fingerprints with cosine > 0.98 for the prefix cache,slack,Implied source,EnterpriseRAG company topics,eval
+q04361,Did anyone in support figure out the 429 spike on the rerank endpoint for that escalated customer?,slack,Implied source,EnterpriseRAG company topics,eval
+q04362,What did people say in chat about the int4 embedding model's recall@1 drop on short queries?,slack,Implied source,EnterpriseRAG company topics,eval
+q04363,"Not the runbook, what did oncall say in chat about kv-cache evictions slowing embedding reads?",slack,Excludes a source,EnterpriseRAG company topics,eval
+q04364,Was there a quick fix shared in slack for SDK retries ignoring Retry-After when paginating embeddings?,slack,Names the source,EnterpriseRAG company topics,eval
+q04365,Did the prospect reply to the welcome email to pick a time with the SDR concierge?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04366,What did the AE email about next steps for the clinical search and nightly batch embedding evaluation?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04367,Any update by mail on clarifying per-embedding vs operator license pricing for VPC?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04368,Did someone reply to the inbound demo request for an embedding plus generation pipeline?,gmail,Implied source,EnterpriseRAG company topics,eval
+q04369,what did the customer email about p95/p99 embeddings spikes after the model catalog sync,gmail,Implied source,EnterpriseRAG company topics,eval
+q04370,My notes on the exposure governor — what did I write about canaries for multi-model reranker flows?,notion,Implied source,EnterpriseRAG company topics,eval
+q04371,What did we agree in the relevance sprint call walking the prospect through embeddings and rerank endpoints?,notion,Implied source,EnterpriseRAG company topics,eval
+q04372,"From the POC notes, did the hosted option meet the qps target for the search embeddings pipeline?",notion,Implied source,EnterpriseRAG company topics,eval
+q04373,"Not the wiki — in our 90-day ops stability canvas, what's planned for the embeddings route?",notion,Excludes a source,EnterpriseRAG company topics,eval
+q04374,"In my evals workbook notes, what loader patterns did we use for onboarding reranking and embedding models?",notion,Names the source,EnterpriseRAG company topics,eval
+q04375,How do I set up gating rules on embedding drift with the cohort-aware probe generator?,kb,Implied source,EnterpriseRAG company topics,eval
+q04376,What are the steps to migrate traffic off the legacy embeddings model before it's sunset?,kb,Implied source,EnterpriseRAG company topics,eval
+q04377,What's the guidance on pricing tier messaging for embeddings and reranking?,kb,Implied source,EnterpriseRAG company topics,eval
+q04378,which GPU instance type gives the best $/token for embeddings according to the benchmark playbook,kb,Implied source,EnterpriseRAG company topics,eval
+q04379,What's on the technical onboarding checklist for the fintech pilot's nightly bulk embeddings?,kb,Implied source,EnterpriseRAG company topics,eval
+q04380,What is the difference between a bi-encoder embedding model and a cross-encoder reranker?,web,Implied source,EnterpriseRAG company topics,eval
+q04381,How does cosine similarity work for comparing text embeddings?,web,Implied source,EnterpriseRAG company topics,eval
+q04382,why add a reranking stage after vector search in a RAG pipeline,web,Implied source,EnterpriseRAG company topics,eval
+q04383,What is recall@k and how is it used to evaluate embedding retrieval quality?,web,Implied source,EnterpriseRAG company topics,eval
+q04384,How does approximate nearest neighbor search like HNSW speed up embedding lookup?,web,Implied source,EnterpriseRAG company topics,eval

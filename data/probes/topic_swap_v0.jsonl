@@ -1,0 +1,30 @@
+{"id": "ts001", "text": "what did the team say in chat about the website payment plan issue", "labels": ["slack"], "borrowed_topic": "kb/website"}
+{"id": "ts002", "text": "someone in the channel shared a fix for the domain not connecting, what was it", "labels": ["slack"], "borrowed_topic": "kb/website"}
+{"id": "ts003", "text": "did anyone in chat figure out why the consumer lag keeps growing", "labels": ["slack"], "borrowed_topic": "jira/streaming"}
+{"id": "ts004", "text": "what did people say in the thread about the new expense policy", "labels": ["slack"], "borrowed_topic": "kb/HR"}
+{"id": "ts005", "text": "is there a ticket for the grub boot failure on the build servers", "labels": ["jira"], "borrowed_topic": "slack/linux"}
+{"id": "ts006", "text": "is the bug where the checkout page breaks on mobile fixed yet", "labels": ["jira"], "borrowed_topic": "kb/website"}
+{"id": "ts007", "text": "has anyone filed a bug about the wifi driver crashing on the new laptops", "labels": ["jira"], "borrowed_topic": "slack/linux"}
+{"id": "ts008", "text": "what's the status of the payroll export bug", "labels": ["jira"], "borrowed_topic": "kb/HR"}
+{"id": "ts009", "text": "where's the design doc for migrating our website to the new editor", "labels": ["confluence"], "borrowed_topic": "kb/website"}
+{"id": "ts010", "text": "what does the runbook say about recovering a server that won't boot", "labels": ["confluence"], "borrowed_topic": "slack/linux"}
+{"id": "ts011", "text": "why did we decide on the new 401k provider, is there a spec page", "labels": ["confluence"], "borrowed_topic": "kb/HR"}
+{"id": "ts012", "text": "what's the architecture proposal for the email archiving service", "labels": ["confluence"], "borrowed_topic": "gmail"}
+{"id": "ts013", "text": "how do I set up direct deposit for my paycheck", "labels": ["kb"], "borrowed_topic": "kb/HR"}
+{"id": "ts014", "text": "how do I install the vpn client on linux", "labels": ["kb"], "borrowed_topic": "slack/linux"}
+{"id": "ts015", "text": "what's the official policy on reporting a security incident", "labels": ["kb"], "borrowed_topic": "confluence"}
+{"id": "ts016", "text": "how do I request access to the analytics dashboard", "labels": ["kb"], "borrowed_topic": "jira"}
+{"id": "ts017", "text": "what did we decide in monday's meeting about the website redesign", "labels": ["notion"], "borrowed_topic": "kb/website"}
+{"id": "ts018", "text": "my notes from the call about the broker upgrade", "labels": ["notion"], "borrowed_topic": "jira/streaming"}
+{"id": "ts019", "text": "what were the action items from the linux migration sync", "labels": ["notion"], "borrowed_topic": "slack/linux"}
+{"id": "ts020", "text": "summary of the 1:1 where we discussed the payroll change", "labels": ["notion"], "borrowed_topic": "kb/HR"}
+{"id": "ts021", "text": "did the client reply about the website launch date", "labels": ["gmail"], "borrowed_topic": "kb/website"}
+{"id": "ts022", "text": "any emails from the vendor about the server outage", "labels": ["gmail"], "borrowed_topic": "slack/linux"}
+{"id": "ts023", "text": "did hr send me anything about the insurance change", "labels": ["gmail"], "borrowed_topic": "kb/HR"}
+{"id": "ts024", "text": "did the customer write back about the streaming cluster contract", "labels": ["gmail"], "borrowed_topic": "jira/streaming"}
+{"id": "ts025", "text": "what's the latest version of the linux kernel", "labels": ["web"], "borrowed_topic": "slack/linux"}
+{"id": "ts026", "text": "what is the average cost of a domain name", "labels": ["web"], "borrowed_topic": "kb/website"}
+{"id": "ts027", "text": "what is the federal 401k contribution limit this year", "labels": ["web"], "borrowed_topic": "kb/HR"}
+{"id": "ts028", "text": "who invented the email", "labels": ["web"], "borrowed_topic": "gmail"}
+{"id": "ts029", "text": "hey thanks a lot", "labels": [], "borrowed_topic": "control"}
+{"id": "ts030", "text": "good morning, how are you", "labels": [], "borrowed_topic": "control"}

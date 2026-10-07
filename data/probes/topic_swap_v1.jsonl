@@ -1,0 +1,70 @@
+{"id": "tsv1_001", "text": "how do i submit a pto request for a half day", "labels": ["kb"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_002", "text": "How do I get access to the model serving billing dashboard through single sign-on?", "labels": ["kb"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_003", "text": "What's the expense policy for buying a domain name on a company card?", "labels": ["kb"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_004", "text": "What is our policy on recording video meetings that include external participants?", "labels": ["kb"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_005", "text": "how do I install the printer driver on ubuntu", "labels": ["kb"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_006", "text": "Is there a help article explaining how to rotate my API key for the inference gateway?", "labels": ["kb"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_007", "text": "How do I reset my password for the event streaming console?", "labels": ["kb"], "borrowed_topic": "c streaming_data_infra"}
+{"id": "tsv1_008", "text": "What's the official policy on taking customer card payments over the phone for online store orders?", "labels": ["kb"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_009", "text": "Where's the help center article listing which national holidays the company observes this year?", "labels": ["kb"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_010", "text": "What are the official guidelines for booking a conference room for a product design review?", "labels": ["kb"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_011", "text": "is the ticket for the broken wifi on the linux laptops resolved yet", "labels": ["jira"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_012", "text": "What's the status of the bug where the payroll export drops overtime hours?", "labels": ["jira"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_013", "text": "Who is assigned to fix the wrong capital city showing in the country dropdown?", "labels": ["jira"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_014", "text": "Which sprint is the task for the onboarding redesign mockups scheduled in?", "labels": ["jira"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_015", "text": "Is the checkout payment failure bug on the online store still open?", "labels": ["jira"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_016", "text": "what's the priority on the kv cache eviction bug", "labels": ["jira"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_017", "text": "How many open issues are left in the consumer lag epic?", "labels": ["jira"], "borrowed_topic": "c streaming_data_infra"}
+{"id": "tsv1_018", "text": "Is there a Jira ticket blocking the release because of the benefits enrollment page error?", "labels": ["jira"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_019", "text": "Show me the tickets filed this week about desktop audio breaking after the OS update.", "labels": ["jira"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_020", "text": "Who's working on the SSO login loop bug for the inference portal?", "labels": ["jira"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_021", "text": "Where's the design doc for the new PTO accrual calculation service?", "labels": ["confluence"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_022", "text": "Is there a runbook the IT team follows for reimaging Linux developer workstations?", "labels": ["confluence"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_023", "text": "Find the technical spec for the geography quiz game we're building into the employee app.", "labels": ["confluence"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_024", "text": "Pull up the architecture doc for the online store's payment integration.", "labels": ["confluence"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_025", "text": "Where's the product requirements doc for the meeting room booking feature?", "labels": ["confluence"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_026", "text": "What does the runbook say to do when GPU capacity runs out during a traffic spike?", "labels": ["confluence"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_027", "text": "Find the data model spec for the benefits enrollment system on Confluence.", "labels": ["confluence"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_028", "text": "Is there a design document for migrating our domain DNS to the new provider?", "labels": ["confluence"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_029", "text": "where's the spec for the public holidays calendar service that feeds the scheduling app", "labels": ["confluence"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_030", "text": "Find the design doc for the Linux fleet patching pipeline.", "labels": ["confluence"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_031", "text": "did anyone in the team channel complain about the new dental plan", "labels": ["slack"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_032", "text": "Someone posted a fix for the Linux display flicker in chat yesterday, can you find it?", "labels": ["slack"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_033", "text": "There was a debate in the random channel about the tallest mountain in the world. What did people conclude?", "labels": ["slack"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_034", "text": "What were folks saying in the channel when the store launch page went down?", "labels": ["slack"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_035", "text": "Find the thread where engineers argued about raising the GPU quota.", "labels": ["slack"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_036", "text": "Did anyone mention in the incidents channel that the broker kept restarting?", "labels": ["slack"], "borrowed_topic": "c streaming_data_infra"}
+{"id": "tsv1_037", "text": "Who reacted to the redesign mockup that was shared in the design channel?", "labels": ["slack"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_038", "text": "Find the direct message where my manager pinged me about my time off.", "labels": ["slack"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_039", "text": "what was the back-and-forth in the channel about latency spikes this morning", "labels": ["slack"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_040", "text": "Someone dropped a link to a domain registrar discount in a Slack thread, what was it?", "labels": ["slack"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_041", "text": "What did I write in my notes from the benefits orientation session?", "labels": ["notion"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_042", "text": "Pull up my personal notes on how I set up my Linux dotfiles.", "labels": ["notion"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_043", "text": "Find my personal notes with the trivia questions I drafted for the team offsite.", "labels": ["notion"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_044", "text": "What were the action items in the meeting notes from the store launch sync?", "labels": ["notion"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_045", "text": "Find the meeting notes from Tuesday's consumer lag retro.", "labels": ["notion"], "borrowed_topic": "c streaming_data_infra"}
+{"id": "tsv1_046", "text": "What did we decide according to the notes from the GPU capacity planning meeting?", "labels": ["notion"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_047", "text": "my notes from the 1:1 where we talked about my raise", "labels": ["notion"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_048", "text": "I jotted down some fun facts about the moon landing for a presentation. Where are those notes?", "labels": ["notion"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_049", "text": "Open the Notion page with the meeting notes from the KV cache review with the infra team.", "labels": ["notion"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_050", "text": "Find the notes I took during the call with the payment processor about fees.", "labels": ["notion"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_051", "text": "Did the registrar send an email confirming the domain renewal?", "labels": ["gmail"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_052", "text": "Did HR send me the email with my revised offer letter?", "labels": ["gmail"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_053", "text": "Find the email IT sent me with the Linux laptop pickup instructions.", "labels": ["gmail"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_054", "text": "Who emailed me that article about the history of the calendar?", "labels": ["gmail"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_055", "text": "Did the GPU vendor reply to my email about the capacity reservation?", "labels": ["gmail"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_056", "text": "Check my inbox for the alert email about disk usage on the streaming cluster.", "labels": ["gmail"], "borrowed_topic": "c streaming_data_infra"}
+{"id": "tsv1_057", "text": "Did the customer email back their feedback on the dashboard mockups?", "labels": ["gmail"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_058", "text": "Find the invoice email for last month's inference billing.", "labels": ["gmail"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_059", "text": "did my manager reply to my email asking for friday off", "labels": ["gmail"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_060", "text": "There's a newsletter email about Olympic host cities somewhere in my inbox, can you find it?", "labels": ["gmail"], "borrowed_topic": "f general_trivia"}
+{"id": "tsv1_061", "text": "What is the federal minimum wage in the United States?", "labels": ["web"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_062", "text": "What's the difference between the apt and snap package managers in general?", "labels": ["web"], "borrowed_topic": "a linux_desktop_it"}
+{"id": "tsv1_063", "text": "In general, how does a log-based message broker guarantee message ordering?", "labels": ["web"], "borrowed_topic": "c streaming_data_infra"}
+{"id": "tsv1_064", "text": "What is a KV cache in transformer inference?", "labels": ["web"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_065", "text": "How long do DNS record changes typically take to propagate across the internet?", "labels": ["web"], "borrowed_topic": "b website_store_domains_payments"}
+{"id": "tsv1_066", "text": "What is the double diamond design process?", "labels": ["web"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_067", "text": "how many public holidays does germany have", "labels": ["web"], "borrowed_topic": "d hr_payroll_benefits_pto"}
+{"id": "tsv1_068", "text": "How much memory does a typical high-end data center GPU have?", "labels": ["web"], "borrowed_topic": "g ai_model_serving"}
+{"id": "tsv1_069", "text": "What are some widely recommended techniques for running more effective meetings?", "labels": ["web"], "borrowed_topic": "e meetings_product_design"}
+{"id": "tsv1_070", "text": "What does PCI DSS compliance generally require from online stores that take card payments?", "labels": ["web"], "borrowed_topic": "b website_store_domains_payments"}
