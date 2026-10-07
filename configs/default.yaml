@@ -1,0 +1,9 @@
+# Every setting lives here. A missing setting is an error.
+# Learned values (gate, thresholds) are NOT here: they are saved with each model.
+
+# Who answers the user: model_only | gated | shadow
+mode: shadow
+
+# When the model answers alone, it must be right at least this often.
+# The gate is computed from this in Phase 4 (never typed by hand).
+accuracy_floor: 0.80
