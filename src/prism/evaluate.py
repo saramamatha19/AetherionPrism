@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
     settings = load_settings()
     questions = load_questions("data/eval.csv")
-    model, thresholds = train_small_model(settings, features=build_tfidf())
+    model, thresholds, _, _ = train_small_model(settings, features=build_tfidf())
 
     results = {}
     results["keyword rules"] = evaluate(keyword_rules, questions)
