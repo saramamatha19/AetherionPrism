@@ -14,6 +14,9 @@ class Settings(BaseModel):
 
     mode: Literal["model_only", "gated", "shadow"]  # only these 3 words allowed
     accuracy_floor: float = Field(gt=0.5, lt=1)  # must be between 0.5 and 1
+    seed: int
+    threshold_slice_size: int = Field(gt=0)  # must be a positive number
+    gate_slice_size: int = Field(gt=0)
 
 
 def load_settings(path: str | Path = "configs/default.yaml") -> Settings:

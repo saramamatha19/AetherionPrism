@@ -61,9 +61,31 @@ def print_report(student_name: str, result: dict) -> None:
         print(f"{source:<22}{s['precision']:>10.1%}{s['recall']:>9.1%}{s['f1']:>12.1%}")
 
 
+def print_comparison(results: dict) -> None:
+    """One row per student: the key numbers side by side."""
+    print(f"\n{'Comparison':<22}{'All exact':>10}{'Real-world exact':>18}{'All needed':>12}")
+    for name, r in results.items():
+        all_exact = r["all"]["exact_match"]
+        real_exact = r["by_part"]["real-world"]["exact_match"]
+        all_needed = r["all"]["found_all_needed"]
+        print(f"{name:<22}{all_exact:>10.1%}{real_exact:>18.1%}{all_needed:>12.1%}")
+
+
 if __name__ == "__main__":
     from prism.baselines import keyword_rules
+    from prism.config import load_settings
     from prism.data import load_questions
+    from prism.pipeline import make_student, train_small_model
+    from prism.tfidf import build_tfidf
 
+    settings = load_settings()
     questions = load_questions("data/eval.csv")
-    print_report("keyword rules", evaluate(keyword_rules, questions))
+    model, thresholds = train_small_model(settings, features=build_tfidf())
+
+    results = {}
+    results["keyword rules"] = evaluate(keyword_rules, questions)
+    results["tfidf + logreg"] = evaluate(make_student(model, thresholds), questions)
+
+    for name, result in results.items():
+        print_report(name, result)
+    print_comparison(results)

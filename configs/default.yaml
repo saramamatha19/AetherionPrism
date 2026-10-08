@@ -7,3 +7,8 @@ mode: shadow
 # When the model answers alone, it must be right at least this often.
 # The gate is computed from this in Phase 4 (never typed by hand).
 accuracy_floor: 0.80
+
+# How train is cut into slices (Phase 3). Same seed → same split every run.
+seed: 42
+threshold_slice_size: 500
+gate_slice_size: 500
