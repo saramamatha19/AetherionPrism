@@ -9,8 +9,8 @@ from prism.data import load_questions
 from prism.evaluate import evaluate
 from prism.gate import coverage_at
 from prism.logreg import scores
-from prism.pipeline import confidences_and_correct, make_student
-from prism.registry import MODELS_DIR, load_model
+from prism.pipeline import confidences_and_correct, make_student, routing_confidences
+from prism.registry import MODELS_DIR, load_card, load_model
 from prism.thresholds import apply_thresholds
 
 RESULTS_FILE = Path("results/model_comparison.md")
@@ -27,9 +27,7 @@ def percentile(values: list[float], p: int) -> float:
 
 def speed_ms(model, thresholds, questions) -> tuple[float, float]:
     """Time each question on its own (model already loaded) → p50 and p95 in milliseconds."""
-    scores(
-        model, "warm-up"
-    )  # the first call loads things; not timed (plan: warm-up never counts)
+    scores(model, "warm-up")  # the first call loads things; not timed (plan: warm-up never counts)
     times = []
     for q in questions:
         start = time.perf_counter()
@@ -56,10 +54,15 @@ def compare_one(version: str, questions) -> dict:
     model, thresholds, gate = load_model(version)
     result = evaluate(make_student(model, thresholds), questions)
     confidences, correct = confidences_and_correct(model, thresholds, questions)
-    overall = coverage_at(confidences, correct, gate)
-    real_world = gate_on_part(confidences, correct, questions, "real-world", gate)
-    company = gate_on_part(confidences, correct, questions, "company topics", gate)
-    hard = gate_on_part(confidences, correct, questions, "hard cases", gate)
+
+    # Was this model saved with the negation rule on? (older cards don't have the setting → off)
+    rule_on = load_card(version)["settings"].get("negation_to_llm", False)
+    routing = routing_confidences(confidences, questions, rule_on)
+
+    overall = coverage_at(routing, correct, gate)
+    real_world = gate_on_part(routing, correct, questions, "real-world", gate)
+    company = gate_on_part(routing, correct, questions, "company topics", gate)
+    hard = gate_on_part(routing, correct, questions, "hard cases", gate)
 
     p50, p95 = speed_ms(model, thresholds, questions)
     size_mb = (MODELS_DIR / version / "model.joblib").stat().st_size / 1_000_000
@@ -74,6 +77,7 @@ def compare_one(version: str, questions) -> dict:
         "all_needed": result["all"]["found_all_needed"],
         # Table 2: after the gate
         "gate": gate,
+        "negation_rule": "on" if rule_on else "off",
         "coverage": overall["coverage"],
         "kept_accuracy": overall["accuracy"],
         "real_world_coverage": real_world["coverage"],
@@ -92,9 +96,7 @@ def compare_one(version: str, questions) -> dict:
 if __name__ == "__main__":
     versions = sys.argv[1:]
     if not versions:
-        raise SystemExit(
-            "Usage: uv run python -m prism.compare <version> <version> ..."
-        )
+        raise SystemExit("Usage: uv run python -m prism.compare <version> <version> ...")
 
     questions = load_questions("data/eval.csv")
     rows = []
@@ -110,10 +112,10 @@ if __name__ == "__main__":
     table2 = [
         "### Table 2: After the gate",
         "",
-        "| model | gate | coverage | right on kept | real-world coverage "
+        "| model | negation rule | gate | coverage | right on kept | real-world coverage "
         "| real-world right on kept | company coverage | company right on kept "
         "| hard-case coverage | hard-case kept |",
-        "|---|---|---|---|---|---|---|---|---|---|",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     table3 = [
         "### Table 3: Speed and size",
@@ -140,7 +142,8 @@ if __name__ == "__main__":
             f"| {r['company_exact']:.1%} | {r['hard_exact']:.1%} | {r['all_needed']:.1%} |"
         )
         table2.append(
-            f"| {r['version']} | {r['gate']} | {r['coverage']:.1%} | {r['kept_accuracy']:.1%} "
+            f"| {r['version']} | {r['negation_rule']} | {r['gate']} | {r['coverage']:.1%} "
+            f"| {r['kept_accuracy']:.1%} "
             f"| {r['real_world_coverage']:.1%} | {r['real_world_kept_accuracy']:.1%} "
             f"| {r['company_coverage']:.1%} | {r['company_kept_accuracy']:.1%} "
             f"| {r['hard_coverage']:.1%} | {r['hard_kept_accuracy']:.1%} |"
@@ -148,9 +151,7 @@ if __name__ == "__main__":
         table3.append(
             f"| {r['version']} | {r['p50_ms']:.1f} | {r['p95_ms']:.1f} | {r['size_mb']:.2f} |"
         )
-        table4.append(
-            f"| {r['version']} | {r['all_exact']:.1%} | {r['kept_accuracy']:.1%} |"
-        )
+        table4.append(f"| {r['version']} | {r['all_exact']:.1%} | {r['kept_accuracy']:.1%} |")
         parts = [
             ("all", r["all_exact"], r["coverage"], r["kept_accuracy"]),
             (

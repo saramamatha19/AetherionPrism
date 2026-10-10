@@ -1,0 +1,39 @@
+{
+  "version": "tfidf_ftv2_bge_logreg_v2",
+  "created": "2026-10-11 03:06",
+  "recipe": "tfidf_ftv2_bge_logreg",
+  "settings": {
+    "mode": "shadow",
+    "accuracy_floor": 0.8,
+    "seed": 42,
+    "threshold_slice_size": 500,
+    "gate_slice_size": 500,
+    "finetune_epochs": 1,
+    "finetune_batch_size": 16,
+    "finetune_augment_count": 1000,
+    "finetune_on_fit_half": true,
+    "negation_to_llm": true
+  },
+  "train_data_fingerprint": "d343b615dcfb",
+  "thresholds": {
+    "kb": 0.45,
+    "jira": 0.45,
+    "confluence": 0.4,
+    "slack": 0.5,
+    "notion": 0.5,
+    "gmail": 0.5,
+    "web": 0.45
+  },
+  "gate": 0.13,
+  "gate_slice": {
+    "coverage": 0.782,
+    "accuracy": 0.8005115089514067
+  },
+  "eval": {
+    "all_exact": 0.6366666666666667,
+    "real_world_exact": 0.84,
+    "all_needed": 0.6825,
+    "coverage": 0.7625,
+    "kept_accuracy": 0.7125683060109289
+  }
+}

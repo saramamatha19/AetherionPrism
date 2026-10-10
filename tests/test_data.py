@@ -2,7 +2,7 @@
 
 import pytest
 
-from prism.data import load_questions, parse_labels, split_train
+from prism.data import load_questions, parse_labels, split_fit_in_half, split_train
 
 
 # 1. The frozen eval set is complete (1,200 rows: 500 / 560 / 140)
@@ -23,7 +23,9 @@ def test_unknown_label_is_an_error():
     with pytest.raises(ValueError, match="jria"):
         parse_labels("jria")
 
+
 # for train -> fit,gate,threshold(4,5)
+
 
 # 4. Every train question lands in exactly one slice
 def test_split_slices_do_not_overlap():
@@ -40,3 +42,19 @@ def test_same_seed_gives_same_split():
     first = split_train(questions, 500, 500, seed=42)
     second = split_train(questions, 500, 500, seed=42)
     assert first == second
+
+
+# 6. Split fix: the two halves of fit never share a question, and together cover all of fit
+def test_fit_halves_do_not_overlap():
+    fit, _, _ = split_train(load_questions("data/train.csv"), 500, 500, seed=42)
+    finetune_half, judges_half = split_fit_in_half(fit, seed=42)
+
+    finetune_ids = set()
+    for q in finetune_half:
+        finetune_ids.add(q.id)
+    judges_ids = set()
+    for q in judges_half:
+        judges_ids.add(q.id)
+
+    assert finetune_ids & judges_ids == set()  # nothing in both halves
+    assert len(finetune_ids) + len(judges_ids) == len(fit)  # nothing left out

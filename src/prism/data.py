@@ -1,5 +1,6 @@
 """Load the dataset (train.csv / eval.csv). Labels become sets, so order never matters."""
-#csv to python objects 
+
+# csv to python objects
 import csv
 import random
 from dataclasses import dataclass
@@ -20,6 +21,7 @@ class Question:
     labels: frozenset[str]  # e.g. {"jira", "confluence"}; empty = no search needed
     question_type: str  # e.g. "Multiple sources"
     part: str  # "real-world", "hard cases" or "company topics"
+
 
 # .csv to python object
 def parse_labels(raw: str) -> frozenset[str]:
@@ -54,7 +56,8 @@ def load_questions(path: str | Path) -> list[Question]:
             for row in csv.DictReader(f)
         ]
 
-#spliting train into 3(fit,gate,threshold)
+
+# spliting train into 3(fit,gate,threshold)
 def split_train(
     questions: list[Question], threshold_size: int, gate_size: int, seed: int
 ) -> tuple[list[Question], list[Question], list[Question]]:
@@ -70,3 +73,31 @@ def split_train(
         gate += group[n_threshold : n_threshold + n_gate]
         fit += group[n_threshold + n_gate :]
     return fit, threshold, gate
+
+
+def split_fit_in_half(fit_questions, seed: int):
+    """Split the fit slice into two halves that never share a question (the "split fix", Phase 4c).
+
+    finetune_half → used to fine-tune BGE
+    judges_half   → used to train the 7 judges, on questions BGE has never studied,
+                    so the judges see honest difficulty and don't become over-confident.
+
+    Each half keeps the same mix of parts (real-world / hard / company), like split_train.
+    The same seed always gives the same halves, so finetune.py and pipeline.py agree on them.
+    """
+    rng = random.Random(seed)
+    finetune_half = []
+    judges_half = []
+
+    for part in sorted({q.part for q in fit_questions}):
+        questions_in_part = []
+        for q in fit_questions:
+            if q.part == part:
+                questions_in_part.append(q)
+
+        rng.shuffle(questions_in_part)
+        middle = len(questions_in_part) // 2
+        finetune_half += questions_in_part[:middle]
+        judges_half += questions_in_part[middle:]
+
+    return finetune_half, judges_half

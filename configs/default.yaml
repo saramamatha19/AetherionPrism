@@ -12,3 +12,14 @@ accuracy_floor: 0.80
 seed: 42
 threshold_slice_size: 500
 gate_slice_size: 500
+
+# Fine-tuning (Phase 4c): how many passes over the pairs, and pairs per nudge.
+finetune_epochs: 1
+finetune_batch_size: 16
+finetune_augment_count: 1000  # augmented negation questions added to fine-tuning (0 = none)
+# Split fix: fine-tune BGE on one half of fit, train the judges on the other half (never the same questions)
+finetune_on_fit_half: true
+
+# Negation rule: questions with "not", "except", "skip", … always go to the LLM (the model is
+# confidently wrong on many of them). The model's real confidence is still kept for the logs.
+negation_to_llm: true

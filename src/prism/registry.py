@@ -83,3 +83,8 @@ def load_model(version: str, models_dir: Path = MODELS_DIR):
             "uv run python -m prism.pipeline"
         )
     return saved["model"], saved["thresholds"], saved["gate"]
+
+
+def load_card(version: str, models_dir: Path = MODELS_DIR) -> dict:
+    """Read a saved model's ID card (card.json): settings, thresholds, gate, eval scores."""
+    return json.loads((models_dir / version / "card.json").read_text())

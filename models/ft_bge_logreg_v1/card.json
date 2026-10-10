@@ -1,0 +1,36 @@
+{
+  "version": "ft_bge_logreg_v1",
+  "created": "2026-10-11 01:55",
+  "recipe": "ft_bge_logreg",
+  "settings": {
+    "mode": "shadow",
+    "accuracy_floor": 0.8,
+    "seed": 42,
+    "threshold_slice_size": 500,
+    "gate_slice_size": 500,
+    "finetune_epochs": 1,
+    "finetune_batch_size": 16
+  },
+  "train_data_fingerprint": "d343b615dcfb",
+  "thresholds": {
+    "kb": 0.65,
+    "jira": 0.4,
+    "confluence": 0.35,
+    "slack": 0.35,
+    "notion": 0.45,
+    "gmail": 0.5,
+    "web": 0.2
+  },
+  "gate": 0.15,
+  "gate_slice": {
+    "coverage": 0.774,
+    "accuracy": 0.8010335917312662
+  },
+  "eval": {
+    "all_exact": 0.5625,
+    "real_world_exact": 0.778,
+    "all_needed": 0.6533333333333333,
+    "coverage": 0.7516666666666667,
+    "kept_accuracy": 0.6740576496674058
+  }
+}

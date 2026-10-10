@@ -16,3 +16,6 @@ README.md
 PROJECT.md
 LOG.md
 LEARNING.md
+
+# Fine-tuned embedding models (~130 MB each): too big for git; card.json says how to rebuild
+finetuned/

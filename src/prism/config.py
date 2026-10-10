@@ -17,6 +17,11 @@ class Settings(BaseModel):
     seed: int
     threshold_slice_size: int = Field(gt=0)  # must be a positive number
     gate_slice_size: int = Field(gt=0)
+    finetune_epochs: int = Field(ge=1)  # at least 1 pass
+    finetune_batch_size: int = Field(ge=1)
+    finetune_augment_count: int = Field(ge=0)  # 0 = no augmentation
+    finetune_on_fit_half: bool  # true = split fix: fine-tune on the finetune half of fit only
+    negation_to_llm: bool  # true = negation questions always go to the LLM
 
 
 def load_settings(path: str | Path = "configs/default.yaml") -> Settings:
