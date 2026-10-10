@@ -1,8 +1,10 @@
-"""Test that the student wrapper turns scores into a set of sources."""
+"""Tests for the pipeline: the student wrapper and the recipe list."""
+
+import pytest
 
 from prism.data import SOURCES, Question
 from prism.logreg import train
-from prism.pipeline import make_student
+from prism.pipeline import build_features, make_student
 from prism.tfidf import build_tfidf
 
 
@@ -27,3 +29,8 @@ def test_student_returns_sources_that_pass():
         thresholds[source] = 0.3
     student = make_student(model, thresholds)
     assert "jira" in student("is the ticket fixed")
+
+
+def test_unknown_recipe_is_an_error():
+    with pytest.raises(ValueError, match="Unknown recipe"):
+        build_features("bgee")

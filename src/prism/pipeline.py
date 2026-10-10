@@ -1,10 +1,30 @@
 """Put the small model together: split → train judges → thresholds → gate → student."""
 
+import sys
+
+from sklearn.pipeline import FeatureUnion
+
 from prism.confidence import confidence
 from prism.data import load_questions, split_train
+from prism.embeddings import SentenceEmbeddings
 from prism.gate import choose_gate, coverage_at, risk_coverage
 from prism.logreg import scores, train
+from prism.tfidf import build_tfidf
 from prism.thresholds import apply_thresholds, choose_thresholds
+
+BGE = "BAAI/bge-small-en-v1.5"
+RECIPE_NAMES = ["tfidf", "bge", "tfidf_bge"]
+
+
+def build_features(recipe: str):
+    """The "words → numbers" part of each recipe. A new embedding model later = one more `if`."""
+    if recipe == "tfidf":
+        return build_tfidf()
+    if recipe == "bge":
+        return SentenceEmbeddings(BGE)
+    if recipe == "tfidf_bge":
+        return FeatureUnion([("tfidf", build_tfidf()), ("emb", SentenceEmbeddings(BGE))])
+    raise ValueError(f"Unknown recipe '{recipe}'. Choose one of: {', '.join(RECIPE_NAMES)}")
 
 
 def train_small_model(settings, features):
@@ -60,16 +80,22 @@ if __name__ == "__main__":
     from prism.data import load_questions
     from prism.evaluate import evaluate, print_report
     from prism.registry import save_model
-    from prism.tfidf import build_tfidf
+
+    if len(sys.argv) != 2 or sys.argv[1] not in RECIPE_NAMES:
+        raise SystemExit(
+            "Usage: uv run python -m prism.pipeline <recipe>   "
+            f"(recipes: {', '.join(RECIPE_NAMES)})"
+        )
+    recipe = sys.argv[1]
 
     settings = load_settings()
     model, thresholds, gate, gate_slice_result = train_small_model(
-        settings, features=build_tfidf()
+        settings, features=build_features(recipe)
     )
 
     eval_questions = load_questions("data/eval.csv")
     result = evaluate(make_student(model, thresholds), eval_questions)
-    print_report("tfidf + logreg", result)
+    print_report(recipe + " + logreg", result)
 
     # Does the gate keep its promise on the final exam?
     confidences, correct = confidences_and_correct(model, thresholds, eval_questions)
@@ -84,7 +110,7 @@ if __name__ == "__main__":
         model,
         thresholds,
         gate,
-        "tfidf_logreg",
+        recipe + "_logreg",
         settings,
         result,
         gate_slice_result,
