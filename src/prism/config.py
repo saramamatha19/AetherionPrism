@@ -7,6 +7,17 @@ import yaml
 from pydantic import BaseModel, ConfigDict, Field
 
 
+class ModelPrice(BaseModel):
+    """One LLM's prices, $ per 1 million tokens, and where they came from."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    input: float = Field(ge=0)
+    cached_input: float = Field(ge=0)
+    output: float = Field(ge=0)
+    source: str  # where and when the prices were checked
+
+
 class Settings(BaseModel):
     """Every setting the project uses. No defaults: a missing setting is an error."""
 
@@ -22,6 +33,12 @@ class Settings(BaseModel):
     finetune_augment_count: int = Field(ge=0)  # 0 = no augmentation
     finetune_on_fit_half: bool  # true = split fix: fine-tune on the finetune half of fit only
     negation_to_llm: bool  # true = negation questions always go to the LLM
+    llm_model: str  # an exact model version, e.g. "gpt-4o-2024-11-20"
+    llm_timeout_seconds: float = Field(gt=0)
+    llm_max_retries: int = Field(ge=0)
+    llm_prompt_version: str  # e.g. "v1"; the prompts themselves live in llm.py
+    llm_prices: dict[str, ModelPrice]  # model name → its prices
+    prompt_practice_per_type: int = Field(ge=1)
 
 
 def load_settings(path: str | Path = "configs/default.yaml") -> Settings:

@@ -2,7 +2,13 @@
 
 import pytest
 
-from prism.data import load_questions, parse_labels, split_fit_in_half, split_train
+from prism.data import (
+    load_questions,
+    parse_labels,
+    prompt_practice_set,
+    split_fit_in_half,
+    split_train,
+)
 
 
 # 1. The frozen eval set is complete (1,200 rows: 500 / 560 / 140)
@@ -58,3 +64,21 @@ def test_fit_halves_do_not_overlap():
 
     assert finetune_ids & judges_ids == set()  # nothing in both halves
     assert len(finetune_ids) + len(judges_ids) == len(fit)  # nothing left out
+
+
+# 7. Prompt practice set: from train only, the same number of each question type
+def test_prompt_practice_set_is_balanced_and_from_train():
+    train = load_questions("data/train.csv")
+    practice = prompt_practice_set(train, per_type=28, seed=42)
+
+    per_type = {}
+    for q in practice:
+        per_type[q.question_type] = per_type.get(q.question_type, 0) + 1
+    for count in per_type.values():
+        assert count == 28
+
+    eval_ids = set()
+    for q in load_questions("data/eval.csv"):
+        eval_ids.add(q.id)
+    for q in practice:
+        assert q.id not in eval_ids  # never an eval question

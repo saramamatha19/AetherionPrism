@@ -101,3 +101,21 @@ def split_fit_in_half(fit_questions, seed: int):
         judges_half += questions_in_part[middle:]
 
     return finetune_half, judges_half
+
+
+def prompt_practice_set(train_questions, per_type: int, seed: int) -> list:
+    """Pick `per_type` random train questions of EACH question type (never eval).
+
+    Equal numbers per type, so rare hard types (misleading keyword, unclear) are well represented.
+    Used to find where the LLM prompt fails and to improve it, without ever looking at eval.
+    """
+    rng = random.Random(seed)
+    practice = []
+    for question_type in sorted({q.question_type for q in train_questions}):
+        of_this_type = []
+        for q in train_questions:
+            if q.question_type == question_type:
+                of_this_type.append(q)
+        rng.shuffle(of_this_type)
+        practice += of_this_type[:per_type]
+    return practice

@@ -23,3 +23,19 @@ finetune_on_fit_half: true
 # Negation rule: questions with "not", "except", "skip", … always go to the LLM (the model is
 # confidently wrong on many of them). The model's real confidence is still kept for the logs.
 negation_to_llm: true
+
+# LLM fallback (Phase 5). The API key is NOT here: it lives in .env (never in git).
+llm_model: "gpt-4o-2024-11-20"   # one exact version, so results are repeatable
+llm_timeout_seconds: 10          # give up after 10 s (the prototype saw calls of up to 11 s)
+llm_max_retries: 2               # try again up to 2 times on a temporary error (e.g. rate limit)
+
+# Which prompt the LLM gets (prompts live in llm.py; v1 never changes, new versions are added)
+llm_prompt_version: "v3"
+
+# LLM prices, $ per 1 million tokens, with source + date. Add a line for every model you try.
+llm_prices:
+  gpt-4o-2024-11-20: {input: 2.50, cached_input: 1.25, output: 10.00, source: "OpenRouter, checked 2026-10-12"}
+  gpt-5-2025-08-07: {input: 1.25, cached_input: 1.25, output: 10.00, source: "user, 2026-10-12 (cached price not given; caching not used yet)"}
+
+# Prompt practice set (from TRAIN, never eval): this many questions of each question type
+prompt_practice_per_type: 28

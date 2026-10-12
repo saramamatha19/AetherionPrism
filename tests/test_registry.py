@@ -11,9 +11,7 @@ from prism.tfidf import build_tfidf
 
 
 def q(text, *labels):
-    return Question(
-        id=text, text=text, labels=frozenset(labels), question_type="", part=""
-    )
+    return Question(id=text, text=text, labels=frozenset(labels), question_type="", part="")
 
 
 TINY = [
@@ -51,9 +49,7 @@ def test_save_then_load_gives_same_scores(tmp_path):
     model = train(TINY, features=build_tfidf())
     thresholds = {"jira": 0.3}
     version = save(model, thresholds, 0.11, tmp_path)
-    loaded_model, loaded_thresholds, loaded_gate = load_model(
-        version, models_dir=tmp_path
-    )
+    loaded_model, loaded_thresholds, loaded_gate = load_model(version, models_dir=tmp_path)
     assert scores(loaded_model, "is the bug fixed") == scores(model, "is the bug fixed")
     assert loaded_thresholds == thresholds
     assert loaded_gate == 0.11

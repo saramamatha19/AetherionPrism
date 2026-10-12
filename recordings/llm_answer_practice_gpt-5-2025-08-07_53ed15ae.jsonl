@@ -1,0 +1,196 @@
+{"id": "q00214", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2546.129458001815}
+{"id": "q03942", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 752, "cached_tokens": 0, "completion_tokens": 1301, "latency_ms": 9205.071875010617}
+{"id": "q04048", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 2163.9478750294074}
+{"id": "q03804", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 2444.0650829928927}
+{"id": "q01832", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2357.2943750186823}
+{"id": "q00562", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2257.280207995791}
+{"id": "q02482", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 751, "cached_tokens": 0, "completion_tokens": 725, "latency_ms": 5524.081375042442}
+{"id": "q04053", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 752, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2661.1084579490125}
+{"id": "q04054", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2851.144291984383}
+{"id": "q04404", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 749, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3088.5065000038594}
+{"id": "q01739", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 2456.1582500464283}
+{"id": "q00698", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 762, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2373.2947090175003}
+{"id": "q01240", "llm_sources": [], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 466, "latency_ms": 3875.9405839955434}
+{"id": "q03907", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2301.8424170440994}
+{"id": "q01357", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 755, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2210.887624998577}
+{"id": "q01843", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 744, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 3368.598666973412}
+{"id": "q02494", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2561.5839160163887}
+{"id": "q04320", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2288.5400840314105}
+{"id": "q04188", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 753, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 1888.9282080344856}
+{"id": "q00643", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 533, "latency_ms": 4524.432583013549}
+{"id": "q03777", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 752, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2047.2493330016732}
+{"id": "q00107", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 2154.412667034194}
+{"id": "q03667", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2351.4499160228297}
+{"id": "q03841", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 754, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2310.570083966013}
+{"id": "q01440", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 753, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 3308.3073750021867}
+{"id": "q03881", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3049.389916996006}
+{"id": "q00171", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 736, "cached_tokens": 0, "completion_tokens": 917, "latency_ms": 7203.765333979391}
+{"id": "q00019", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 744, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 1946.8053330201656}
+{"id": "q02537", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 742, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3479.120791016612}
+{"id": "q00032", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2580.9879999724217}
+{"id": "q01223", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 739, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2128.9606250356883}
+{"id": "q00048", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 729, "cached_tokens": 0, "completion_tokens": 404, "latency_ms": 3686.9834159733728}
+{"id": "q02545", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 751, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2867.495416023303}
+{"id": "q00836", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 2968.9997080131434}
+{"id": "q01818", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 745, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3583.995833003428}
+{"id": "q03808", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 745, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 3716.375291987788}
+{"id": "q00002", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 764, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3668.170958990231}
+{"id": "q00672", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 740, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2854.7670830157585}
+{"id": "q04418", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2311.077042017132}
+{"id": "q02467", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 739, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2092.039917013608}
+{"id": "q02508", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 739, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2866.4539579767734}
+{"id": "q01354", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 730, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 1843.4968749643303}
+{"id": "q01398", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 3353.734500007704}
+{"id": "q02201", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 744, "cached_tokens": 0, "completion_tokens": 1044, "latency_ms": 8123.107708001044}
+{"id": "q03897", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 744, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2144.190291000996}
+{"id": "q01197", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 743, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2327.4778749910183}
+{"id": "q02293", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 84, "latency_ms": 1580.3395829861984}
+{"id": "q00790", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2438.33758297842}
+{"id": "q04098", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 469, "latency_ms": 3902.8529170318507}
+{"id": "q04005", "llm_sources": ["confluence", "jira"], "llm_error": null, "prompt_tokens": 745, "cached_tokens": 0, "completion_tokens": 535, "latency_ms": 4246.713708969764}
+{"id": "q01154", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 84, "latency_ms": 1555.0125000299886}
+{"id": "q01489", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 740, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2685.0074999965727}
+{"id": "q00414", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 743, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 3482.0862500346266}
+{"id": "q01966", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 469, "latency_ms": 5119.3077500211075}
+{"id": "q02289", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2356.085416977294}
+{"id": "q01283", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 84, "latency_ms": 1636.9163749623112}
+{"id": "q00405", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 742, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2995.0843330007046}
+{"id": "q00686", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 742, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 3293.348832987249}
+{"id": "q00249", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 2928.234833001625}
+{"id": "q02564", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2839.6134999929927}
+{"id": "q01308", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2484.1445420170203}
+{"id": "q02442", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 736, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2461.5254169912077}
+{"id": "q00963", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 751, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2249.1675830096938}
+{"id": "q01979", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 770, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3418.832957977429}
+{"id": "q01250", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 724, "latency_ms": 7333.426083961967}
+{"id": "q02140", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 758, "cached_tokens": 0, "completion_tokens": 533, "latency_ms": 4608.603375032544}
+{"id": "q02543", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 742, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2400.231250037905}
+{"id": "q02517", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2001.3347080093808}
+{"id": "q01065", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 743, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2048.20333304815}
+{"id": "q01387", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3789.2134159919806}
+{"id": "q02220", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 740, "cached_tokens": 0, "completion_tokens": 660, "latency_ms": 5630.672541970853}
+{"id": "q00302", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 737, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2457.9295000294223}
+{"id": "q01341", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 740, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2770.4860829981044}
+{"id": "q02244", "llm_sources": [], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 402, "latency_ms": 3579.3946250341833}
+{"id": "q00610", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 744, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2558.961750008166}
+{"id": "q01705", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2354.5874590054154}
+{"id": "q01594", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3686.554124986287}
+{"id": "q04399", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 749, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 1945.9814589936286}
+{"id": "q01297", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2456.2729169847444}
+{"id": "q01591", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 767, "cached_tokens": 0, "completion_tokens": 788, "latency_ms": 5940.983125008643}
+{"id": "q02113", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 767, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 2979.085916012991}
+{"id": "q02512", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2141.3072500145063}
+{"id": "q01378", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 756, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2762.4082090333104}
+{"id": "q00339", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 749, "cached_tokens": 0, "completion_tokens": 84, "latency_ms": 1644.3494579871185}
+{"id": "q02203", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 788, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2144.355208030902}
+{"id": "q00296", "llm_sources": ["gmail", "notion"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 343, "latency_ms": 3049.737500026822}
+{"id": "q02300", "llm_sources": ["jira", "kb"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 278, "latency_ms": 2581.5194160095416}
+{"id": "q02404", "llm_sources": ["gmail", "slack"], "llm_error": null, "prompt_tokens": 742, "cached_tokens": 0, "completion_tokens": 151, "latency_ms": 2048.900499998126}
+{"id": "q00373", "llm_sources": ["confluence", "kb"], "llm_error": null, "prompt_tokens": 766, "cached_tokens": 0, "completion_tokens": 1367, "latency_ms": 10104.372249974404}
+{"id": "q01421", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 2798.0480000260286}
+{"id": "q00174", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 760, "cached_tokens": 0, "completion_tokens": 1045, "latency_ms": 7883.785084006377}
+{"id": "q01284", "llm_sources": ["confluence", "jira"], "llm_error": null, "prompt_tokens": 803, "cached_tokens": 0, "completion_tokens": 407, "latency_ms": 4198.533040995244}
+{"id": "q00856", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 736, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 3053.001249965746}
+{"id": "q02014", "llm_sources": ["gmail", "kb"], "llm_error": null, "prompt_tokens": 749, "cached_tokens": 0, "completion_tokens": 150, "latency_ms": 5139.964083966333}
+{"id": "q01012", "llm_sources": ["notion", "slack"], "llm_error": null, "prompt_tokens": 743, "cached_tokens": 0, "completion_tokens": 152, "latency_ms": 2046.6416249983013}
+{"id": "q00092", "llm_sources": ["confluence", "jira"], "llm_error": null, "prompt_tokens": 749, "cached_tokens": 0, "completion_tokens": 343, "latency_ms": 3686.4597909734584}
+{"id": "q02170", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 776, "cached_tokens": 0, "completion_tokens": 469, "latency_ms": 6453.419832978398}
+{"id": "q00354", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 3684.2347090132535}
+{"id": "q00483", "llm_sources": ["confluence", "jira"], "llm_error": null, "prompt_tokens": 749, "cached_tokens": 0, "completion_tokens": 343, "latency_ms": 3378.361249982845}
+{"id": "q00003", "llm_sources": ["gmail", "notion", "slack"], "llm_error": null, "prompt_tokens": 766, "cached_tokens": 0, "completion_tokens": 410, "latency_ms": 4242.63841600623}
+{"id": "q01164", "llm_sources": ["jira", "kb", "slack"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 793, "latency_ms": 6406.102999986615}
+{"id": "q01268", "llm_sources": ["jira", "notion"], "llm_error": null, "prompt_tokens": 751, "cached_tokens": 0, "completion_tokens": 471, "latency_ms": 4199.200250033755}
+{"id": "q01662", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 737, "cached_tokens": 0, "completion_tokens": 468, "latency_ms": 4650.333957979456}
+{"id": "q00966", "llm_sources": ["gmail", "notion", "slack"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 346, "latency_ms": 3541.64520901395}
+{"id": "q00685", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 759, "cached_tokens": 0, "completion_tokens": 660, "latency_ms": 6143.173874996137}
+{"id": "q02554", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 770, "cached_tokens": 0, "completion_tokens": 661, "latency_ms": 8990.072667016648}
+{"id": "q01567", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 917, "latency_ms": 10064.684542012401}
+{"id": "q01587", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 2712.374875030946}
+{"id": "q01970", "llm_sources": ["jira", "kb", "slack"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 601, "latency_ms": 6188.294499996118}
+{"id": "q00494", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 765, "cached_tokens": 0, "completion_tokens": 981, "latency_ms": 10752.443042001687}
+{"id": "q02149", "llm_sources": ["gmail", "notion"], "llm_error": null, "prompt_tokens": 750, "cached_tokens": 0, "completion_tokens": 279, "latency_ms": 3255.4084170260467}
+{"id": "q01222", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 743, "cached_tokens": 0, "completion_tokens": 404, "latency_ms": 3887.1683329925872}
+{"id": "q03746", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 3505.788750015199}
+{"id": "q00694", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 733, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3934.3768340186216}
+{"id": "q00422", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 740, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2053.68658300722}
+{"id": "q00263", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 762, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2662.416375009343}
+{"id": "q02503", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 745, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2229.6280420268886}
+{"id": "q03901", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2139.5221660495736}
+{"id": "q00726", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 2548.2122499961406}
+{"id": "q01999", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 84, "latency_ms": 3925.2147920196876}
+{"id": "q02525", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 2754.026625014376}
+{"id": "q03921", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 2559.486750047654}
+{"id": "q01245", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2019.199792004656}
+{"id": "q03748", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2780.0665829563513}
+{"id": "q04116", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 3542.871584009845}
+{"id": "q01882", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 213, "latency_ms": 3501.1064580176026}
+{"id": "q00287", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 732, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 3229.9226670293137}
+{"id": "q01568", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 744, "cached_tokens": 0, "completion_tokens": 405, "latency_ms": 4973.055208043661}
+{"id": "q01977", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 737, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 3027.257959009148}
+{"id": "q00791", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 733, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 2983.1884580198675}
+{"id": "q00081", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 732, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 3038.430666027125}
+{"id": "q04013", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 744, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 3107.1815829491243}
+{"id": "q01865", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 736, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2360.40441703517}
+{"id": "q01795", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 730, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2602.468791999854}
+{"id": "q02546", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 3057.841832982376}
+{"id": "q01831", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 749, "cached_tokens": 0, "completion_tokens": 149, "latency_ms": 2964.175416971557}
+{"id": "q01755", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 730, "cached_tokens": 0, "completion_tokens": 212, "latency_ms": 2073.217333003413}
+{"id": "q01224", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 741, "cached_tokens": 0, "completion_tokens": 84, "latency_ms": 1250.5249999812804}
+{"id": "q01789", "llm_sources": ["gmail"], "llm_error": null, "prompt_tokens": 740, "cached_tokens": 0, "completion_tokens": 84, "latency_ms": 1599.994542018976}
+{"id": "q00089", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 747, "cached_tokens": 0, "completion_tokens": 148, "latency_ms": 1954.8704579938203}
+{"id": "q01225", "llm_sources": [], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 83, "latency_ms": 1484.1689169988967}
+{"id": "q00380", "llm_sources": [], "llm_error": null, "prompt_tokens": 739, "cached_tokens": 0, "completion_tokens": 211, "latency_ms": 2589.1650000121444}
+{"id": "q02075", "llm_sources": [], "llm_error": null, "prompt_tokens": 731, "cached_tokens": 0, "completion_tokens": 83, "latency_ms": 1366.5359999868087}
+{"id": "q00181", "llm_sources": [], "llm_error": null, "prompt_tokens": 733, "cached_tokens": 0, "completion_tokens": 82, "latency_ms": 1636.3543749903329}
+{"id": "q00606", "llm_sources": [], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 82, "latency_ms": 1236.0399999888614}
+{"id": "q01073", "llm_sources": [], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 210, "latency_ms": 2449.262500042096}
+{"id": "q02457", "llm_sources": [], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 83, "latency_ms": 1505.2710419986397}
+{"id": "q02122", "llm_sources": [], "llm_error": null, "prompt_tokens": 732, "cached_tokens": 0, "completion_tokens": 82, "latency_ms": 1677.3934999946505}
+{"id": "q02528", "llm_sources": [], "llm_error": null, "prompt_tokens": 730, "cached_tokens": 0, "completion_tokens": 146, "latency_ms": 1974.043750029523}
+{"id": "q00569", "llm_sources": [], "llm_error": null, "prompt_tokens": 731, "cached_tokens": 0, "completion_tokens": 83, "latency_ms": 1634.3287079944275}
+{"id": "q02150", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 725, "latency_ms": 8547.514125006273}
+{"id": "q01099", "llm_sources": [], "llm_error": null, "prompt_tokens": 732, "cached_tokens": 0, "completion_tokens": 275, "latency_ms": 3128.5614160005935}
+{"id": "q00098", "llm_sources": [], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 82, "latency_ms": 1876.3571250019595}
+{"id": "q00189", "llm_sources": [], "llm_error": null, "prompt_tokens": 732, "cached_tokens": 0, "completion_tokens": 83, "latency_ms": 1338.3326250477694}
+{"id": "q02261", "llm_sources": [], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 147, "latency_ms": 2604.4629579992034}
+{"id": "q02474", "llm_sources": [], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 83, "latency_ms": 1335.1250420091674}
+{"id": "q00485", "llm_sources": [], "llm_error": null, "prompt_tokens": 732, "cached_tokens": 0, "completion_tokens": 147, "latency_ms": 2003.4004999906756}
+{"id": "q00176", "llm_sources": [], "llm_error": null, "prompt_tokens": 734, "cached_tokens": 0, "completion_tokens": 82, "latency_ms": 1752.8262079576962}
+{"id": "q01467", "llm_sources": [], "llm_error": null, "prompt_tokens": 736, "cached_tokens": 0, "completion_tokens": 146, "latency_ms": 1652.0146249677055}
+{"id": "q00017", "llm_sources": [], "llm_error": null, "prompt_tokens": 731, "cached_tokens": 0, "completion_tokens": 83, "latency_ms": 1797.8101249900647}
+{"id": "q00552", "llm_sources": [], "llm_error": null, "prompt_tokens": 731, "cached_tokens": 0, "completion_tokens": 210, "latency_ms": 2670.621500001289}
+{"id": "q00796", "llm_sources": [], "llm_error": null, "prompt_tokens": 735, "cached_tokens": 0, "completion_tokens": 146, "latency_ms": 1892.6296249846928}
+{"id": "q00267", "llm_sources": [], "llm_error": null, "prompt_tokens": 733, "cached_tokens": 0, "completion_tokens": 147, "latency_ms": 1587.676791998092}
+{"id": "q00473", "llm_sources": [], "llm_error": null, "prompt_tokens": 738, "cached_tokens": 0, "completion_tokens": 211, "latency_ms": 5324.679541983642}
+{"id": "q00523", "llm_sources": [], "llm_error": null, "prompt_tokens": 733, "cached_tokens": 0, "completion_tokens": 210, "latency_ms": 2868.4398750192486}
+{"id": "q01826", "llm_sources": [], "llm_error": null, "prompt_tokens": 733, "cached_tokens": 0, "completion_tokens": 146, "latency_ms": 1763.3587500313297}
+{"id": "q00804", "llm_sources": [], "llm_error": null, "prompt_tokens": 732, "cached_tokens": 0, "completion_tokens": 82, "latency_ms": 2027.4944999837317}
+{"id": "q00315", "llm_sources": [], "llm_error": null, "prompt_tokens": 730, "cached_tokens": 0, "completion_tokens": 82, "latency_ms": 1940.9257910447195}
+{"id": "q02307", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 775, "cached_tokens": 0, "completion_tokens": 532, "latency_ms": 5532.904291001614}
+{"id": "q01695", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 765, "cached_tokens": 0, "completion_tokens": 1045, "latency_ms": 7881.759750016499}
+{"id": "q02515", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 767, "cached_tokens": 0, "completion_tokens": 469, "latency_ms": 6144.504875002895}
+{"id": "q01953", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 756, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 3695.151249994524}
+{"id": "q00619", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 746, "cached_tokens": 0, "completion_tokens": 276, "latency_ms": 3471.735791012179}
+{"id": "q00553", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 755, "cached_tokens": 0, "completion_tokens": 533, "latency_ms": 5428.567999973893}
+{"id": "q00578", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 796, "cached_tokens": 0, "completion_tokens": 532, "latency_ms": 7166.581915982533}
+{"id": "q01519", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 758, "cached_tokens": 0, "completion_tokens": 533, "latency_ms": 5735.116416995879}
+{"id": "q00191", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 756, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 3275.926125003025}
+{"id": "q00050", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 791, "cached_tokens": 0, "completion_tokens": 660, "latency_ms": 6042.565000010654}
+{"id": "q01682", "llm_sources": ["jira", "kb"], "llm_error": null, "prompt_tokens": 772, "cached_tokens": 0, "completion_tokens": 1046, "latency_ms": 10442.822667013388}
+{"id": "q00197", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 756, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 4403.378499962855}
+{"id": "q00885", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 766, "cached_tokens": 0, "completion_tokens": 277, "latency_ms": 3379.4784999918193}
+{"id": "q01812", "llm_sources": ["confluence", "kb"], "llm_error": null, "prompt_tokens": 800, "cached_tokens": 0, "completion_tokens": 663, "latency_ms": 5325.872667017393}
+{"id": "q02230", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 755, "cached_tokens": 0, "completion_tokens": 469, "latency_ms": 5732.086875010282}
+{"id": "q01661", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 755, "cached_tokens": 0, "completion_tokens": 469, "latency_ms": 4198.190791998059}
+{"id": "q01805", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 752, "cached_tokens": 0, "completion_tokens": 405, "latency_ms": 3742.6310000009835}
+{"id": "q00880", "llm_sources": ["slack"], "llm_error": null, "prompt_tokens": 770, "cached_tokens": 0, "completion_tokens": 533, "latency_ms": 6804.899749986362}
+{"id": "q01907", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 762, "cached_tokens": 0, "completion_tokens": 469, "latency_ms": 4505.126374948304}
+{"id": "q00586", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 597, "latency_ms": 5119.478792010341}
+{"id": "q01787", "llm_sources": ["kb"], "llm_error": null, "prompt_tokens": 773, "cached_tokens": 0, "completion_tokens": 596, "latency_ms": 6656.513750029262}
+{"id": "q01454", "llm_sources": ["notion"], "llm_error": null, "prompt_tokens": 760, "cached_tokens": 0, "completion_tokens": 533, "latency_ms": 4814.059125026688}
+{"id": "q00739", "llm_sources": ["web"], "llm_error": null, "prompt_tokens": 782, "cached_tokens": 0, "completion_tokens": 404, "latency_ms": 3582.9623750178143}
+{"id": "q01151", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 754, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 3480.208583001513}
+{"id": "q01248", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 783, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 2867.6788749871776}
+{"id": "q00989", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 748, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3380.1786659751087}
+{"id": "q02309", "llm_sources": ["jira"], "llm_error": null, "prompt_tokens": 751, "cached_tokens": 0, "completion_tokens": 340, "latency_ms": 3172.6169160101563}
+{"id": "q01286", "llm_sources": ["confluence"], "llm_error": null, "prompt_tokens": 753, "cached_tokens": 0, "completion_tokens": 341, "latency_ms": 3173.9536250242963}
