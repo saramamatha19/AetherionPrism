@@ -490,6 +490,22 @@ wheels = [
 ]
 
 [[package]]
+name = "laya"
+version = "0.4.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "numpy" },
+    { name = "safetensors" },
+    { name = "torch" },
+    { name = "transformers" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/20/a2/ea4980cad1413e8d8799acaf1f2896be85c1a6ed2813b509f99669f3386e/laya-0.4.4.tar.gz", hash = "sha256:047e61f8f823b61b424cc655d41d76b6cd8f8bb9f2a6a973874fca7b06d2b027", size = 1148141, upload-time = "2026-10-12T03:58:31.415Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f1/6d/50f830ed4b3870a679bd10ad36a11c65583d4282fc2ad68819bc69025b35/laya-0.4.4-py3-none-any.whl", hash = "sha256:4c34362b2acc9bd7a00b780c40526a88e80c3e290115e6619859fc905755e206", size = 390776, upload-time = "2026-10-12T03:58:29.787Z" },
+]
+
+[[package]]
 name = "markdown-it-py"
 version = "4.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -838,6 +854,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "joblib" },
+    { name = "laya" },
     { name = "openai" },
     { name = "pydantic" },
     { name = "python-dotenv" },
@@ -855,6 +872,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "joblib", specifier = ">=1.6.0" },
+    { name = "laya", specifier = ">=0.4.4" },
     { name = "openai", specifier = ">=3.28.0" },
     { name = "pydantic", specifier = ">=2.13.5" },
     { name = "python-dotenv", specifier = ">=1.2.4" },

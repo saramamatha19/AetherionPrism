@@ -30,7 +30,7 @@ llm_timeout_seconds: 10          # give up after 10 s (the prototype saw calls o
 llm_max_retries: 2               # try again up to 2 times on a temporary error (e.g. rate limit)
 
 # Which prompt the LLM gets (prompts live in llm.py; v1 never changes, new versions are added)
-llm_prompt_version: "v3"
+llm_prompt_version: "v4"
 
 # LLM prices, $ per 1 million tokens, with source + date. Add a line for every model you try.
 llm_prices:
