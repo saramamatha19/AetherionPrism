@@ -17,11 +17,21 @@ REVIEW_COLUMNS = ["kind", "question", "model_answer", "llm_answer", "correct_ans
 
 
 def load_run(log_dir: Path) -> list[dict]:
-    """All decisions of one shadow run (every day's JSON file in the folder)."""
+    """All SHADOW-mode decisions of one run (every day's JSON file in the folder)."""
     decisions = []
     for path in sorted(Path(log_dir).glob("decisions_*.jsonl")):
         decisions += read_decisions(path)
-    return decisions
+
+    # Only SHADOW-mode decisions count: gated questions only have an LLM answer when the model
+    # was unsure (or negation / audit), so mixing them in would bias the go-live check.
+    shadow_only = []
+    for d in decisions:
+        if d["mode"] == "shadow":
+            shadow_only.append(d)
+    skipped = len(decisions) - len(shadow_only)
+    if skipped:
+        print(f"  (skipped {skipped} decisions from other modes)")
+    return shadow_only
 
 
 def shadow_report(decisions, spot_check_rate: float, seed: int) -> dict:

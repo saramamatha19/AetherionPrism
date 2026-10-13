@@ -111,3 +111,10 @@ def test_every_decision_is_logged(router):
     router.route(SURE_QUESTION)
     router.route(NEGATION_QUESTION)
     assert len(router.log.records) == 2
+
+
+def test_mode_per_question_does_not_change_the_router(router):
+    use(router, "shadow")
+    record = router.route(SURE_QUESTION, mode="gated")
+    assert record.mode == "gated" and record.reason == "model sure"  # this question: gated
+    assert router.mode == "shadow"  # the router's own mode is unchanged

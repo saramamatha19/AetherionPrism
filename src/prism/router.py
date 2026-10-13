@@ -7,6 +7,7 @@ gated:      the model answers when sure; the LLM otherwise (+ negation rule) (li
 Try it:  uv run python -m prism.router "is the login bug fixed?"   (uses the mode in the YAML)
 """
 
+import os
 import random
 import time
 from datetime import datetime
@@ -55,9 +56,11 @@ class Router:
         self.audit_draw = random.Random(settings.seed)  # repeatable audit draws
         self.log = log  # the decision log (Step 6.3); None = don't write
 
-        # The LLM: not needed in model_only mode (so no API key is needed for testing)
+        # The LLM client: needed unless EVERY question is model_only. Each question can choose its
+        # own mode (the UI), so it's made whenever an API key exists; without a key, model_only works.
         self.llm_client = llm_client
-        if self.llm_client is None and self.mode != "model_only":
+        key_available = os.environ.get("OPENAI_API_KEY") is not None
+        if self.llm_client is None and (self.mode != "model_only" or key_available):
             self.llm_client = make_client(settings)
 
         # "What the LLM would have cost": the average REAL cost per question from the recording
@@ -67,8 +70,16 @@ class Router:
         # It is NEVER logged: a fake question must not look like real traffic (prototype mistake #24).
         self.route("warm-up", write_log=False)
 
-    def route(self, question_text: str, write_log: bool = True) -> DecisionRecord:
-        """Decide where to search for ONE question → a DecisionRecord (and write it to the log)."""
+    def route(
+        self, question_text: str, write_log: bool = True, mode: str | None = None
+    ) -> DecisionRecord:
+        """Decide where to search for ONE question → a DecisionRecord (and write it to the log).
+
+        mode: this question's own mode (e.g. chosen in the UI). None → the router's mode (YAML).
+        It never changes the router's mode, so one user's choice can't affect anyone else.
+        """
+        if mode is None:
+            mode = self.mode
         start = time.perf_counter()
 
         # 1. The model ALWAYS runs first (fast, free), so its answer is always recorded
@@ -84,9 +95,9 @@ class Router:
 
         # 3. Decide, depending on the mode
         ask_llm = False
-        if self.mode == "model_only":
+        if mode == "model_only":
             reason = "model only"
-        elif self.mode == "shadow":
+        elif mode == "shadow":
             ask_llm = True
             reason = "shadow mode"
         elif would_escalate:  # gated: the negation rule, or the model is unsure
@@ -108,6 +119,10 @@ class Router:
         llm_error = None
         cost_spent = 0.0
         if ask_llm:
+            if self.llm_client is None:
+                raise ValueError(
+                    f"Mode {mode!r} needs the LLM, but there's no OPENAI_API_KEY in .env"
+                )
             result = ask_llm_safely(self.llm_client, self.settings, question_text, model_answer)
             llm_answer = result["llm_sources"]
             llm_error = result["llm_error"]
@@ -145,7 +160,7 @@ class Router:
             cost_spent=cost_spent,
             cost_if_llm=cost_if_llm,
             latency_ms=(time.perf_counter() - start) * 1000,
-            mode=self.mode,
+            mode=mode,  # this question's own mode
             model_version=self.model_version,
             llm_model=self.settings.llm_model,
             prompt_version=self.settings.llm_prompt_version,

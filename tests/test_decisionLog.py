@@ -38,3 +38,14 @@ def test_question_with_comma_stays_one_csv_cell(tmp_path):
     _, csv_path = todays_files(log)
     rows = list(csv.reader(csv_path.open()))
     assert rows[1][1] == "check jira, then slack"  # one cell, not split at the comma
+
+
+def test_count_shadow_questions(tmp_path):
+    import json
+
+    from prism.decisionLog import count_shadow_questions
+
+    with open(tmp_path / "decisions_2026-10-13.jsonl", "w") as file:
+        for mode in ["shadow", "gated", "shadow"]:
+            file.write(json.dumps({"mode": mode}) + "\n")
+    assert count_shadow_questions(tmp_path) == 2  # the gated one isn't counted

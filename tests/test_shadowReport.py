@@ -82,3 +82,20 @@ def test_unreviewed_row_is_an_error(tmp_path):
         writer.writerow(["disagreement", "is the bug fixed?", "jira", "slack", ""])
     with pytest.raises(ValueError, match="Not reviewed yet"):
         read_review_file(path)
+
+
+def test_only_shadow_mode_decisions_are_counted(tmp_path):
+    import json
+
+    from prism.shadowReport import load_run
+
+    lines = [
+        {"question": "a", "mode": "shadow"},
+        {"question": "b", "mode": "gated"},
+        {"question": "c", "mode": "shadow"},
+    ]
+    with open(tmp_path / "decisions_2026-10-13.jsonl", "w") as file:
+        for line in lines:
+            file.write(json.dumps(line) + "\n")
+    decisions = load_run(tmp_path)
+    assert len(decisions) == 2  # the gated one is skipped

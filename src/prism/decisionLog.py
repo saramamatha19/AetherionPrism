@@ -52,3 +52,14 @@ def read_decisions(path: Path) -> list[dict]:
     for line in Path(path).read_text().splitlines():
         decisions.append(json.loads(line))
     return decisions
+
+
+def count_shadow_questions(logs_dir: Path = LOGS_DIR) -> int:
+    """How many SHADOW-mode questions are in the day logs (logs/decisions_*.jsonl): the progress
+    towards the go-live check. Rehearsal runs live in sub-folders, so they're not counted."""
+    count = 0
+    for path in sorted(Path(logs_dir).glob("decisions_*.jsonl")):
+        for decision in read_decisions(path):
+            if decision["mode"] == "shadow":
+                count += 1
+    return count
