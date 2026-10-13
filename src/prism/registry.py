@@ -39,8 +39,10 @@ def save_model(
     gate_slice_result,
     eval_gate_result,
     models_dir: Path = MODELS_DIR,
+    extra_card: dict | None = None,
 ) -> str:
-    """Save the model + its ID card into a new version folder. Returns the version name."""
+    """Save the model + its ID card into a new version folder. Returns the version name.
+    extra_card: more notes for the card (e.g. which reviewed batches it learned from)."""
     version = next_version(recipe, models_dir)
     folder = models_dir / version
     folder.mkdir(parents=True)  # error if the folder already exists → never overwrite
@@ -70,6 +72,8 @@ def save_model(
             "kept_accuracy": eval_gate_result["accuracy"],
         },
     }
+    if extra_card:
+        card.update(extra_card)
     (folder / "card.json").write_text(json.dumps(card, indent=2))
     return version
 
@@ -88,3 +92,84 @@ def load_model(version: str, models_dir: Path = MODELS_DIR):
 def load_card(version: str, models_dir: Path = MODELS_DIR) -> dict:
     """Read a saved model's ID card (card.json): settings, thresholds, gate, eval scores."""
     return json.loads((models_dir / version / "card.json").read_text())
+
+
+# ---------- Which model is live (the "champion"), and the history of every change ----------
+
+CHAMPION_FILE = "champion.json"  # inside models/: which version is live, explained in plain words
+PROMOTIONS_FILE = "promotions.jsonl"  # inside models/: every change, appended, never rewritten
+
+
+def read_champion(models_dir: Path = MODELS_DIR) -> dict:
+    """The live model's pointer file. Missing → ERROR (the router never guesses a model)."""
+    path = models_dir / CHAMPION_FILE
+    if not path.exists():
+        raise ValueError(
+            f"No {path}: promote a model first (uv run python -m prism.retrain promote …)"
+        )
+    return json.loads(path.read_text())
+
+
+def promote(
+    version: str,
+    by: str,
+    what_it_is: str,
+    why: str,
+    evidence: dict,
+    details: str,
+    models_dir: Path = MODELS_DIR,
+) -> dict:
+    """Make `version` the live model. Writes champion.json + one history line. Always explained."""
+    if not (models_dir / version).exists():
+        raise ValueError(f"No saved model {version} in {models_dir}")
+    if not why.strip() or not what_it_is.strip():
+        raise ValueError("A promotion must say what the model is and why (in plain words)")
+
+    previous_version = None
+    if (models_dir / CHAMPION_FILE).exists():
+        previous_version = read_champion(models_dir)["version"]
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    champion = {
+        "version": version,
+        "since": today,
+        "promoted_by": by,
+        "what_it_is": what_it_is,
+        "why": why,
+        "evidence_on_eval": evidence,
+        "details": details,
+    }
+    (models_dir / CHAMPION_FILE).write_text(json.dumps(champion, indent=2) + "\n")
+
+    history_line = {
+        "when": today,
+        "by": by,
+        "from": previous_version,
+        "to": version,
+        "why": why,
+        "evidence_on_eval": evidence,
+    }
+    with open(models_dir / PROMOTIONS_FILE, "a") as file:  # append: the history is never rewritten
+        file.write(json.dumps(history_line) + "\n")
+    return champion
+
+
+def rollback(by: str, why: str, models_dir: Path = MODELS_DIR) -> dict:
+    """Go back to the champion BEFORE the current one (recorded as a promotion too)."""
+    history = []
+    for line in (models_dir / PROMOTIONS_FILE).read_text().splitlines():
+        history.append(json.loads(line))
+    last = history[-1]
+    if last["from"] is None:
+        raise ValueError("Nothing to roll back to: this is the first champion")
+
+    old_card = json.loads((models_dir / last["from"] / "card.json").read_text())
+    return promote(
+        last["from"],
+        by,
+        what_it_is=f"Rolled back to {last['from']} (the model live before {last['to']})",
+        why=why,
+        evidence=old_card["eval"],  # its own saved evidence
+        details=f"rollback from {last['to']}",
+        models_dir=models_dir,
+    )

@@ -1,0 +1,15 @@
+{
+  "version": "tfidf_ftv2_bge_logreg_v2",
+  "since": "2026-10-13",
+  "promoted_by": "Sara",
+  "what_it_is": "TF-IDF words + a BGE meaning model fine-tuned on our labels (with extra negation examples), 7 yes/no judges, a confidence gate, and a rule that sends negation questions (not / except / skip) to the LLM",
+  "why": "Best of 8 models tried: most accurate on normal questions and the cheapest full system. A bigger fine-tuned model (Laya) was only a tie in the full system and 8x slower.",
+  "evidence_on_eval": {
+    "real_world_exact": 0.84,
+    "full_system_all_exact": 0.7,
+    "full_system_real_world_exact": 0.842,
+    "model_answers_alone": 0.76,
+    "cheaper_than_llm_only": 0.76
+  },
+  "details": "results/model_comparison.md, results/laya_full_system.md, results/cost_accuracy_curve.md"
+}

@@ -39,11 +39,11 @@ class Settings(BaseModel):
     llm_prompt_version: str  # e.g. "v1"; the prompts themselves live in llm.py
     llm_prices: dict[str, ModelPrice]  # model name → its prices
     prompt_practice_per_type: int = Field(ge=1)
-    router_model_version: str  # the saved model the live router uses
     audit_rate: float = Field(ge=0, le=1)  # share of "model sure" questions spot-checked by the LLM
     spot_check_rate: float = Field(ge=0, le=1)  # shadow: share of confident agreements a human checks
     go_live_accuracy: float = Field(gt=0.5, lt=1)  # the model's accuracy needed to go live
     go_live_min_questions: int = Field(ge=1)  # minimum shadow questions before deciding
+    retrain_min_new_rows: int = Field(ge=1)  # new reviewed rows needed before retraining
 
 
 def load_settings(path: str | Path = "configs/default.yaml") -> Settings:

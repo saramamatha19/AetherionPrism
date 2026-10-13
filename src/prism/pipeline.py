@@ -57,11 +57,15 @@ def build_features(recipe: str):
     raise ValueError(f"Unknown recipe '{recipe}'. Choose one of: {', '.join(RECIPE_NAMES)}")
 
 
-def train_small_model(settings, features, judges_on_judges_half: bool = False):
+def train_small_model(
+    settings, features, judges_on_judges_half: bool = False, extra_fit_questions=None
+):
     """Judges on the fit slice → thresholds on the threshold slice → gate on the gate slice.
 
     judges_on_judges_half=True (split fix): the judges train only on the judges half of fit,
     the questions the fine-tuned BGE never studied, so they don't become over-confident.
+    extra_fit_questions (learning loop): reviewed real questions the judges ALSO learn from.
+    The threshold and gate slices never change, so every version is measured with the same ruler.
     """
     all_train = load_questions("data/train.csv")
     fit, threshold, gate_slice = split_train(
@@ -76,6 +80,9 @@ def train_small_model(settings, features, judges_on_judges_half: bool = False):
         _finetune_half, judges_questions = split_fit_in_half(fit, settings.seed)
     else:
         judges_questions = fit
+
+    if extra_fit_questions:  # the learning loop: + reviewed real questions
+        judges_questions = judges_questions + list(extra_fit_questions)
 
     model = train(judges_questions, features=features)
 

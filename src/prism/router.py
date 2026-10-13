@@ -19,7 +19,7 @@ from prism.decisionRecord import DecisionRecord
 from prism.llm import ask_llm_safely, make_client
 from prism.llm_answer_eval import answers_file, read_answers
 from prism.logreg import scores
-from prism.registry import data_fingerprint, load_card, load_model
+from prism.registry import data_fingerprint, load_card, load_model, read_champion
 from prism.ruleNegation import has_negation
 from prism.system_eval import route_one
 from prism.thresholds import apply_thresholds
@@ -48,7 +48,7 @@ class Router:
             settings = load_settings()
         self.settings = settings
         self.mode = settings.mode
-        self.model_version = settings.router_model_version
+        self.model_version = read_champion()["version"]  # the live model: models/champion.json
         self.model, self.thresholds, self.gate = load_model(self.model_version)
         card_settings = load_card(self.model_version)["settings"]
         self.negation_rule_on = card_settings.get("negation_to_llm", False)

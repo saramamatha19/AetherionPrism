@@ -41,7 +41,7 @@ llm_prices:
 prompt_practice_per_type: 28
 
 # The live router (Phase 6)
-router_model_version: "tfidf_ftv2_bge_logreg_v2"   # which saved model the router uses (model B)
+# (which model is live is NOT here: see models/champion.json, written by `prism.retrain promote`)
 audit_rate: 0.03   # gated mode: 3% of "model sure" questions also ask the LLM (recorded only)
 
 # Shadow mode (Phase 7): share of confident AGREEMENTS a human spot-checks (catches "case B":
@@ -50,3 +50,6 @@ spot_check_rate: 0.05
 # The go-live rule (Phase 7): accuracy on CONFIDENT questions, against checked answers
 go_live_accuracy: 0.85        # the model must be right on ≥ 85% of its confident questions
 go_live_min_questions: 500    # …measured on at least 500 questions
+
+# Learning loop (Phase 8): retrain only when there are enough new reviewed questions
+retrain_min_new_rows: 150

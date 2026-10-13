@@ -4,7 +4,7 @@ Free: the LLM's answers are replayed from the recording (never asked again).
 Run:  uv run python -m prism.system_eval tfidf_ftv2_bge_logreg_v2          (the full system)
       uv run python -m prism.system_eval tfidf_ftv2_bge_logreg_v2 curve    (cost–accuracy curve)
 """
-#creates cost_accuracy_curve.md in results/
+# creates cost_accuracy_curve.md in results/
 
 from prism.confidence import confidence
 from prism.cost import llm_call_cost
@@ -27,6 +27,53 @@ def route_one(
     if model_confidence >= gate:
         return "model"
     return "llm (unsure)"
+
+
+def full_system_numbers(
+    questions, answers, confidences, llm_answers, llm_costs, gate, rule_on
+) -> dict:
+    """The full system with ANY small model (Laya or model B): it answers when sure, the LLM otherwise.
+    Plain inputs keyed by question id, so model B and Laya are scored by exactly the same code."""
+    right = 0
+    needed = 0
+    per_part = {}
+    small_model_count = 0
+    hard_kept = 0
+    hard_kept_wrong = 0
+    hard_count = 0
+    total_cost = 0.0
+    for q in questions:
+        decided_by = route_one(confidences[q.id], gate, has_negation(q.text), rule_on)
+        if decided_by == "model":
+            final = answers[q.id]
+            small_model_count += 1
+        else:
+            final = llm_answers[q.id]
+            total_cost += llm_costs[q.id]
+        is_right = final == q.labels
+        right += is_right
+        needed += q.labels <= final
+        if q.part not in per_part:
+            per_part[q.part] = [0, 0]
+        per_part[q.part][0] += is_right
+        per_part[q.part][1] += 1
+        if q.part == "hard cases":
+            hard_count += 1
+            if decided_by == "model":
+                hard_kept += 1
+                hard_kept_wrong += not is_right
+
+    n = len(questions)
+    return {
+        "all_exact": right / n,
+        "real_world": per_part["real-world"][0] / per_part["real-world"][1],
+        "company": per_part["company topics"][0] / per_part["company topics"][1],
+        "hard": per_part["hard cases"][0] / per_part["hard cases"][1],
+        "all_needed": needed / n,
+        "small_model_share": small_model_count / n,
+        "hard_confident_mistakes_per_100": hard_kept_wrong / hard_count * 100,
+        "cost_per_million": total_cost / n * 1_000_000,
+    }
 
 
 def system_decisions(version: str, questions, settings) -> list[dict]:
