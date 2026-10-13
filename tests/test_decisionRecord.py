@@ -51,3 +51,11 @@ def test_csv_and_json_have_the_same_fields():
     record = example_record()
     assert list(json.loads(record.to_json()).keys()) == CSV_COLUMNS
     assert len(record.to_csv_row()) == len(CSV_COLUMNS)
+
+
+def test_money_saved_and_agreement():
+    record = example_record(cost_spent=0.0, cost_if_llm=0.0017, llm_answer=None)
+    assert record.money_saved() == 0.0017  # the model answered: the whole LLM cost was saved
+    assert record.model_and_llm_agree() is None  # the LLM wasn't asked
+    record = example_record(llm_answer=frozenset({"slack", "jira"}))  # model said {jira, slack}
+    assert record.model_and_llm_agree() is True

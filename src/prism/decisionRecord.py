@@ -64,6 +64,16 @@ class DecisionRecord:
     prompt_version: str  # e.g. "v4"
     config_hash: str  # fingerprint of configs/default.yaml: exactly which settings
 
+    def money_saved(self) -> float:
+        """What this question saved compared with asking the LLM every time ($)."""
+        return self.cost_if_llm - self.cost_spent
+
+    def model_and_llm_agree(self) -> bool | None:
+        """Did the model and the LLM give the same sources? None if the LLM wasn't asked."""
+        if self.llm_answer is None:
+            return None
+        return set(self.model_answer) == set(self.llm_answer)
+
     def to_dict(self) -> dict:
         """The record as plain values: sets become sorted lists, so JSON can store them."""
         values = {}

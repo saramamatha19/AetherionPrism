@@ -1,0 +1,8 @@
+# The page's look (Streamlit theme). Colours only: no logic here.
+[theme]
+base = "light"
+primaryColor = "#E5574B"            # coral: buttons, selected options
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F5F8" # sidebar, input boxes
+textColor = "#1F2430"
+font = "sans serif"
