@@ -10,10 +10,18 @@ Run:  uv run streamlit run src/prism/app.py          (the look: .streamlit/confi
 import html
 import json
 from pathlib import Path
+from zipfile import BadZipFile
 
 import pandas as pd
 import streamlit as st
 
+from prism.batch import (
+    FILE_TYPES,
+    read_questions_file,
+    results_rows,
+    route_many,
+    split_questions,
+)
 from prism.decisionLog import DecisionLog, count_shadow_questions
 from prism.registry import MODELS_DIR, PROMOTIONS_FILE, load_card, read_champion
 from prism.router import Router
@@ -71,6 +79,19 @@ RECIPE_PLAIN_NAMES = {
 # results/laya_full_system.md. Our own model's numbers come from models/champion.json.
 LLM_ONLY_REAL_WORLD = 0.746
 LAYA_WITH_LLM_REAL_WORLD = 0.822
+
+# Plain words for the evidence numbers saved in champion.json / promotions.jsonl / model cards
+EVIDENCE_LABELS = {
+    "real_world_exact": "right on real-world questions",
+    "all_exact": "right on all questions",
+    "all_needed": "gets every needed source",
+    "coverage": "answers without the LLM",
+    "model_answers_alone": "answers without the LLM",
+    "kept_accuracy": "right when it answers",
+    "full_system_all_exact": "model + LLM: right on all questions",
+    "full_system_real_world_exact": "model + LLM: right on real-world questions",
+    "cheaper_than_llm_only": "cheaper than LLM-only",
+}
 
 REPORTS = {
     "All small models compared": "results/model_comparison.md",
@@ -134,26 +155,35 @@ def model_rows(live_version: str) -> list:
 
 
 def promotion_history() -> list:
-    """Every change of live model, newest first (models/promotions.jsonl)."""
-    rows = []
+    """Every change of live model (promotions and rollbacks), newest first (promotions.jsonl)."""
+    changes = []
     history_file = MODELS_DIR / PROMOTIONS_FILE
     if not history_file.exists():
-        return rows
+        return changes
     for line in history_file.read_text().splitlines():
-        if not line.strip():
-            continue
-        change = json.loads(line)
-        rows.append(
-            {
-                "When": change["when"],
-                "By": change["by"],
-                "From": change["from"] or "—",
-                "To": change["to"],
-                "Why": change["why"],
-            }
-        )
-    rows.reverse()
-    return rows
+        if line.strip():
+            changes.append(json.loads(line))
+    changes.reverse()
+    return changes
+
+
+def evidence_text(evidence: dict) -> str:
+    """{"real_world_exact": 0.84, ...} → "right on real-world questions 84.0% · ..." """
+    parts = []
+    for key, value in evidence.items():
+        label = EVIDENCE_LABELS.get(key, key)
+        if isinstance(value, (int, float)):
+            parts.append(f"{label} {value:.1%}")
+        else:
+            parts.append(f"{label} {value}")
+    return " · ".join(parts)
+
+
+def percent_or_dash(numbers: dict, key: str) -> str:
+    """A score as "84.2%", or "—" if this model's evidence doesn't have it (e.g. after a rollback)."""
+    if key not in numbers:
+        return "—"
+    return f"{numbers[key]:.1%}"
 
 
 @st.cache_resource  # made ONCE when the app starts, then shared by every user (~36 s to load)
@@ -198,9 +228,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-ask_tab, models_tab, session_tab, how_tab = st.tabs(
-    ["Ask", "Models", "This session", "How it works"]
+ask_tab, batch_tab, live_tab, models_tab, session_tab, how_tab = st.tabs(
+    ["Ask", "Batch", "Live model", "Models", "This session", "How it works"]
 )
+live_card = load_card(champion["version"])  # the live model's card: scores, gate, thresholds
+evidence = champion["evidence_on_eval"]
 
 # ---------- Ask ----------
 with ask_tab:
@@ -270,24 +302,174 @@ with ask_tab:
             if record.llm_error:
                 st.warning(f"The LLM failed ({record.llm_error}); the backup answer was used.")
 
-# ---------- Models ----------
-with models_tab:
-    evidence = champion["evidence_on_eval"]
-    live_card = load_card(champion["version"])
-
-    section("WHY THIS MODEL")
-    st.markdown(f"**{plain_model_name(live_card)}** · `{champion['version']}`")
-    w1, w2, w3, w4 = st.columns(4)
-    w1.metric("Right on real-world questions", f"{evidence['real_world_exact']:.0%}")
-    w2.metric("Answered without the LLM", f"{evidence['model_answers_alone']:.0%}")
-    w3.metric("Cheaper than LLM-only", f"{evidence['cheaper_than_llm_only']:.0%}")
-    w4.metric("Model + LLM, real-world", f"{evidence['full_system_real_world_exact']:.1%}")
-    st.info(champion["why"])
-    st.caption(
-        f"What it is: {champion['what_it_is']}. Measured on 1,200 test questions the model never "
-        f"trained on. Live since {champion['since']}, chosen by {champion['promoted_by']}."
+# ---------- Batch ----------
+with batch_tab:
+    st.markdown(
+        "Route many questions at once. Every question is logged like a single one. "
+        "**For training, use Shadow mode:** retraining needs the LLM's answer next to the model's."
+    )
+    pasted = st.text_area(
+        "Paste questions: one per line, or whole paragraphs",
+        height=140,
+        placeholder="is the login bug fixed?\nwhat did slack say about the outage? check the spec too.",
+    )
+    uploaded = st.file_uploader(
+        "…or upload a file (.txt: one per line · .csv / .xlsx: a 'question' column, or the first column)",
+        type=FILE_TYPES,
     )
 
+    batch_questions = []
+    try:
+        if uploaded is not None:  # a file wins over the pasted text
+            batch_questions = read_questions_file(uploaded.name, uploaded.getvalue())
+        else:
+            batch_questions = split_questions(pasted)
+    except (ValueError, BadZipFile) as error:  # an unreadable file: say why, route nothing
+        st.error(f"Couldn't read the file: {error}")
+
+    limit = router.settings.batch_max_questions
+    if batch_questions:
+        st.markdown(f"Found **{len(batch_questions)}** questions. Check them before routing:")
+        preview = []
+        for number in range(len(batch_questions)):
+            preview.append({"#": number + 1, "question": batch_questions[number]})
+        st.dataframe(preview, hide_index=True, width="stretch", height=180)
+        if len(batch_questions) > limit:
+            st.error(
+                f"That's more than the limit of {limit} (batch_max_questions). Split the file."
+            )
+
+    batch_mode_label = st.radio("Mode", list(MODES.keys()), index=0, key="batch_mode")
+    if MODES[batch_mode_label] != "model_only":
+        st.caption("Each question that goes to the LLM takes ~1.5 s and costs ~$0.002.")
+    ready = len(batch_questions) > 0 and len(batch_questions) <= limit
+    if st.button("Route all", type="primary", width="stretch", disabled=not ready):
+        progress_bar = st.progress(0.0, text="Starting…")
+
+        def show_progress(done, total):
+            progress_bar.progress(done / total, text=f"Routed {done} / {total}")
+
+        st.session_state["batch_records"] = route_many(
+            router,
+            batch_questions,
+            limit,
+            mode=MODES[batch_mode_label],
+            on_progress=show_progress,
+        )
+
+    if st.session_state.get("batch_records"):
+        batch_records = st.session_state["batch_records"]
+        batch_by_model = 0
+        batch_cost = 0.0
+        batch_saved = 0.0
+        for record in batch_records:  # adding up the records' own numbers
+            if record.decided_by == "model":
+                batch_by_model += 1
+            batch_cost += record.cost_spent
+            batch_saved += record.money_saved()
+        section("RESULTS")
+        b1, b2, b3, b4 = st.columns(4)
+        b1.metric("Questions", len(batch_records))
+        b2.metric("Answered by the model", batch_by_model)
+        b3.metric("Cost", f"${batch_cost:.4f}")
+        b4.metric("Saved vs LLM every time", f"${batch_saved:.4f}")
+        rows = results_rows(batch_records)
+        st.dataframe(rows, hide_index=True, width="stretch")
+        st.download_button(
+            "Download results (CSV)",
+            data=pd.DataFrame(rows).to_csv(index=False),
+            file_name="routing_results.csv",
+            mime="text/csv",
+        )
+
+# ---------- Live model ----------
+with live_tab:
+    if router.model_version != champion["version"]:  # promoted after the page started
+        st.warning(
+            f"A new model was promoted ({champion['version']}), but this page still uses "
+            f"{router.model_version}. Restart the page to use the new one."
+        )
+
+    section("ANSWERING QUESTIONS NOW")
+    st.markdown(f"#### {plain_model_name(live_card)}")
+    st.caption(
+        f"`{champion['version']}` · live since {champion['since']} · "
+        f"chosen by {champion['promoted_by']}"
+    )
+    st.info(f"**Why:** {champion['why']}")
+    st.caption(f"What it is: {champion['what_it_is']}.")
+
+    scores = live_card["eval"]
+    section("ON ITS OWN (1,200 TEST QUESTIONS IT NEVER TRAINED ON)")
+    o1, o2, o3 = st.columns(3)
+    o1.metric("Right on real-world questions", percent_or_dash(scores, "real_world_exact"))
+    o2.metric("Right on all questions", percent_or_dash(scores, "all_exact"))
+    o3.metric("Gets every needed source", percent_or_dash(scores, "all_needed"))
+    st.caption("All questions include the hard cases (47% of the test on purpose).")
+
+    section("THE GATE (WHEN IT ANSWERS BY ITSELF)")
+    gate_slice = live_card["gate_slice"]
+    g1, g2, g3 = st.columns(3)
+    g1.metric("Gate", live_card["gate"])
+    g2.metric("Answers without the LLM", percent_or_dash(scores, "coverage"))
+    g3.metric("Right when it answers", percent_or_dash(scores, "kept_accuracy"))
+    st.caption(
+        f"The gate was chosen on separate practice questions (the gate slice) so the model is right "
+        f"on at least {live_card['settings']['accuracy_floor']:.0%} of the questions it keeps: "
+        f"there it kept {gate_slice['coverage']:.1%} and was right on {gate_slice['accuracy']:.1%}. "
+        "Below the gate (or a question with not / except / skip) → the LLM answers."
+    )
+
+    section("WITH THE LLM (THE FULL SYSTEM)")
+    f1, f2, f3 = st.columns(3)
+    f1.metric(
+        "Right on real-world questions", percent_or_dash(evidence, "full_system_real_world_exact")
+    )
+    f2.metric("Right on all questions", percent_or_dash(evidence, "full_system_all_exact"))
+    f3.metric("Cheaper than LLM-only", percent_or_dash(evidence, "cheaper_than_llm_only"))
+
+    section("PER SOURCE (WHEN EACH YES/NO JUDGE SAYS YES)")
+    source_rows = []
+    for source, threshold in live_card["thresholds"].items():
+        source_rows.append(
+            {"Source": SOURCE_NAMES.get(source, source), "Says yes above": threshold}
+        )
+    st.dataframe(source_rows, hide_index=True, width="stretch")
+    st.caption(
+        "Each source has its own judge giving a score from 0 to 1; the bar was chosen per source "
+        "on practice questions (the threshold slice), not on the test."
+    )
+
+    section("HISTORY OF CHANGES (NEWEST FIRST)")
+    for change in promotion_history():
+        if change["from"] is None:
+            title = f"**{change['when']}** · first live model: **{change['to']}**"
+        else:
+            title = f"**{change['when']}** · {change['from']} → **{change['to']}**"
+        with st.container(border=True):
+            st.markdown(f"{title} · by {change['by']}")
+            st.markdown(f"**Why:** {change['why']}")
+            st.caption(evidence_text(change["evidence_on_eval"]))
+
+    section("HOW TO CHANGE IT")
+    st.markdown(
+        """
+1. **Collect** reviewed real questions from a shadow run:
+   `uv run python -m prism.retrain collect logs/<run folder>`
+2. **Train and compare** a new version with the live one on the same test:
+   `uv run python -m prism.retrain train` → it can be promoted only if it is not worse
+   (overall, real-world, and confident mistakes on hard questions) and all tests pass.
+3. **Promote** it (a person decides, and must write why):
+   `uv run python -m prism.retrain promote <version> "<what it is>" "<why>"` → restart the page.
+
+Changed your mind? `uv run python -m prism.retrain rollback "<why>"` goes back to the previous model
+(it shows up in the history above too). Nothing is ever promoted automatically.
+"""
+    )
+
+# ---------- Models ----------
+with models_tab:
+    st.caption("Every model we trained, compared on the same 1,200 test questions.")
     section("ALL MODELS WE TRIED")
     table = pd.DataFrame(model_rows(champion["version"]))
     # best on real-world first; a tie → the one that is more often right when it answers
@@ -322,8 +504,8 @@ with models_tab:
     section("MODEL + LLM TOGETHER (REAL-WORLD QUESTIONS)")
     t1, t2, t3, t4 = st.columns(4)
     t1.metric("LLM alone", f"{LLM_ONLY_REAL_WORLD:.1%}")
-    t2.metric("Our model alone", f"{evidence['real_world_exact']:.1%}")
-    t3.metric("Our model + LLM", f"{evidence['full_system_real_world_exact']:.1%}")
+    t2.metric("Our model alone", percent_or_dash(live_card["eval"], "real_world_exact"))
+    t3.metric("Our model + LLM", percent_or_dash(evidence, "full_system_real_world_exact"))
     t4.metric("Laya + LLM", f"{LAYA_WITH_LLM_REAL_WORLD:.1%}")
     st.markdown(
         "**Why not Laya** (a bigger ready-made model, fine-tuned on our data)? With the LLM it "
@@ -331,9 +513,6 @@ with models_tab:
         "**8× slower** (~54 ms vs ~7 ms) and **340× bigger** (1.6 GB). It was better only on "
         "the hard cases, and those already go to the LLM."
     )
-
-    section("HISTORY OF THE LIVE MODEL")
-    st.dataframe(promotion_history(), hide_index=True, width="stretch")
 
     section("FULL REPORTS")
     for title, report_file in REPORTS.items():

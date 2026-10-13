@@ -53,3 +53,7 @@ go_live_min_questions: 500    # …measured on at least 500 questions
 
 # Learning loop (Phase 8): retrain only when there are enough new reviewed questions
 retrain_min_new_rows: 150
+
+# Batch (the page's Batch tab): the most questions routed in one go
+# (in shadow mode ~ $0.002 and ~1.5 s each → 500 ≈ $1 and ~12 minutes)
+batch_max_questions: 500
