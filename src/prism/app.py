@@ -124,6 +124,10 @@ def plain_model_name(card: dict) -> str:
     name = RECIPE_PLAIN_NAMES.get(card["recipe"], card["recipe"])
     if card["settings"].get("negation_to_llm"):
         name = name + " + negation rule"
+    if (
+        "learned_from_batches" in card
+    ):  # made by `retrain train`: retrain N = learned from N batches
+        name = name + f" (retrain {len(card['learned_from_batches'])})"
     return name
 
 

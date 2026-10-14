@@ -1,0 +1,212 @@
+question,question_type,expected_sources
+how many vacation days do new joiners get in their first year?,Implied source,kb
+what's the process to request a new laptop?,Implied source,kb
+how do I set up two-factor login on my work account?,Implied source,kb
+can I claim my home internet bill as a work expense?,Implied source,kb
+how do I connect to the office wifi from a personal phone?,Implied source,kb
+what's the policy for working from another country for a month?,Implied source,kb
+how do I add a custom domain to my site on our platform?,Implied source,kb
+where can customers change the currency shown in their online store?,Implied source,kb
+how do I book a meeting room for next week?,Implied source,kb
+what is the parental leave policy?,Implied source,kb
+is the checkout timeout bug assigned to anyone yet?,Implied source,jira
+what's the status of the dark mode feature for the mobile app?,Implied source,jira
+which issues are blocking the 4.2 release?,Implied source,jira
+who is working on the flaky payment test?,Implied source,jira
+how many story points are left in the current sprint?,Implied source,jira
+was the memory leak in the inference worker closed as fixed?,Implied source,jira
+is there a ticket for adding rate limits to the public API?,Implied source,jira
+what priority did the search crash get?,Implied source,jira
+has the CSV export bug been reopened?,Implied source,jira
+when is the SSO migration epic due?,Implied source,jira
+what does the architecture doc say about how the cache layer is sharded?,Implied source,confluence
+where is the onboarding guide for backend engineers?,Implied source,confluence
+what's the documented rollback procedure for a bad model deploy?,Implied source,confluence
+what are the steps in the incident postmortem template?,Implied source,confluence
+what does the design proposal say about the new billing service?,Implied source,confluence
+find the runbook for restarting the GPU scheduler,Implied source,confluence
+what are the coding standards for our Python services?,Implied source,confluence
+where is the API versioning guideline written down?,Implied source,confluence
+what is the data retention policy for customer logs in our engineering docs?,Implied source,confluence
+show me the technical spec for the notification service,Implied source,confluence
+did anyone mention why the staging cluster was down this morning?,Implied source,slack
+what was the team chatting about regarding the new office move?,Implied source,slack
+has someone already asked about the broken build on main today?,Implied source,slack
+what did people say about the latency spike after lunch?,Implied source,slack
+anyone found a workaround for the VPN dropping every hour?,Implied source,slack
+what's the latest chatter on the hackathon teams?,Implied source,slack
+did the on-call engineer post an update on the outage?,Implied source,slack
+what did folks suggest for fixing the docker disk space error?,Implied source,slack
+who said they would cover the release tonight?,Implied source,slack
+was there any discussion on switching to the new CI runner?,Implied source,slack
+what did we decide in the planning meeting about the Q3 roadmap?,Implied source,notion
+summarise the action items from yesterday's product sync,Implied source,notion
+what did the group conclude about the pricing experiment in the last meeting?,Implied source,notion
+who took notes in the design review and what were the next steps?,Implied source,notion
+what were the main points raised in the retro?,Implied source,notion
+what did the marketing team agree on for the launch date?,Implied source,notion
+what did the members say about the remote control prototype colours?,Implied source,notion
+list the decisions from the leadership offsite,Implied source,notion
+what concerns came up in the hiring committee discussion?,Implied source,notion
+what did the team discuss about the budget for the user study?,Implied source,notion
+did the vendor reply about the contract renewal?,Implied source,gmail
+has the client sent the signed purchase order?,Implied source,gmail
+what did the auditor ask for in their last message to me?,Implied source,gmail
+any update from the recruiter about the candidate's offer?,Implied source,gmail
+did I get the invoice from the cloud provider this month?,Implied source,gmail
+what did the partner company say about the integration deadline?,Implied source,gmail
+find the message from legal about the NDA,Implied source,gmail
+has the customer confirmed the meeting time for Thursday?,Implied source,gmail
+did HR send me my updated salary letter?,Implied source,gmail
+what was the reply from the conference organisers?,Implied source,gmail
+what is the difference between TCP and UDP?,Implied source,web
+who won the football world cup in 2018?,Implied source,web
+how does gradient descent work?,Implied source,web
+what is the capital of Australia?,Implied source,web
+what's a good way to learn Rust as a Python developer?,Implied source,web
+how tall is mount kilimanjaro?,Implied source,web
+what does HTTP status 429 mean?,Implied source,web
+explain the CAP theorem in simple words,Implied source,web
+what is the population of Japan?,Implied source,web
+how do transformers use attention?,Implied source,web
+search the help center for how to reset a customer's password,Names the source,kb
+what does the knowledge base say about refund timelines?,Names the source,kb
+check the HR policy page for sick leave rules,Names the source,kb
+look up the IT help article on printer setup,Names the source,kb
+find the support article about connecting a payment provider,Names the source,kb
+search jira for tickets about the login page redesign,Names the source,jira
+open the jira issue for the broken image upload,Names the source,jira
+check jira for the bug about duplicate emails,Names the source,jira
+any jira tickets assigned to me that are overdue?,Names the source,jira
+find the jira epic for the analytics dashboard,Names the source,jira
+check confluence for the deployment checklist,Names the source,confluence
+find the confluence page on our security review process,Names the source,confluence
+what does the confluence space for the data team say about pipelines?,Names the source,confluence
+pull up the confluence runbook for database failover,Names the source,confluence
+search confluence for the release notes template,Names the source,confluence
+search slack for messages about the server migration,Names the source,slack
+what did people post in the general slack channel today?,Names the source,slack
+check the infra slack channel for the disk alert,Names the source,slack
+find the slack thread about the holiday schedule,Names the source,slack
+look in slack for the link someone shared to the demo video,Names the source,slack
+open the notion page with the meeting notes from monday,Names the source,notion
+check notion for the team's quarterly goals,Names the source,notion
+what's in the notion doc for the customer interview notes?,Names the source,notion
+find the notion page where we track decisions,Names the source,notion
+search notion for the brainstorm notes on the new feature,Names the source,notion
+check my gmail for anything from the bank,Names the source,gmail
+search my email for the flight confirmation,Names the source,gmail
+any new emails from my manager?,Names the source,gmail
+find the email with the training certificate attached,Names the source,gmail
+read my latest mails,Names the source,gmail
+search the web for the latest python release,Names the source,web
+google how to center a div in css,Names the source,web
+look online for reviews of the new macbook,Names the source,web
+search the internet for today's weather in bangalore,Names the source,web
+find on the web the official docs for kubernetes probes,Names the source,web
+is the auth bug fixed and does the fix match the design doc?,Multiple sources,jira|confluence
+check the ticket for the export feature and find its spec page,Multiple sources,jira|confluence
+find the open bugs for the billing service and its architecture page,Multiple sources,jira|confluence
+who owns the search ticket and where is the search design written up?,Multiple sources,jira|confluence
+is there a ticket for the deploy failure and what did people say about it in chat?,Multiple sources,jira|slack
+what's the status of the payment bug and has anyone discussed it in the channel?,Multiple sources,jira|slack
+find the issue for the slow dashboard and the thread where it was reported,Multiple sources,jira|slack
+did someone raise the crash in slack and was a jira ticket made?,Multiple sources,jira|slack
+"what did people say in chat about the launch, and what was decided in the meeting?",Multiple sources,slack|notion
+compare the slack discussion on pricing with the meeting decision,Multiple sources,slack|notion
+what did we agree in the sync and did anyone object in the channel afterwards?,Multiple sources,slack|notion
+what did the client email about the scope and what did we decide in standup?,Multiple sources,notion|gmail
+check the customer's email and our meeting notes about their feature request,Multiple sources,notion|gmail
+find the vendor's email and the notes from our call with them,Multiple sources,notion|gmail
+what's the official policy on password resets and is there a ticket to change it?,Multiple sources,kb|jira
+check the help article on exports and whether there's a bug filed for it,Multiple sources,kb|jira
+find the support article about refunds and any open issue about refunds failing,Multiple sources,kb|jira
+does what people agreed in the channel match the spec page for the API?,Multiple sources,confluence|slack
+find the runbook for the outage and what the on-call said in chat,Multiple sources,confluence|slack
+did the customer email us about the outage and what was said internally in chat?,Multiple sources,slack|gmail
+find the partner's email and the slack discussion about it,Multiple sources,slack|gmail
+what's the travel policy and what did the team decide about the offsite trip?,Multiple sources,kb|notion
+check the expense rules and the meeting notes about the conference budget,Multiple sources,kb|notion
+"find the bug, the design page and the chat thread about the upload limit",Multiple sources,jira|confluence|slack
+"for the timeout issue give me the ticket, the runbook and the slack discussion",Multiple sources,jira|confluence|slack
+how does oauth work in general and how is it described in our auth design doc?,Multiple sources,confluence|web
+what is a circuit breaker pattern and how does our service guide say we use it?,Multiple sources,confluence|web
+did the client report the bug by email and is there a ticket for it?,Multiple sources,jira|gmail
+find the customer's complaint email and the jira issue it created,Multiple sources,jira|gmail
+what's our policy on using personal cloud storage and what are the general risks of it?,Multiple sources,kb|web
+"what was decided about the release in the meeting, is there a ticket, and what are people saying in chat?",Multiple sources,jira|slack|notion
+"not the ticket, I want the design doc for the payments API",Excludes a source,confluence
+"skip slack, what does the official runbook say about failover?",Excludes a source,confluence
+"I don't need the meeting notes, just the architecture page for search",Excludes a source,confluence
+"not the spec, just tell me if the upload bug is still open",Excludes a source,jira
+"ignore the chat, what's the status of the release blocker ticket?",Excludes a source,jira
+"don't look at the docs, which ticket tracks the memory leak?",Excludes a source,jira
+"not the email, what did people say in chat about the outage?",Excludes a source,slack
+"skip jira, what did the team discuss about the flaky tests?",Excludes a source,slack
+"not the docs, I want the discussion where someone explained the cache bug",Excludes a source,slack
+"not slack, what was officially decided in the planning meeting?",Excludes a source,notion
+"ignore emails, what did we agree in the retro?",Excludes a source,notion
+"except jira, where are the notes from the sprint review?",Excludes a source,notion
+"not the slack message, the email from the customer about pricing",Excludes a source,gmail
+"skip the meeting notes, what did the vendor write to me?",Excludes a source,gmail
+"don't search chat, did the auditor email me back?",Excludes a source,gmail
+"not the web, what does our own policy say about overtime pay?",Excludes a source,kb
+"skip google, how do I reset my account password according to our help center?",Excludes a source,kb
+"not our docs, what does the general internet say about rate limiting best practices?",Excludes a source,web
+"don't check internal stuff, what's the latest version of node?",Excludes a source,web
+"except slack, find the ticket and the spec for the export feature",Excludes a source,jira|confluence
+hi there!,Small talk,none
+"thanks a lot, that helps",Small talk,none
+good morning,Small talk,none
+who built you?,Small talk,none
+are you a robot?,Small talk,none
+what can you do for me?,Small talk,none
+can you say that again more simply?,Small talk,none
+bye for now,Small talk,none
+you're awesome,Small talk,none
+how are you today?,Small talk,none
+what's your name?,Small talk,none
+can you summarise what you just told me?,Small talk,none
+ok cool,Small talk,none
+nice work,Small talk,none
+"sorry, I didn't get that",Small talk,none
+can you make that shorter?,Small talk,none
+lol,Small talk,none
+talk to you later,Small talk,none
+do you have feelings?,Small talk,none
+"great, that's all",Small talk,none
+anything on the login issue?,Unclear source,jira
+what's going on with the staging environment?,Unclear source,slack
+any news on the reorg?,Unclear source,notion
+what do we know about feature flags?,Unclear source,confluence
+where are we with the outage?,Unclear source,slack
+any updates from the client?,Unclear source,gmail
+what happened with the budget?,Unclear source,notion
+is the search thing sorted?,Unclear source,jira
+info on the data pipeline?,Unclear source,confluence
+look into that thing from this morning,Unclear source,slack
+what about the holiday rules?,Unclear source,kb
+anything about the new hire plan?,Unclear source,notion
+status of the mobile app?,Unclear source,jira
+did they get back to us?,Unclear source,gmail
+what's the deal with the API limits?,Unclear source,confluence
+"I got a parking ticket on a client visit, can I expense it?",Misleading keyword,kb
+how do I set up an email address for my website visitors?,Misleading keyword,kb
+can I change my plan from two email inboxes to one?,Misleading keyword,kb
+"how do I get approval for a slack day, I mean a lighter work day?",Misleading keyword,kb
+"my site's contact form isn't sending emails to me, how do I fix it?",Misleading keyword,kb
+did anyone figure out why the mail app shows no folders on linux?,Misleading keyword,slack
+what did people say about the confluence of the two rivers photo on the team page?,Misleading keyword,slack
+"people were talking about why the gmail tab keeps crashing chrome, what did they find?",Misleading keyword,slack
+did someone explain in chat what notion means in our new branding?,Misleading keyword,slack
+what did the meeting decide about when to move the runbook to confluence?,Misleading keyword,notion
+"in the sync, what did we agree about replying to customer emails faster?",Misleading keyword,notion
+what was decided in the planning meeting about closing old jira tickets?,Misleading keyword,notion
+is there a ticket to fix the email notification template?,Misleading keyword,jira
+which issue tracks the broken slack integration?,Misleading keyword,jira
+is there a bug filed for the notion import failing?,Misleading keyword,jira
+find the ticket about the confluence links being broken in the app,Misleading keyword,jira
+is jira a real word in mythology?,Misleading keyword,web
+what does confluence mean in geography?,Misleading keyword,web
+who invented email?,Misleading keyword,web
+how did slack get its name as a company?,Misleading keyword,web

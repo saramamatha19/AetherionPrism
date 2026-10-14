@@ -1,0 +1,276 @@
+question
+how do I change my bank details for salary payments?
+what is the dress code for client meetings?
+how many sick days can I take without a doctor's note?
+how do I get access to the company VPN?
+what's the procedure to report a lost access card?
+how do I enrol my spouse in the health insurance plan?
+what is the notice period for resignation?
+how can a customer cancel their annual subscription?
+how do I install the printer driver on a mac?
+what's the reimbursement limit for team lunches?
+how do I add a team member as an admin on the site dashboard?
+can store owners offer free shipping above a certain order amount?
+how do I update my emergency contact details?
+what holidays does the company observe this year?
+is the bug where images don't load on safari fixed?
+who reported the issue with duplicate invoices?
+what's left in the backlog for the onboarding revamp?
+has QA verified the fix for the password reset loop?
+which sprint is the accessibility audit work planned for?
+is anyone assigned to the slow query on the orders table?
+what's the resolution of the crash when uploading large files?
+how many open bugs are tagged critical right now?
+did the GPU out-of-memory issue get a fix version?
+is the dark theme contrast problem marked as won't fix?
+what's the acceptance criteria for the bulk delete story?
+has the regression in the search ranking been triaged?
+which tickets were moved out of this release?
+when was the API pagination bug last updated?
+what does our engineering handbook say about code reviews?
+where is the disaster recovery plan documented?
+what is the documented SLA for the inference API?
+what are the steps to rotate the database credentials according to our docs?
+find the design doc for the recommendation engine
+what does the platform team's guide say about adding a new microservice?
+where's the documented branching strategy for our repos?
+what's in the security guidelines for storing secrets?
+show me the how-to page for setting up the local dev environment
+what does the capacity planning doc say about GPU headroom?
+what does the RFC for the event bus say about message ordering?
+where is the list of approved third-party libraries written down?
+what does the observability guide recommend for alert thresholds?
+find the documented process for on-call handover
+did anyone share the slides from today's all-hands in chat?
+what did the team say about the new coffee machine?
+is someone already looking at the alert that fired an hour ago?
+what was the quick fix people mentioned for the npm install error?
+has anyone posted about the deploy freeze this week?
+what did people think of the new design mockups shared yesterday?
+did someone ask for help with the kafka consumer lag earlier?
+what was the back and forth about moving standup to 10am?
+anyone reported the login page being slow today?
+who was asking about the test environment credentials?
+what did the data team say when the dashboard broke?
+did people discuss the new expense tool in the channel?
+has anybody mentioned the certificate expiring soon?
+what tips did people share for debugging the websocket drops?
+what did we agree on in the kickoff meeting for the new client?
+what were the outcomes of the architecture review meeting?
+summarise the discussion from the weekly ops meeting
+what did the product council decide about the free tier?
+who owns which action items from the quarterly planning session?
+what did the team say about user feedback in the research readout meeting?
+what did the group decide about the interface design for the remote control?
+what was concluded about hiring priorities in the last management meeting?
+list the follow-ups from the customer advisory board session
+what did we discuss in the one-on-one notes about career goals?
+what did the meeting say about the industrial designer's proposal?
+what did the professor and students discuss about the evaluation metrics?
+what ideas came up in the brainstorming session for the marketing campaign?
+what did the committee decide about the education budget?
+did the bank send the loan statement?
+has the landlord replied about the office lease?
+what did the customer write in their complaint yesterday?
+any message from the travel agent about my booking?
+did the candidate accept the interview slot I sent?
+has the supplier confirmed the shipment date?
+what did the insurance company say about the claim?
+did the speaker send their bio for the event?
+find the receipt the hotel sent me
+did the investor reply to the quarterly update?
+has the security vendor sent the penetration test report?
+what did my manager write about the performance review timeline?
+did I receive the onboarding documents from the new contractor?
+any reply from the university about the internship program?
+what is the speed of light?
+who wrote pride and prejudice?
+how does a bloom filter work?
+what are the symptoms of burnout?
+what is the difference between a process and a thread?
+when did the first iphone come out?
+what is kubernetes used for?
+how many players are on a cricket team?
+what does ACID mean in databases?
+what's the time difference between london and new york?
+how do vaccines train the immune system?
+what is quantisation in machine learning models?
+who is the current secretary general of the united nations?
+what is the boiling point of water at high altitude?
+search our help docs for how to export customer data
+what does the HR handbook say about bereavement leave?
+check the IT knowledge base for the email signature setup
+find the help center page about changing a site's domain name
+look up the policy article on bringing guests to the office
+what does the support FAQ say about failed card payments?
+check the employee handbook for the remote work allowance
+list my open jira tickets
+check jira for the status of the data export epic
+find the jira bug about the calendar sync
+what's the jira ticket number for the SSO login failure?
+search jira for issues labelled performance
+has the jira story for the new onboarding email been closed?
+show the jira board for the mobile team
+find the confluence page for the API style guide
+search confluence for the incident response playbook
+check the confluence wiki for the glossary of internal terms
+open the confluence space for the security team
+what's on the confluence page about release trains?
+pull up the confluence doc on GPU quota requests
+find the confluence how-to for adding feature flags
+check slack for anyone asking about the staging password
+what's new in the frontend slack channel?
+search slack for the message about the parking spaces
+find the slack discussion where we picked the new logo
+did anyone post the meeting link in slack?
+look through slack for the thread on the build cache
+check the random slack channel for the lunch plan
+open notion and find the notes from the product review
+check the notion meeting page from last friday
+search notion for the decision log about the pricing change
+find the notion notes from the user interviews in march
+what's on the notion page for the team offsite agenda?
+look up the notion doc with the retro notes
+check notion for what was decided about the design system
+check my inbox for the hotel booking
+search gmail for the email from the payroll team
+any unread emails from clients?
+find the email thread with the legal team about the contract
+look in my mail for the meeting invite from finance
+did I get an email from the airline?
+search my email for the password reset link
+search online for the best laptops for programming
+google the meaning of the word serendipity
+look up on the internet how to make cold brew coffee
+check the web for the latest news on AI regulation
+search online for python asyncio tutorials
+find on google the opening hours of the city library
+look up the exchange rate for dollars to rupees online
+find the ticket for the caching bug and the design page that explains the cache
+check if the migration story is done and where the migration guide is
+give me the epic for the new dashboard and its technical spec
+is the rate limit bug fixed and is the API doc updated with the new limits?
+who is assigned the logging task and what does the logging standard page say?
+is the outage ticket closed and what are people saying in the channel about it?
+did anyone mention the broken export in chat and is there a bug filed?
+find the ticket for the memory leak and the slack thread where it was found
+what's the status of the release blocker and what's the latest discussion on it?
+check the bug for the login loop and whether someone posted a workaround in slack
+what did the meeting decide about the deadline and how did people react in chat?
+find the meeting notes on the reorg and the slack discussion afterwards
+what was agreed in planning and what questions came up in the channel?
+compare what the team said in slack with the retro notes
+what did the partner email about pricing and what did we decide in the call notes?
+find the client's email request and the meeting notes where we discussed it
+what did the board member write to me and what was decided in the board meeting?
+check the vendor's proposal email and our meeting notes reviewing it
+what does the help article say about two-factor login and is there a bug about it?
+check the refund policy and any tickets about refunds being delayed
+find the onboarding policy and the ticket to automate it
+what does the runbook say about the cache outage and what did on-call post in chat?
+find the spec for the search API and the slack thread questioning it
+check the deployment guide and the chat discussion about the failed deploy
+what did the customer email about the outage and what did support say in slack?
+find the vendor email about the delay and the team's chat about it
+did the client complain by email and has anyone shared it in the channel?
+what is the leave policy and what did the team decide about holiday cover in the meeting?
+check the travel policy and the meeting notes about the team trip
+did the customer email about the bug and what's the status of its ticket?
+find the partner's bug report email and the jira issue for it
+what is event sourcing in general and how does our architecture doc use it?
+explain what a service mesh is and what our platform docs say about ours
+"for the payment failure give me the ticket, the runbook, and the slack thread"
+"find the bug, the design doc, and the chat discussion for the search timeout"
+"what did we decide about the launch, is there a ticket, and what's the chatter in slack?"
+"what's the policy on account deletion, is there a ticket for it, and what did support say in chat?"
+"find the vendor's email, the integration doc, and the slack discussion about the integration"
+what does our policy say about using AI tools and what are the general risks?
+"not the jira ticket, the architecture page for the notification service"
+"skip the chat, where is the documented process for access requests?"
+"I don't want meeting notes, find the spec page for the mobile app"
+"ignore slack, what does the official guide say about deploys?"
+"not the design doc, is the bug with the search filters closed?"
+"skip slack, which ticket is tracking the outage follow-up?"
+"don't look at confluence, who is assigned the login redesign?"
+"not emails, what's the status of the data export story?"
+"not the ticket, what did people say in chat about the broken build?"
+"skip the meeting notes, what was discussed in the channel about the offsite?"
+"not confluence, what did the team chat about the new linter rules?"
+"don't check email, did anyone in the channel mention the client visit?"
+"not the chat messages, what was decided in the design review meeting?"
+"skip the emails, what did we conclude in the strategy session?"
+"ignore jira, what were the action items from the sprint planning meeting?"
+"not slack, what did the meeting say about the remote control buttons?"
+"not slack, what did the recruiter write to me by email?"
+"skip the meeting notes, did the vendor send the quote by email?"
+"not the ticket, the customer's email about the bug"
+"don't look in chat, did legal email the signed contract?"
+"not online, what does our company policy say about public holidays?"
+"skip slack, what does the help center say about resetting two-factor?"
+"not the internet, how do I request equipment according to our IT guide?"
+"not internal docs, what is the general definition of a microservice?"
+"skip our wiki, what are common causes of memory leaks in java?"
+"don't check slack, what's the latest stable version of postgres?"
+"except chat and email, find the ticket and design doc for the billing change"
+"not the jira tickets, what did the team say in chat and decide in the meeting about the redesign?"
+hello
+"hey, how's it going?"
+thank you so much
+good night
+what are you?
+who made you?
+can you help me?
+how old are you?
+are you real?
+can you repeat that?
+explain that differently please
+"that's helpful, thanks"
+never mind
+you're funny
+what languages do you speak?
+see you tomorrow
+cheers
+can you shorten your last answer?
+do you like your job?
+where do you live?
+ok got it
+good afternoon
+what should I call you?
+"awesome, thanks for the help"
+can you give me the key points?
+anything new about the deploy?
+where are we on the export thing?
+what's the plan for next quarter?
+how does the auth flow work here?
+has the vendor said anything?
+what's the story with the broken dashboard?
+what did we land on for the pricing?
+is the performance problem being handled?
+any info about the backup setup?
+did the customer respond?
+what are the rules for expenses?
+anyone know about the office wifi problem?
+what's happening with the rebrand?
+update on the payments work?
+details on the monitoring setup?
+"I got a speeding ticket in the company car, who pays for it?"
+how do I forward my website's contact form to my email?
+can I get reimbursed for a concert ticket for the team event?
+how do I connect my business email to my online store?
+how do I add a chat widget to my website?
+"folks were discussing why the email client keeps asking for a password, did anyone find out?"
+"people were chatting about the jira outage earlier, what did they say?"
+what did people say about the notion of a four-day week?
+did someone in the channel explain why the confluence tab won't load on their laptop?
+what did the meeting decide about moving our docs out of confluence?
+"in the planning meeting, what did we agree about slack etiquette?"
+what did the retro conclude about too many jira tickets per person?
+is there a ticket for the gmail login button not working on our app?
+which issue tracks the slack notifications being sent twice?
+find the bug about the help center search returning nothing
+is there a story for adding a notion export option to our product?
+what does slack mean in project management scheduling?
+what is the origin of the word ticket?
+when was gmail launched?
+what does the word notion mean?
+what does the IT policy say about laptop encryption and how does the security doc tell us to set it up?
