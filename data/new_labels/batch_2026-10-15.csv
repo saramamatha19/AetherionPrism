@@ -1,0 +1,420 @@
+id,question,labels,question_type,origin,split
+n20261015_0001,pull up the slack thread on the outage last night and the email from the auditor about the compliance report,gmail|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0002,is the payments issue moving?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0003,check notion for what came out of the weekly product sync,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0004,find the message from our lawyer about the trademark filing,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0005,what is the tallest building in the world?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0006,who maintains the disaster recovery plan?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0007,what is the GDPR?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0008,how many story points is the new onboarding checklist?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0009,pull up the disaster recovery plan and the slack thread on the docker build failing on new macbooks,confluence|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0010,has the customer emailed about their jira access?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0011,anything on the security incident?,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0012,what are the rules for relocation support?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0013,check notion for what came out of the all-hands prep meeting,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0014,what did we decide in the sprint retro?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0015,what did folks say about the outage last night?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0016,how old are you exactly?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0017,can you list the key points?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0018,find the slack thread on the cloud bill spike and the notes from the hiring committee meeting,notion|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0019,is the duplicate rows in the audit log fixed yet?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0020,check jira for dark mode for the web app,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0021,what's in slack about the team lunch on friday?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0022,what's the policy on using personal devices for work?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0023,search jira for the crash when exporting to excel,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0024,summarise the notes from the customer feedback session,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0025,how many story points is the two-step approval flow?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0026,what is the difference between latency and throughput?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0027,what are the rules for expensing client dinners?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0028,has anybody found a fix for the docker build failing on new macbooks?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0029,is webhook retries still in the backlog?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0030,which issue tracks the slack bot posting twice?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0031,nice one,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0032,"sorry, my mistake",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0033,how many bones are in the human body?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0034,find the ticket for the broken password reset link and the data platform architecture page,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0035,find the message from the landlord about the rent increase,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0036,search the help center for how to change the language of my site,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0037,where are we with the roadmap?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0038,"ignore the chat, summarise the notes from the customer feedback session",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0039,what's the deal with the new expense tool?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0040,what did we decide in the budget review?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0041,what's the status of the blank screen after checkout?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0042,did someone figure out why the confluence editor freezes in firefox?,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0043,where is the disaster recovery plan written up?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0044,any news on the migration?,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0045,what's going on with the billing thing?,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0046,what is a notion in philosophy?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0047,what are the steps in the load testing playbook?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0048,what can you help with?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0049,alright,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0050,who was asking about the new linter rules earlier?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0051,find the ticket for the double charge on renewals and the access control design doc,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0052,give me the status of the team billing view and the model deployment checklist,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0053,what's in slack about the cloud bill spike?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0054,status of the data export?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0055,great job,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0056,what's the policy on overtime for weekend releases?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0057,what did the meeting decide about archiving old slack channels?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0058,"not the email, what does our caching strategy doc recommend?",confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0059,"ignore the ticket, summarise the notes from the architecture council",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0060,what's your favourite colour?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0061,did the hardware vendor reply about the delivery date?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0062,has our lawyer sent anything about the trademark filing?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0063,find the disaster recovery plan and the slack thread on the flaky CI pipeline,confluence|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0064,what's the difference between RAM and storage?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0065,give me the cloud cost allocation guide and what we decided in the marketing kickoff,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0066,where is the on-call handbook written up?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0067,has the insurance broker sent anything about the renewal quote?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0068,"skip the email, did anyone mention the team lunch on friday today?",slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0069,pull up the status of the team billing view and the email from the bank about the wire transfer,gmail|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0070,what did we decide in the marketing kickoff?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0071,"skip the email, what's the status of the missing push notifications on android?",jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0072,open the disaster recovery plan in confluence,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0073,what's the plan for the launch?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0074,open the jira ticket for the broken password reset link,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0075,when is the usage dashboard for admins due?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0076,find what we decided in the weekly product sync and the email from the cloud account manager about the discount,gmail|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0077,check jira for the new onboarding checklist,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0078,check my gmail for the landlord's email about the rent increase,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0079,find the status of dark mode for the web app and the vendor integration guide,jira|kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0080,search the internet for the python 3.13 release notes,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0081,did anyone share tips for organising a messy inbox?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0082,who was asking about the docker build failing on new macbooks earlier?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0083,what does the word confluence mean?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0084,did the new contractor reply about the signed agreement?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0085,did the cloud account manager reply about the discount?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0086,summarise the notes from the sprint retro,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0087,what concerns were raised in the partner call?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0088,"skip the email, what did folks say about the new parking rules?",slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0089,pull up the policy on jury duty leave and the status of offline mode for the mobile app,jira|kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0090,check notion for what came out of the pricing workshop,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0091,summarise the notes from the weekly product sync,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0092,"skip the chat, where is the service ownership map written up?",confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0093,what's the fastest land animal?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0094,how do solar panels make electricity?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0095,I need the data platform architecture page and what people said in chat about the new parking rules,confluence|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0096,is there a bug filed for the email verification link expiring too fast?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0097,google the population of canada,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0098,what concerns were raised in the hiring committee meeting?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0099,is the search ignoring accents fixed yet?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0100,I need the slack thread on the expired SSL certificate and the notes from the customer feedback session,notion|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0101,what are the steps in the logging conventions page?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0102,"never mind, it's fine",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0103,"not the docs, is the 500 error on the profile page fixed yet?",jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0104,what is a vector database?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0105,pull up what we decided in the design review and the email from the bank about the wire transfer,gmail|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0106,check notion for what came out of the security review meeting,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0107,how do I change the language of my site?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0108,check confluence for the incident response runbook,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0109,brb,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0110,open the caching strategy doc in confluence,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0111,check jira for the team billing view,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0112,I need the disaster recovery plan and the slack thread on the new laptop rollout,confluence|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0113,"hi, good to see you",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0114,has the event organiser sent anything about my speaker slot?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0115,how does a hash map work?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0116,what was the back and forth about the new linter rules?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0117,check notion for what came out of the sprint retro,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0118,search my inbox for the senior engineer role from the recruiter,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0119,search the help center for how to request a second monitor,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0120,what's in slack about the elevator being out of service?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0121,what's the latest on the outage?,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0122,what did folks say about the new laptop rollout?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0123,what's the holiday policy like?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0124,who maintains the release process doc?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0125,"don't check the chat, find the message from our lawyer about the trademark filing",gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0126,what's the policy on the learning budget?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0127,what are the rules for referral bonuses?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0128,pull up the on-call handbook and the notes from the all-hands prep meeting,confluence|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0129,hello again,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0130,what is technical debt?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0131,what did we decide in the onboarding revamp meeting?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0132,pull up the ticket for the double charge on renewals and the incident response runbook,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0133,anything about the new office?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0134,"ignore the chat, how do I update my address in the HR system?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0135,search my inbox for the renewal quote from the insurance broker,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0136,was the missing push notifications on android closed as done?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0137,check my gmail for the travel desk's email about my hotel booking,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0138,how does DNS work?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0139,where are you from?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0140,how do I set up automatic invoices for my customers?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0141,give me the ticket for the crash when exporting to excel and what people said in chat about the new parking rules,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0142,did our lawyer reply about the trademark filing?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0143,did anyone hear back from the client?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0144,you're very helpful,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0145,what did folks say about the notion of moving to quarterly goals?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0146,give me the policy on bringing pets to the office and the notes from the design review,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0147,do you ever sleep?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0148,did anyone in the channel explain why jira is so slow today?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0149,search slack for the new linter rules,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0150,pull up the status of the audit log export and the slack thread on the noisy pager alerts,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0151,pull up the policy on expensing client dinners and what we decided in the budget review,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0152,"in the retro, what did we agree about writing better jira tickets?",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0153,summarise the notes from the all-hands prep meeting,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0154,"ignore the email, what were the action items from the budget review?",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0155,how do I connect my domain to the website builder?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0156,what concerns were raised in the leadership offsite?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0157,any update from the partner?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0158,what does the style guide say about naming slack channels?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0159,when is the bulk user import due?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0160,who pays if I get a parking ticket at the office?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0161,did anyone mention the flaky CI pipeline today?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0162,what are the rules on remote work?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0163,find the status of the audit log export and the API design guidelines,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0164,open the on-call handbook in confluence,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0165,what does jira mean in japanese?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0166,"not the docs, what did folks say about the new laptop rollout?",slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0167,pull up the policy on bringing pets to the office and the status of webhook retries,jira|kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0168,give me the status of the new onboarding checklist and the email from the cloud account manager about the discount,gmail|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0169,I need the vendor integration guide and what people said in chat about the new linter rules,kb|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0170,how's your day going?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0171,what are the rules for overtime for weekend releases?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0172,where is the doc that explains our jira workflow states?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0173,what's in slack about the conference talk proposals?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0174,pull up the policy on home office equipment and the notes from the customer feedback session,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0175,find the message from the investor about the board deck,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0176,who is the CEO of nvidia?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0177,search my inbox for the research partnership from the university,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0178,who are you exactly?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0179,open the cloud cost allocation guide in confluence,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0180,summarise the notes from the roadmap review,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0181,has anyone been assigned the timezone bug in the calendar?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0182,what's the policy on taking a sabbatical?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0183,find the policy on unused vacation days at year end and the notes from the customer feedback session,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0184,give me the slack thread on the cloud bill spike and the email from the insurance broker about the renewal quote,gmail|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0185,where is the incident response runbook written up?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0186,I need the slack thread on the elevator being out of service and the email from our lawyer about the trademark filing,gmail|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0187,has anybody found a fix for the kubernetes upgrade?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0188,who discovered penicillin?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0189,what did folks say about the conference talk proposals?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0190,who maintains the caching strategy doc?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0191,search the web for how to stop a leaking tap,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0192,"skip the ticket, summarise the notes from the all-hands prep meeting",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0193,open the jira ticket for the slow load of the reports page,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0194,is offline mode for the mobile app still in the backlog?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0195,what's in slack about the new linter rules?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0196,did anyone mention the noisy pager alerts today?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0197,check notion for what came out of the marketing kickoff,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0198,is there a ticket for the gmail sync failing in our app?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0199,what did the client write about the confluence space we shared?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0200,do you have a name?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0201,is the crash when exporting to excel fixed yet?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0202,open the notion notes from the sprint retro,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0203,what does the HR handbook say about relocation support?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0204,I need the policy on taking a sabbatical and the notes from the marketing kickoff,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0205,open the notion notes from the roadmap review,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0206,who is working on the broken password reset link?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0207,find the ticket about the help center search being slow,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0208,pull up the ticket for the missing push notifications on android and what people said in chat about the docker build failing on new macbooks,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0209,where is the caching strategy doc written up?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0210,pull up what we decided in the customer feedback session and the email from the investor about the board deck,gmail|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0211,is someone on the search bug?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0212,I need the ticket for the missing push notifications on android and the email from the bank about the wire transfer,gmail|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0213,what's the status of the wrong currency symbol in receipts?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0214,what's up with the API?,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0215,"not the ticket, has the design agency sent anything about the new logo files?",gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0216,open the notion notes from the security review meeting,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0217,search jira for the timezone bug in the calendar,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0218,what's the rule on overtime?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0219,please summarise that,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0220,how far is the moon from earth?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0221,what did the investor write about the board deck?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0222,what's in slack about the new parking rules?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0223,what was the back and forth about the new code owners file?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0224,is there a rule about how much slack time we get between meetings?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0225,how do I add an email signup form to my website?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0226,pull up the policy on jury duty leave and the status of custom roles,jira|kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0227,what did we decide in the roadmap review?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0228,what's the policy on expensing client dinners?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0229,what are the rules for the learning budget?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0230,give me the policy on taking a sabbatical and what we decided in the pricing workshop,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0231,"don't check the ticket, what are the rules for overtime for weekend releases?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0232,search slack for the kubernetes upgrade,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0233,find the slack thread on the quarterly hackathon and the email from the payroll provider about the tax forms,gmail|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0234,check my gmail for the auditor's email about the compliance report,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0235,what are the steps in the SLO definitions page?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0236,find the ticket for the missing push notifications on android and what people said in chat about the kubernetes upgrade,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0237,how does email encryption work in general?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0238,has the landlord sent anything about the rent increase?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0239,what did the payroll provider write about the tax forms?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0240,pull up the incident response runbook and what we decided in the quarterly planning session,confluence|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0241,how do I request a second monitor?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0242,what did folks say about the noisy pager alerts?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0243,"not the docs, what's the status of the search ignoring accents?",jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0244,how do I get a parking pass?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0245,what did folks say about the quarterly hackathon?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0246,"skip the meeting notes, what's the policy on using personal devices for work?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0247,"not the email, what concerns were raised in the leadership offsite?",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0248,where is the database migration guide written up?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0249,where did we land on the hiring freeze?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0250,has the auditor sent anything about the compliance report?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0251,has the hardware vendor sent anything about the delivery date?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0252,can you make it shorter?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0253,I need the slack thread on the new laptop rollout and the email from the university about the research partnership,gmail|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0254,did the candidate respond?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0255,search the help center for how to connect my domain to the website builder,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0256,"ignore the docs, did anyone mention the new code owners file today?",slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0257,how do I reset my SSO password?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0258,"I got a ticket for my train fare to the client office, can I expense it?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0259,what did we decide in the leadership offsite?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0260,find what people said in chat about the new laptop rollout and what we decided in the security review meeting,notion|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0261,find the message from the customer at Acme about their renewal,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0262,pull up the status of scheduled reports and the slack thread on the noisy pager alerts,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0263,I didn't understand that,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0264,what's the story with the budget cuts?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0265,what concerns were raised in the onboarding revamp meeting?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0266,thank you very much,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0267,find the slack thread on the kubernetes upgrade and what we decided in the quarterly planning session,notion|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0268,pull up the policy on referral bonuses and the status of the team billing view,jira|kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0269,"don't check the meeting notes, what are the steps in the model deployment checklist?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0270,what are the rules for bringing pets to the office?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0271,"thanks, bye",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0272,what's the policy on bringing pets to the office?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0273,give me the incident response runbook and what we decided in the pricing workshop,confluence|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0274,how is the cache configured?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0275,who was asking about the conference talk proposals earlier?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0276,who painted the mona lisa?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0277,I need the ticket for the blank screen after checkout and what people said in chat about the noisy pager alerts,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0278,"ignore the docs, who took which follow-ups in the roadmap review?",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0279,give me the API design guidelines and what people said in chat about the slow wifi on the third floor,confluence|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0280,who created you?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0281,"skip the docs, summarise the notes from the weekly product sync",notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0282,google how to write a cover letter,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0283,"not the docs, was the blank screen after checkout closed as done?",jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0284,how does compound interest work?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0285,how do I make a sourdough starter?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0286,pull up the policy on referral bonuses and the notes from the hiring committee meeting,kb|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0287,what did folks say about the slow wifi on the third floor?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0288,pull up the policy on working night shifts and the status of the team billing view,jira|kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0289,check my gmail for the recruiter's email about the senior engineer role,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0290,can I change the email address on my store account?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0291,info on the SSO setup?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0292,find the status of offline mode for the mobile app and the email from the event organiser about my speaker slot,gmail|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0293,what concerns were raised in the sprint retro?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0294,which page describes how we label jira tickets?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0295,what did folks say about the new linter rules?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0296,can you say that more simply?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0297,"don't check the chat, how do I reset my SSO password?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0298,give me the status of the usage dashboard for admins and the email from the cloud account manager about the discount,gmail|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0299,give me the ticket for the image upload failing over 10MB and the API design guidelines,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0300,where is the API design guidelines written up?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0301,"not the chat, what's the policy on overtime for weekend releases?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0302,has anyone been assigned the 500 error on the profile page?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0303,google the rules of pickleball,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0304,find the ticket for the dropdown flicker on the settings page and what people said in chat about the conference talk proposals,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0305,what are the rules for home office equipment?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0306,what is retrieval augmented generation?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0307,did the payroll provider reply about the tax forms?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0308,open the notion notes from the pricing workshop,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0309,give me the status of the audit log export and the email from the university about the research partnership,gmail|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0310,"skip the meeting notes, what's the policy on the learning budget?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0311,what was the back and forth about the elevator being out of service?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0312,what about the training budget?,notion|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0313,is the two-step approval flow still in the backlog?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0314,how many story points is the audit log export?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0315,how many time zones does russia have?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0316,what does our API design guidelines recommend?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0317,"skip the ticket, what are the rules for taking a sabbatical?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0318,find the message from the university about the research partnership,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0319,open the jira ticket for the wrong totals in the invoice summary,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0320,search jira for the stuck jobs in the retry queue,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0321,search my inbox for the new logo files from the design agency,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0322,who maintains the access control design doc?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0323,open the logging conventions page in confluence,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0324,give me the status of the new onboarding checklist and the disaster recovery plan,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0325,what did we decide in the sync about cleaning up confluence pages?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0326,who maintains the vendor integration guide?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0327,what did folks say about the elevator being out of service?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0328,search the help center for how to reset my SSO password,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0329,"people were saying the gmail app drains the battery, what did they find?",slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0330,search online for good books on leadership,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0331,any word from legal?,gmail|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0332,what does the HR handbook say about working night shifts?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0333,what did the university write about the research partnership?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0334,what are the steps in the vendor integration guide?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0335,find the notes from the leadership offsite and the email from our lawyer about the trademark filing,gmail|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0336,ok thank you,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0337,that's all for today,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0338,what are the rules for working night shifts?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0339,what were the action items from the design review?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0340,search the help center for how to enable two-factor login for my team,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0341,"not the email, did anyone mention the kubernetes upgrade today?",slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0342,you rock,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0343,what are the benefits of pair programming?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0344,is there a bug for the confluence export button doing nothing?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0345,"perfect, thanks",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0346,which sprint is offline mode for the mobile app planned for?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0347,give me the ticket for the memory spike in the indexer and what people said in chat about the broken staging deploy,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0348,who was asking about the team lunch on friday earlier?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0349,"skip the meeting notes, how do I set up automatic invoices for my customers?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0350,did the supplier get back to us?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0351,what did folks say about the new code owners file?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0352,open the API design guidelines in confluence,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0353,search jira for the blank screen after checkout,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0354,pull up the status of the bulk user import and the access control design doc,confluence|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0355,what is capital of India,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0356,show me the design of recent project,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0357,wha are leave policies,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0358,what does that ticket is about,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0359,what is status of ticket,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0360,is it fixed,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0361,is the checkout crash on android fixed yet?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0362,what did the team say in chat about moving to the new office?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0363,how many vacation days do I get after two years?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0364,what does the design doc say about rate limiting for the public API?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0365,did the supplier reply to our email about the late shipment?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0366,"thanks, that's exactly what I needed",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0367,what did we agree on in yesterday's planning meeting?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0368,who is assigned to the memory leak in the search service?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0369,any emails from legal about the new contract?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0370,can I expense a taxi ride home after working late?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0371,"not the ticket, I want the architecture doc for the billing system",confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0372,what did people suggest in the channel for fixing the slow builds?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0373,what were the action items from the marketing sync?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0374,check slack and jira for anything about the login outage,jira|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0375,"I got a speeding ticket on a work trip, does the company cover it?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0376,stop slacking and tell me how to reset my laptop password,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0377,what did the client email say and what did we decide about it in standup?,gmail|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0378,what's blocking the 3.2 release?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0379,how does the onboarding process work for new engineers according to the process doc?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0380,good morning!,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0381,what's the notion of eventual consistency in distributed systems?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0382,has anyone discussed the new pricing on slack or over email?,gmail|slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0383,what's the official policy on working from another country?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0384,look into that thing we talked about earlier,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0385,how do kubernetes pods restart after a crash?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0386,has the bug where invoices show the wrong currency been closed?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0387,what did finance say in the channel about the travel freeze?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0388,how do I request a new monitor for my desk?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0389,what does the spec say about retry limits for the notification service?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0390,did the recruiter email back about the senior designer candidate?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0391,"appreciate the quick help, have a great weekend",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0392,what did we decide about hiring in the leadership offsite notes?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0393,who picked up the ticket for the broken password reset link?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0394,is there a runbook for when the message queue fills up?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0395,any replies from the auditors about the missing receipts?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0396,am I allowed to bring my dog to the office on fridays?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0397,"skip the chat threads, what's the latest status of the dark mode feature?",jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0398,what ideas did people throw around for the team offsite location?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0399,what follow-ups came out of the customer advisory board meeting?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0400,look in confluence and notion for the data retention plan,confluence|notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0401,"our team got a ticket for a concert, can I book it as a team event expense?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0402,"I feel like slacking today, how do I apply for a half day leave?",kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0403,what did the partner email about the API change and is there a ticket for it?,gmail|jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0404,which tasks are still open for the payments migration?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0405,explain the notion of technical debt in software teams,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0406,when is the soft launch date we noted for the loyalty program?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0407,what's the company rule on using personal phones for work email?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0408,can you dig up that thing from last week?,,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0409,how does garbage collection work in java?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0410,which jira issues mention the timeout in the export job?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0411,what was said in the support channel about customers losing their carts?,slack,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0412,how do I enroll my spouse in the health insurance plan?,kb,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0413,what does the architecture doc say about caching between regions?,confluence,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0414,did the landlord send the new lease terms by email?,gmail,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0415,what is the average salary of a data scientist in germany?,web,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0416,"okay cool, got it",,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0417,what are the open bugs assigned to me this sprint?,jira,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0418,what did the product team note about the roadmap in last month's review?,notion,(unknown),"shadow run round_2, reviewed by Sara",train
+n20261015_0419,"what did people say about the new expense tool, and is there a how-to article for it?",kb|slack,(unknown),"shadow run round_2, reviewed by Sara",train
