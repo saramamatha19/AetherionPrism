@@ -90,16 +90,61 @@ flowchart LR
 
 ## 3. The models I trained
 
-One change at a time; every version saved, none overwritten.
+I trained **8 small models**, tried **1 big challenger** (Laya) and **1 LLM**, changing one thing
+at a time. Every version is saved in `models/` with a `card.json` (its settings, a fingerprint of
+its training data, its pass marks, its gate and its scores) and is never overwritten.
 
 ```mermaid
 flowchart LR
     K["Keywords<br/>29.2%"] --> A["Words<br/>68.8%"] --> C["+ meaning<br/>76.0%"] --> F["+ fine-tuned<br/>81.2%"] --> B["+ negation data<br/>84.0%"] --> LIVE["+ negation rule<br/>LIVE"]
 ```
 
-*% = real-world questions exactly right.* I also tried **Laya**, a 421M model: fine-tuned, it
-scored 85.8% alone, but in the full system it was only a tie, 8× slower and 340× bigger. So I
-kept the small model ("model B"). **Lesson:** judge a model inside the full system, not alone.
+### The live model: model B + negation rule
+
+| | |
+|---|---|
+| Version | `tfidf_ftv2_bge_logreg_v2` (named in `models/champion.json`) |
+| Features | TF-IDF words and 3–5 letter chunks + **BGE-small** (`BAAI/bge-small-en-v1.5`) **fine-tuned** on my labels, with 1,000 extra generated negation questions |
+| Decision | 7 logistic-regression judges (one per source) → per-source pass marks → confidence → gate **0.13** |
+| Rule | Questions with "not / except / skip …" always go to the LLM |
+| Size · speed | 4.7 MB saved model (+ the 128 MB fine-tuned BGE) · **~7 ms** per question (p95), CPU only |
+| Alone | **84.0%** real-world · 84.3% same-topic · 40.4% hard |
+| Answers by itself | 76% of questions; right on **89.3%** of the real-world ones it keeps |
+
+### Every model, compared
+
+*Exactly right on the test set, before the gate.* "Answers alone" = share of questions it keeps
+after its own gate.
+
+| Model | What changed | Real-world | Hard | Answers alone | p95 |
+|---|---|---|---|---|---|
+| Keyword rules | Clue words from the labelling rules: the bar to beat | 29.2% | n/a | n/a | n/a |
+| `tfidf_logreg_v3` | Words + 7 judges + gate | 68.8% | 40.0% | 61.0% | 0.6 ms |
+| `bge_logreg_v1` | Meaning only: fails on same-topic (30%) | 67.0% | 30.7% | 41.8% | 6.3 ms |
+| `tfidf_bge_logreg_v1` | Words + meaning | 76.0% | 39.6% | 63.8% | 7.4 ms |
+| `ft_bge_logreg_v1` | BGE fine-tuned on my labels | 77.8% | 33.6% | 75.2% | 5.9 ms |
+| `tfidf_ft_bge_logreg_v1` | Words + fine-tuned meaning | 81.2% | 36.2% | 86.7% | 7.3 ms |
+| `tfidf_ftv2_bge_logreg_v1` | + 1,000 negation examples (negation 34% → 41%) | 84.0% | 40.4% | 85.8% | 7.4 ms |
+| `tfidf_ftsplit_bge_logreg_v1` | BGE and judges on different halves: less over-confident, less accurate | 75.8% | 37.9% | 68.6% | 7.4 ms |
+| **`tfidf_ftv2_bge_logreg_v2`** | **+ negation rule: confident negation mistakes 42 → 12 (LIVE)** | **84.0%** | **40.4%** | **76.2%** | **7.4 ms** |
+| Laya, zero-shot | Ready-made 421M model, 7 yes/no questions | 43.8% | 31.6% | n/a | n/a |
+| Laya, fine-tuned 3 epochs | Same fit data as model B | 85.8% | 43.9% | 77% | 54 ms |
+| gpt-4o, prompt v4 | The LLM alone | 74.6% | 71.4% | n/a | ~1.5 s |
+
+### Why this one, and what I learned
+
+- **Words + meaning beat either one alone.** Meaning alone can't tell a Slack thread about SSO from
+  a doc about SSO; words alone miss paraphrases.
+- **Fine-tuning helped normal questions most** (76.0% → 84.0%) but made the model over-confident on
+  hard ones. A stop rule set *before* fine-tuning (hard cases ≥ 65% right when kept) was never met,
+  so hard cases are left to the LLM and the negation rule.
+- **Laya scored higher alone but only tied in the full system** (70.8% vs 70.0%), because it improved
+  the hard cases the LLM already handles. It was also 8× slower and 340× bigger (1.6 GB).
+  **Lesson:** judge a model inside the full system, not alone.
+- **Two retrained challengers** (`_v3`, `_v4`, from the practice retraining rounds) were not promoted:
+  see [Retraining safely](#6-retraining-safely).
+
+Full tables: `results/model_comparison.md`, `results/laya_comparison.md`, `results/laya_full_system.md`.
 
 ## 4. The LLM fallback
 
