@@ -109,27 +109,50 @@ flowchart LR
 | Rule | Questions with "not / except / skip …" always go to the LLM |
 | Size · speed | 4.7 MB saved model (+ the 128 MB fine-tuned BGE) · **~7 ms** per question (p95), CPU only |
 | Alone | **84.0%** real-world · 84.3% same-topic · 40.4% hard |
-| Answers by itself | 76% of questions; right on **89.3%** of the real-world ones it keeps |
+| After the gate | Answers **76%** of all questions itself (right on 71.3%) · **84%** of real-world ones (right on **89.3%**) |
 
-### Every model, compared
+### Every model, compared: before the gate
 
-*Exactly right on the test set, before the gate.* "Answers alone" = share of questions it keeps
-after its own gate.
+The model answers **every** question itself, even when unsure. This shows its raw skill, and it's
+the fair way to compare models, because they all answer the same questions.
+*% = exactly right (every needed source, nothing extra) on the 1,200 test questions.*
 
-| Model | What changed | Real-world | Hard | Answers alone | p95 |
+| Model | What changed | Real-world | Hard | p95 |
+|---|---|---|---|---|
+| Keyword rules | Clue words from the labelling rules: the bar to beat | 29.2% | n/a | n/a |
+| `tfidf_logreg_v3` | Words + 7 judges + gate | 68.8% | 40.0% | 0.6 ms |
+| `bge_logreg_v1` | Meaning only: fails on same-topic (30%) | 67.0% | 30.7% | 6.3 ms |
+| `tfidf_bge_logreg_v1` | Words + meaning | 76.0% | 39.6% | 7.4 ms |
+| `ft_bge_logreg_v1` | BGE fine-tuned on my labels | 77.8% | 33.6% | 5.9 ms |
+| `tfidf_ft_bge_logreg_v1` | Words + fine-tuned meaning | 81.2% | 36.2% | 7.3 ms |
+| `tfidf_ftv2_bge_logreg_v1` | + 1,000 negation examples (negation 34% → 41%) | 84.0% | 40.4% | 7.4 ms |
+| `tfidf_ftsplit_bge_logreg_v1` | BGE and judges on different halves: less over-confident, less accurate | 75.8% | 37.9% | 7.4 ms |
+| **`tfidf_ftv2_bge_logreg_v2`** | **+ negation rule: confident negation mistakes 42 → 12 (LIVE)** | **84.0%** | **40.4%** | **7.4 ms** |
+| Laya, zero-shot | Ready-made 421M model, 7 yes/no questions | 43.8% | 31.6% | n/a |
+| Laya, fine-tuned 3 epochs | Same fit data as model B | 85.8% | 43.9% | 54 ms |
+| gpt-4o, prompt v4 | The LLM alone | 74.6% | 71.4% | ~1.5 s |
+
+### After the gate: what users actually get
+
+Each model now answers **only the questions it is confident about** (confidence ≥ its own gate)
+and sends the rest to the LLM. Two numbers belong together: **how much it answers** and **how
+often it's right when it does**. A model can look very accurate just by answering very little.
+
+| Model | Gate | All: answers / right | Real-world: answers / right | Same-topic: answers / right | Hard: answers / right |
 |---|---|---|---|---|---|
-| Keyword rules | Clue words from the labelling rules: the bar to beat | 29.2% | n/a | n/a | n/a |
-| `tfidf_logreg_v3` | Words + 7 judges + gate | 68.8% | 40.0% | 61.0% | 0.6 ms |
-| `bge_logreg_v1` | Meaning only: fails on same-topic (30%) | 67.0% | 30.7% | 41.8% | 6.3 ms |
-| `tfidf_bge_logreg_v1` | Words + meaning | 76.0% | 39.6% | 63.8% | 7.4 ms |
-| `ft_bge_logreg_v1` | BGE fine-tuned on my labels | 77.8% | 33.6% | 75.2% | 5.9 ms |
-| `tfidf_ft_bge_logreg_v1` | Words + fine-tuned meaning | 81.2% | 36.2% | 86.7% | 7.3 ms |
-| `tfidf_ftv2_bge_logreg_v1` | + 1,000 negation examples (negation 34% → 41%) | 84.0% | 40.4% | 85.8% | 7.4 ms |
-| `tfidf_ftsplit_bge_logreg_v1` | BGE and judges on different halves: less over-confident, less accurate | 75.8% | 37.9% | 68.6% | 7.4 ms |
-| **`tfidf_ftv2_bge_logreg_v2`** | **+ negation rule: confident negation mistakes 42 → 12 (LIVE)** | **84.0%** | **40.4%** | **76.2%** | **7.4 ms** |
-| Laya, zero-shot | Ready-made 421M model, 7 yes/no questions | 43.8% | 31.6% | n/a | n/a |
-| Laya, fine-tuned 3 epochs | Same fit data as model B | 85.8% | 43.9% | 77% | 54 ms |
-| gpt-4o, prompt v4 | The LLM alone | 74.6% | 71.4% | n/a | ~1.5 s |
+| `tfidf_logreg_v3` | 0.11 | 61.0% / 69.5% | 67.4% / 82.5% | 69.3% / 82.5% | 53.2% / 50.7% |
+| `bge_logreg_v1` | 0.21 | 41.8% / 71.5% | 58.0% / 86.9% | 17.1% / 58.3% | 33.4% / 49.2% |
+| `tfidf_bge_logreg_v1` | 0.15 | 63.8% / 71.8% | 74.6% / 87.9% | 59.3% / 81.9% | 55.4% / 49.7% |
+| `ft_bge_logreg_v1` | 0.15 | 75.2% / 67.4% | 83.0% / 88.4% | 70.7% / 84.8% | 69.3% / 40.5% |
+| `tfidf_ft_bge_logreg_v1` | 0.09 | 86.7% / 65.8% | 90.6% / 87.0% | 88.6% / 87.1% | 82.7% / 39.3% |
+| `tfidf_ftv2_bge_logreg_v1` | 0.11 | 85.8% / 69.2% | 92.0% / 88.0% | 87.9% / 91.1% | 79.8% / 43.8% |
+| `tfidf_ftsplit_bge_logreg_v1` | 0.16 | 68.6% / 71.0% | 78.4% / 87.8% | 70.7% / 85.9% | 59.3% / 46.7% |
+| **`tfidf_ftv2_bge_logreg_v2` (LIVE)** | **0.13** | **76.2% / 71.3%** | **84.0% / 89.3%** | **79.3% / 91.9%** | **68.6% / 45.6%** |
+
+**How to read the live row:** on real-world questions the model answers 84% by itself and is right
+on 89.3% of those; the other 16% go to the LLM. On hard questions it is still often confidently
+wrong (45.6%). That's why the negation rule exists, and why shadow mode must prove it on real
+questions before go-live.
 
 ### Why this one, and what I learned
 
