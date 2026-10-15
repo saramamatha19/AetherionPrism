@@ -22,6 +22,11 @@ flowchart LR
 As accurate as the LLM on normal questions, at a quarter of the cost. Hard trick questions are
 still weak, so most of them go to the LLM.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/systems_dark.svg">
+  <img alt="Bar chart: exactly right on real-world vs hard questions. Small model alone 84.0% / 40.4%, LLM alone 74.6% / 71.4%, Prism 84.2% / 52.1%" src="docs/images/systems_light.svg">
+</picture>
+
 ---
 
 ## How I built it
@@ -101,6 +106,15 @@ kept the small model ("model B"). **Lesson:** judge a model inside the full syst
   (~$14 spent in total).
 - Cost comes from real billed tokens, including cached ones.
 
+**The gate is a dial, chosen on purpose.** Moving right sends more questions to the LLM: cost
+rises, but real-world accuracy doesn't. Today's gate (0.13, picked by the 80% rule) sits where
+real-world accuracy is at its best and 76% of questions skip the LLM.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/cost_accuracy_dark.svg">
+  <img alt="Line chart: accuracy vs cost per million questions for every gate. Today's gate 0.13: real-world 84.2%, all 70.0%, $414. LLM every time: 74.6% / 74.4%, $1,731" src="docs/images/cost_accuracy_light.svg">
+</picture>
+
 ## 5. Shadow mode: prove it before going live
 
 ```mermaid
@@ -171,6 +185,7 @@ Restart the page and the API after a promotion.
 | `data/` | `train.csv`, `eval.csv` (frozen), `provenance.csv`, retraining batches |
 | `models/` | 14 saved versions, each with a `card.json` (settings, data fingerprint, scores), plus `champion.json` (which model is live, and why) |
 | `recordings/` · `results/` | Saved LLM answers · comparison tables |
+| `docs/` | The README charts and the script that draws them (`uv run --with matplotlib python docs/make_charts.py`) |
 | `src/prism/` · `tests/` | The code · 114 tests |
 | *not in git* | `.env` (key), `logs/` (real questions), `finetuned/` (large models) |
 
