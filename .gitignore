@@ -11,8 +11,7 @@ __pycache__/
 # Mac
 .DS_Store
 
-# Personal docs: kept local, not in git
-README.md
+# Personal docs: kept local, not in git (README.md is public)
 PROJECT.md
 LOG.md
 LEARNING.md
