@@ -203,26 +203,10 @@ Linux chat, kb = website help, and so on), so topic and source were tangled.
   seen**.
 - v2 rows unchanged. The test set is now frozen.
 
----
-
-## 6. Quality checks
-
-| Check | Result |
-|---|---|
-| Rebuilding from the build scripts gives the identical file | ✅ |
-| Same document or meeting in both train and test | ✅ Never |
-| Company names left in questions | ✅ None |
-| **Blind label check:** 200 rows re-labelled without seeing the original labels | 84% agree; 93% without the email rows later removed in v2 |
-| **Topic bias:** a model trained on v2 vs v3, tested on the same questions | Unseen topics **36% → 74%**; topic-swap test **43% → 77%**; real-world unchanged (73% → 71%) |
-
-The **topic-swap test** (`data/probes/`) uses questions whose topic belongs to one source but whose
-intent points to another. Example: *"how do I install the VPN on Linux?"* is a how-to (**kb**), but
-all the Linux questions in the real data came from Slack. A model that learned topics says `slack`;
-a model that learned intent says `kb`.
 
 ---
 
-## 7. Using it fairly
+## 6 Using it fairly
 
 - **The test set (`eval.csv`) is only for final scores.** Nothing is tuned on it: not the model,
   not the pass marks, not the gate, not the LLM prompt.
@@ -235,18 +219,4 @@ a model that learned intent says `kb`.
 - **Retraining never edits these files.** Reviewed real questions go to `data/new_labels/`, and any
   question that is in the test set is refused.
 
----
 
-## 8. Limitations
-
-1. **Not company data.** No row comes from our own employees. 150–300 real colleague questions
-   would be the best final test; the shadow run is designed to collect them.
-2. **Part of it is AI-written:** 620 rows from real documents, 759 from a fictional company's
-   documents, and 897 generated hard cases. All are marked in `provenance.csv`.
-3. **Each public dataset has its own writing style.** A model can tell which dataset a question came
-   from about 73% of the time, which is another reason to report per part.
-4. **Labels were checked by AI and spot-checked by hand**, not double-labelled by two people.
-5. **Few "Misleading keyword" examples** (79 in total, 31 in train).
-
-The build scripts, downloaded sources and earlier versions (v1, v2) are kept outside this repo; this
-repo holds only the final dataset.
