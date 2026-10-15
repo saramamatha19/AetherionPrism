@@ -1,134 +1,151 @@
 # Dataset
 
-The data used to train and test the Source Router.
+The questions used to train and test the Source Router, where they came from, and how they were
+checked.
 
 ---
 
-## 1. In one paragraph
+## At a glance
 
-Each row is a **question someone might ask at work** and the **sources where
-its answer lives** (for example `jira`, or `slack|gmail`). There are **4,419
-questions**: 3,219 for training and 1,200 for evaluation. The data comes from
-three parts: **real-world questions** from 10 public datasets, **hard cases**
-that try to trick the model, and **same-topic questions** that stop the model
-from guessing the source from the subject. Every row can be traced back to
-where it came from.
-
----
-
-## 2. Quick facts
+Each row is **a question someone might ask at work** and **the sources where its answer lives**
+(for example `jira`, or `slack|gmail`, or nothing for "thanks!").
 
 | | |
 |---|---|
-| Rows | 4,419 |
-| Train / eval | 3,219 / 1,200 |
-| Labels | 7 sources: `kb`, `jira`, `confluence`, `slack`, `notion`, `gmail`, `web` (or none) |
-| Question types | 7 (see §5) |
-| Questions with 2+ sources | 426 |
+| Questions | **4,419**: 3,219 train · 1,200 test (`eval`) |
+| Labels | 7 sources: `kb`, `jira`, `confluence`, `slack`, `notion`, `gmail`, `web`, or none |
+| Questions with 2+ sources | 449 |
 | Questions needing no search | 311 |
-| Built in | `Projects_Sara/Ml_Aetherion/` (scripts and sources; see §12) |
-| Eval set | **Frozen**: never add, remove or change these 1,200 rows |
+| Parts | Real-world (2,500) · Hard cases (1,160) · Same-topic (759) |
+| Question types | 7, from "Small talk" to "Implied source" |
+| Traceable | Every row has its origin, author type and link in `provenance.csv` |
+| Test set | **Frozen**: no row is ever added, removed or changed |
+
+```mermaid
+flowchart LR
+    A["Real-world<br/>2,500 questions<br/>10 public datasets"] --> D[("4,419 questions")]
+    B["Hard cases<br/>1,160 questions<br/>traps, negation, vague, multi-source"] --> D
+    C["Same-topic<br/>759 questions<br/>22 topics under every source"] --> D
+    D --> T["train.csv<br/>3,219"]
+    D --> E["eval.csv<br/>1,200, frozen"]
+```
 
 ---
 
-## 3. Files and columns
+## 1. Files and columns
 
 | File | What it contains |
 |---|---|
-| `data/train.csv` | 3,219 rows to train on |
-| `data/eval.csv` | 1,200 rows to test on (frozen) |
-| `data/provenance.csv` | Where every row came from (original ID, link, who wrote it), matched by `id` |
-| `data/probes/` | Extra test questions for topic bias (§8) |
+| `data/train.csv` | 3,219 questions to learn from |
+| `data/eval.csv` | 1,200 questions for final scores only (frozen) |
+| `data/provenance.csv` | Where each row came from, matched by `id` |
+| `data/probes/` | Topic-swap test questions, used to measure topic bias (§6) |
+| `data/new_labels/` | Reviewed questions added by retraining rounds, one file per round. `train.csv` itself is never edited |
 
-Each file has 6 columns:
+`train.csv` and `eval.csv` have the same 6 columns:
 
 | Column | Meaning | Example |
 |---|---|---|
-| `id` | Row number | `q00042` |
+| `id` | Row ID | `q00042` |
 | `question` | The question | `is the login bug fixed yet` |
 | `labels` | Where the answer is. Several are joined with `\|`; empty = no search needed | `jira` |
-| `question_type` | What kind of question it is (§5) | `Implied source` |
-| `origin` | Which dataset it came from | `Apache Kafka Jira` |
+| `question_type` | What kind of question it is (§3) | `Implied source` |
+| `origin` | Which dataset or set it came from (§4) | `Apache Kafka Jira` |
 | `split` | `train` or `eval` | `train` |
 
+`provenance.csv` adds, for every `id`: `written_by` (a person, a benchmark, or AI),
+`original_id` and `source_link` (the original record), `split_group` (the document or meeting it
+came from, used to keep train and test apart), and `old_labels` / `label_changed` (for the hard
+cases that were relabelled, §5).
 
 ---
 
-## 4. Labels: the 7 sources
+## 2. Labels
+
+A label is **where the answer is actually found**, not a guess from keywords. A question written
+from a Jira ticket is labelled `jira` because its answer is in that ticket.
 
 | Label | Where the answer lives | Example question | Rows |
 |---|---|---|---|
-| `kb` | Official help, how-to or policy articles | "how do I set up direct deposit" | 726 |
+| `kb` | Official help, how-to and policy articles | "how do I set up direct deposit?" | 726 |
 | `jira` | Tickets, bugs, work status | "is the fix for the consumer hang released?" | 803 |
-| `confluence` | Team docs: specs, designs, runbooks, process docs | "what does the design doc say about failover?" | 644 |
+| `confluence` | Specs, designs, runbooks, process docs | "what does the design doc say about failover?" | 644 |
 | `slack` | Chat conversations | "what did people suggest in chat for the wifi issue?" | 742 |
-| `notion` | Notes: meeting notes, personal or team notes | "what did we decide in Monday's meeting?" | 656 |
+| `notion` | Meeting notes, personal and team notes | "what did we decide in Monday's meeting?" | 656 |
 | `gmail` | Email | "did the client reply about the invoice?" | 602 |
 | `web` | Public knowledge outside the company | "what is a KV cache?" | 525 |
 | *(none)* | No search needed | "good morning!" | 311 |
 
-**How a label is decided:** it is **where the answer is actually found**, not a
-guess from keywords. A question written from a Jira ticket is labelled `jira`
-because its answer is in that ticket.
+Rows add up to more than 4,419 because a question can have several labels.
 
-**Labelling rules** (used for every check and re-labelling):
+### Labelling rules
+
+The same rules are used for every label, every check and every human review (and are given to
+the LLM in its prompt):
+
 1. **A named tool counts:** "check Slack for…" includes `slack`.
-2. **Negation removes:** "not in Slack" means `slack` is **out**.
-3. **Misleading words don't count:** "parking ticket", "slack off", "the
-   notion of" are not Jira, Slack or Notion.
-4. **Specs, designs, runbooks, process docs** → `confluence`. **Meeting notes
-   and personal notes** → `notion`. **Official policy or how-to** → `kb`.
-5. **Public knowledge** → `web`. Company topics are never `web`, even though
-   Confluence is a website.
+2. **Negation removes:** "not in Slack" means `slack` is out.
+3. **Misleading words don't count:** "parking ticket", "slack off", "the notion of" are not Jira,
+   Slack or Notion.
+4. **Specs, designs, runbooks, process docs** → `confluence`. **Meeting and personal notes** →
+   `notion`. **Official policy or how-to** → `kb`.
+5. **Public knowledge** → `web`. Company topics are never `web`, even though Confluence is a website.
 6. **No information need** (greetings, thanks, statements) → no label.
 7. **Several labels only when clearly needed.**
 
 ---
 
-## 5. Question types
+## 3. Question types
 
-Every question has **exactly one** type. If more than one fits, the type
-**higher in the list wins**. The list runs from hardest for a model to easiest.
+Every question has exactly one type. If more than one fits, the type **higher in the list wins**.
+The list runs from hardest for a model to easiest. Results are always reported per type, so it is
+clear *where* a model fails.
 
-| # | Type | Meaning | Example → label | Rows |
+| Type | Meaning | Example → label | Train | Test |
 |---|---|---|---|---|
-| 1 | Small talk | No information needed | "thanks a lot!" → none | 311 |
-| 2 | Misleading keyword | A tool's name used with another meaning | "I got a parking **ticket**, do we reimburse that?" → kb | 79 |
-| 3 | Excludes a source | Rules a source out | "not the ticket, the design doc for the API" → confluence | 232 |
-| 4 | Multiple sources | Needs 2 or more sources | "what did the client email and what did we decide in standup?" → gmail, notion | 426 |
-| 5 | Unclear source | Several sources fit, nothing points to one | "anything on feature flags?" | 167 |
-| 6 | Names the source | Names the tool or its obvious item | "any emails from the vendor about the outage?" → gmail | 576 |
-| 7 | Implied source | Clear need, tool not named | "is the login bug fixed yet?" → jira | 2,628 |
+| Small talk | No information needed | "thanks a lot!" → none | 224 | 87 |
+| Misleading keyword | A tool's name used with another meaning | "I got a parking **ticket**, do we reimburse that?" → kb | 31 | 48 |
+| Excludes a source | Rules a source out | "not the ticket, the design doc for the API" → confluence | 127 | 105 |
+| Multiple sources | Needs 2 or more sources | "what did the client email and what did we decide in standup?" → gmail, notion | 232 | 194 |
+| Unclear source | Several sources fit, nothing points to one | "anything on feature flags?" | 100 | 67 |
+| Names the source | Names the tool or its obvious item | "any emails from the vendor about the outage?" → gmail | 397 | 179 |
+| Implied source | Clear need, tool not named | "is the login bug fixed yet?" → jira | 2,108 | 520 |
 
-**Why this matters:** results per type show *where* the model fails. Types 2–5
-are where the model should hand the question to the LLM.
+The test set has proportionally more hard types on purpose, so weaknesses can't hide.
 
 ---
 
-## 6. Where the data comes from
+## 4. Where the data comes from
 
-### The three parts
+### Three parts
 
-| Part | Rows (train / eval) | What it is | Why it's there |
+| Part | Train / test | What it is | Why it's there |
 |---|---|---|---|
-| **A. Real-world** | 2,500 (2,000 / 500) | Questions from 10 published public datasets | Realistic questions with traceable sources |
-| **B. Hard cases** | 1,160 (600 / 560) | Earlier project dataset: keyword traps, negation, vague and multi-source questions | Real data rarely contains these |
-| **C. Same-topic** | 759 (619 / 140) | 22 topics written under every source, from one company's documents | Stops the model from guessing the source from the topic |
+| **Real-world** | 2,000 / 500 | Questions from 10 published public datasets | Realistic questions with traceable sources |
+| **Hard cases** | 600 / 560 | Keyword traps, negation, vague and multi-source questions, from my earlier project | Real data rarely contains these, but users ask them |
+| **Same-topic** | 619 / 140 | 22 topics (KV cache, SSO, billing, postmortems, …), each written under **every** source, from one fictional company's documents (EnterpriseRAG-Bench) | Stops the model guessing the source from the subject |
 
-### Part A: real-world sources
+In the code (`data.part_of`) and the results tables, the same-topic part is called
+**"company topics"**.
 
-| Dataset | Rows | Label(s) | What the questions are | Licence |
-|---|---|---|---|---|
-| EnterpriseRAG-Bench (Onyx, 2026) | 437 | jira, confluence, slack, notion, gmail; some multi-source | Benchmark questions tagged with the sources that answer them | MIT |
-| WixQA | 230 | kb | Real customer help-center questions | MIT |
-| CLINC150 | 350 | kb, web, none | People-written HR questions, definitions and small talk | CC-BY-3.0 |
-| MASSIVE (Amazon) | 310 | gmail, web | People-written assistant requests ("any emails from jo?") | CC-BY-4.0 |
-| Natural Questions (Google) | 210 | web | Real Google searches | CC BY-SA 3.0 |
-| ConcurrentQA | 70 | web | People-written questions answered by Wikipedia | MIT |
-| QMSum | 273 | notion | People-written questions about real meetings | MIT |
-| Apache Kafka Jira | 200 | jira | Written from real Kafka Jira tickets (one per ticket) | Public ASF tracker |
-| Apache Kafka Confluence | 220 | confluence | Written from real Kafka design pages (one per page) | ASF contributor grant |
-| Ubuntu help chat | 200 | slack | Written from real help-chat conversations | CC-BY-4.0 |
+### Real-world sources
+
+| Dataset | Train | Test | Label(s) | What the questions are | Licence |
+|---|---|---|---|---|---|
+| EnterpriseRAG-Bench (Onyx) | 351 | 86 | jira, confluence, slack, notion, gmail; some multi-source | Benchmark questions tagged with the sources that answer them | MIT |
+| WixQA | 184 | 46 | kb | Real customer help-center questions | MIT |
+| CLINC150 | 280 | 70 | kb, web, none | People-written HR questions, definitions and small talk | CC-BY-3.0 |
+| MASSIVE (Amazon) | 248 | 62 | gmail, web | People-written assistant requests ("any emails from jo?") | CC-BY-4.0 |
+| Natural Questions (Google) | 168 | 42 | web | Real Google searches | CC BY-SA 3.0 |
+| ConcurrentQA | 56 | 14 | web | People-written questions answered by Wikipedia | MIT |
+| QMSum | 217 | 56 | notion | People-written questions about real meetings | MIT |
+| Apache Kafka Jira | 160 | 40 | jira | Written from real Kafka Jira tickets, one per ticket | Public ASF tracker |
+| Apache Kafka Confluence | 176 | 44 | confluence | Written from real Kafka design pages, one per page | ASF contributor grant |
+| Ubuntu help chat | 160 | 40 | slack | Written from real help-chat conversations | CC-BY-4.0 |
+
+Jira, Confluence and Slack have few public "ask an assistant" questions, so for those one question
+was written from each real document (a ticket, a design page, a chat thread). The answer is in that
+document, so the label is certain.
 
 ### Who wrote the questions
 
@@ -139,141 +156,97 @@ are where the model should hand the question to the LLM.
 | AI, from a real document (Kafka tickets, design pages, chat threads) | 620 |
 | Hand-written hard cases | 263 |
 | AI-generated hard cases | 897 |
-| AI, from one company's documents (Part C) | 759 |
+| AI, from one company's documents (same-topic part) | 759 |
 
-`provenance.csv` shows this for every single row.
-
----
-
-## 7. How it was built: three versions
-
-Each version fixed a problem found in the one before.
-
-### v1: real-world data (2,500 rows)
-- Downloaded 10 public datasets and mapped their categories to our 7 labels.
-- Jira, Confluence and Slack had few real "ask an assistant" questions, so one
-  question was written per real document (a Kafka ticket, design page or chat
-  thread).
-- Company names (Wix, Enron, Kafka, Redwood) were removed from questions, so
-  the model can't learn "Wix → kb".
-- Split 2,000 / 500 so that questions from the same document or meeting never
-  appear in both train and eval.
-
-**Problems found:**
-1. A blind re-check showed 180 email questions read like public trivia. Their
-   label was true but impossible to guess from the question.
-2. A topic-swap test showed the model guessing the source from the **topic**.
-
-### v2: + hard cases, fixes (3,660 rows)
-- Removed the 180 unclear email questions and replaced them with real email
-  requests (MASSIVE) and real Google searches.
-- Added the 1,160 hard cases from the earlier dataset, converted from 5 labels
-  to 7 (257 labels changed, mainly notion → confluence for specs and runbooks).
-- Reduced the columns to 6 and added `question_type`.
-
-**Problem still there:** topic bias. Each real source still came from a
-different organisation (Slack = Linux chat, kb = website help, and so on).
-
-### v3: + same-topic questions (4,419 rows) ← current
-- Added 759 questions on 22 shared topics (KV cache, SSO, billing, postmortems
-  and more). Each topic is written under **every** source, all from one
-  company's documents.
-- 4 whole topics are kept for eval only, so eval tests **topics the model has
-  never seen**.
-- v2 rows are unchanged. The eval set is now frozen.
+`provenance.csv` shows this for every row.
 
 ---
 
-## 8. Is it correct? Checks we ran
+## 5. How it was built: three versions
+
+Each version fixed a problem measured in the one before.
+
+```mermaid
+flowchart TD
+    V1["v1: 2,500 real-world questions"] --> P1["Found: 180 email questions read like trivia<br/>Found: the model guesses the source from the TOPIC"]
+    P1 --> V2["v2: 3,660 questions<br/>replaced the 180 email rows<br/>added 1,160 hard cases, 257 labels fixed"]
+    V2 --> P2["Still there: each source came<br/>from a different organisation"]
+    P2 --> V3["v3: 4,419 questions<br/>added 759 same-topic questions<br/>4 topics only in the test set<br/>test set frozen"]
+```
+
+**v1: real-world data (2,500 rows)**
+- Downloaded 10 public datasets and mapped their categories to the 7 labels.
+- Removed company names (Wix, Enron, Kafka, Redwood) from questions, so the model can't learn
+  "Wix → kb".
+- Split 2,000 / 500 **by document**: questions from the same ticket, page or meeting never appear in
+  both train and test.
+
+*Problems found:* a blind re-check showed 180 email questions read like public trivia (their label
+was true but impossible to guess from the question), and a topic-swap test showed the model guessing
+the source from the **topic**.
+
+**v2: hard cases and fixes (3,660 rows)**
+- Replaced the 180 unclear email questions with real email requests (MASSIVE) and real Google
+  searches (Natural Questions).
+- Added 1,160 hard cases from my earlier project, converted from 5 labels to 7. 257 labels changed
+  (mainly `notion` → `confluence` for specs and runbooks); each change is recorded in
+  `provenance.csv`.
+- Added the `question_type` column.
+
+*Problem still there:* topic bias. Each real source came from a different organisation (Slack =
+Linux chat, kb = website help, and so on), so topic and source were tangled.
+
+**v3: same-topic questions (4,419 rows), current**
+- Added 759 questions on 22 shared topics. Each topic is written under every source, all from one
+  company's documents, so topic no longer gives the source away.
+- 4 whole topics are kept for the test set only, so the test checks **topics the model has never
+  seen**.
+- v2 rows unchanged. The test set is now frozen.
+
+---
+
+## 6. Quality checks
 
 | Check | Result |
 |---|---|
-| Rebuilding gives the identical file | ✅ |
-| Same document / meeting in both train and eval | ✅ Never |
+| Rebuilding from the build scripts gives the identical file | ✅ |
+| Same document or meeting in both train and test | ✅ Never |
 | Company names left in questions | ✅ None |
-| **Blind label check:** 200 rows re-labelled without seeing the original labels | 84% agree, 93% without the email rows later removed in v2 |
-| **Topic bias:** model trained on v2 vs v3, tested on the same questions | Unseen topics **36% → 74%**; topic-swap test **43% → 77%**; real-world unchanged (73% → 71%) |
+| **Blind label check:** 200 rows re-labelled without seeing the original labels | 84% agree; 93% without the email rows later removed in v2 |
+| **Topic bias:** a model trained on v2 vs v3, tested on the same questions | Unseen topics **36% → 74%**; topic-swap test **43% → 77%**; real-world unchanged (73% → 71%) |
 
-The topic-swap test uses questions whose topic belongs to one source but whose
-intent points to another. Example: *"how do I install the VPN on Linux?"* is a
-how-to (**kb**), but all the Linux questions in the real data came from Slack.
-
----
-
-## 9. Baseline results
-
-A simple model (TF-IDF + logistic regression, untuned) trained on `train` and
-scored on the frozen `eval` set. Score = **exact match** (all labels right).
-
-| Slice | Rows | Score |
-|---|---|---|
-| **Real-world questions** | 500 | **71%** |
-| Same-topic questions (unseen topics) | 140 | 74% |
-| Hard cases | 560 | 45% |
-| All eval *(never quote this without the rows above)* | 1,200 | 59% |
-
-| Question type | Rows | Score |
-|---|---|---|
-| Small talk | 87 | 85% |
-| Names the source | 179 | 71% |
-| Implied source | 520 | 71% |
-| Excludes a source | 105 | 38% |
-| Multiple sources | 194 | 35% |
-| Unclear source | 67 | 25% |
-| Misleading keyword | 48 | 25% |
-
-**What this shows:** easy questions already work. Hard types are where the
-project's confidence gate should send questions to the LLM. These are the
-numbers to beat.
+The **topic-swap test** (`data/probes/`) uses questions whose topic belongs to one source but whose
+intent points to another. Example: *"how do I install the VPN on Linux?"* is a how-to (**kb**), but
+all the Linux questions in the real data came from Slack. A model that learned topics says `slack`;
+a model that learned intent says `kb`.
 
 ---
 
-## 10. Limitations
+## 7. Using it fairly
 
-1. **Not company data.** No row comes from our own company's employees. A set
-   of 150–300 real colleague questions would be the best final test.
-2. **Some questions were written by AI:** 620 from real documents, 759 from a
-   fictional company's documents, and 897 generated hard cases. All are labelled
-   as such in `provenance.csv`.
-3. **Each real dataset has its own writing style.** A model can tell which
-   dataset a question came from about 73% of the time, so always report results
-   per part and per type, not only the total.
-4. **Labels were checked by AI and spot-checked**, not double-labelled by humans.
-5. **Few "Misleading keyword" examples** (79 in total).
-
----
-
-## 11. How to talk about it
-
-✅ **Say:**
-> "4,419 questions: 2,500 real-world questions from 10 public datasets, each
-> traceable to its source; 1,160 hard cases for traps and negation; and 759
-> same-topic questions that stop the model guessing the source from the
-> subject. Labels are where the answer actually lives, and I checked them
-> blind."
-
-❌ **Don't say:**
-- "Real company data" or "our employees' questions": none of it is.
-- "Real-time data": the word is **real-world**.
-- "All real questions": part of it is AI-written, and the table in §6 shows exactly how much.
-- The 59% total score on its own: always give the breakdown.
+- **The test set (`eval.csv`) is only for final scores.** Nothing is tuned on it: not the model,
+  not the pass marks, not the gate, not the LLM prompt.
+- **Choices are made on slices of train.** The code (`data.split_train`) cuts train into a fit
+  slice (2,219, to learn from), a threshold slice (500, to choose each source's pass mark) and a gate
+  slice (500, to choose the gate). The slices keep the same mix of parts and use a fixed seed (42).
+- **Always report per part and per question type**, never only the total. Hard cases are 47% of the
+  test set on purpose, so the total alone looks worse than real use and hides where a model is good.
+- **Labels are sets.** `jira|slack` and `slack|jira` are the same answer.
+- **Retraining never edits these files.** Reviewed real questions go to `data/new_labels/`, and any
+  question that is in the test set is refused.
 
 ---
 
-## 12. Where it was built
+## 8. Limitations
 
-The dataset was built in a separate folder, **`Projects_Sara/Ml_Aetherion/`**,
-so this project folder stays clean. That folder has everything needed to show
-or repeat how it was made:
+1. **Not company data.** No row comes from our own employees. 150–300 real colleague questions
+   would be the best final test; the shadow run is designed to collect them.
+2. **Part of it is AI-written:** 620 rows from real documents, 759 from a fictional company's
+   documents, and 897 generated hard cases. All are marked in `provenance.csv`.
+3. **Each public dataset has its own writing style.** A model can tell which dataset a question came
+   from about 73% of the time, which is another reason to report per part.
+4. **Labels were checked by AI and spot-checked by hand**, not double-labelled by two people.
+5. **Few "Misleading keyword" examples** (79 in total, 31 in train).
 
-| In `Ml_Aetherion/` | What it is |
-|---|---|
-| `scripts/build_dataset.py`, `_v2.py`, `_v3.py` | The build scripts, one per version. Rebuilding gives the identical file. |
-| `data/v1/`, `data/v2/`, `data/v3/` | Each version's output and detailed notes (`DATASET_CARD.md`) |
-| `data/v1/sources/` | The real Kafka tickets, design pages and chat threads questions were written from |
-| `data/v2/label_changes.csv` | All 257 relabelled hard-case rows, with reasons |
-| `data/v1/audit/` | The blind label-check results |
-
-To rebuild there: run the three scripts in order (v1 → v2 → v3). They need
-`pandas`, `pyarrow` and `openpyxl`, and download the public datasets
-automatically.
+The build scripts, downloaded sources and earlier versions (v1, v2) are kept outside this repo; this
+repo holds only the final dataset.
