@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 210" width="340" height="210" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<text x="8" y="94" font-size="12" fill="#9aa6b2">a question</text>
+<line x1="8" y1="105" x2="97" y2="105" stroke="#9aa6b2" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="130,25 75,165 185,165" fill="#161b22" stroke="#e5ebef" stroke-width="2" stroke-linejoin="round"/>
+<line x1="97" y1="105" x2="162" y2="105" stroke="#9aa6b2" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="162" y1="105" x2="246" y2="20" stroke="#3987e5" stroke-width="2.6" stroke-linecap="round"/>
+<text x="254" y="24" font-size="13" fill="#e5ebef">kb</text>
+<line x1="162" y1="105" x2="246" y2="48" stroke="#d95926" stroke-width="2.6" stroke-linecap="round"/>
+<text x="254" y="52" font-size="13" fill="#e5ebef">jira</text>
+<line x1="162" y1="105" x2="246" y2="76" stroke="#199e70" stroke-width="2.6" stroke-linecap="round"/>
+<text x="254" y="80" font-size="13" fill="#e5ebef">confluence</text>
+<line x1="162" y1="105" x2="246" y2="104" stroke="#c98500" stroke-width="2.6" stroke-linecap="round"/>
+<text x="254" y="108" font-size="13" fill="#e5ebef">slack</text>
+<line x1="162" y1="105" x2="246" y2="132" stroke="#d55181" stroke-width="2.6" stroke-linecap="round"/>
+<text x="254" y="136" font-size="13" fill="#e5ebef">notion</text>
+<line x1="162" y1="105" x2="246" y2="160" stroke="#2f9e2f" stroke-width="2.6" stroke-linecap="round"/>
+<text x="254" y="164" font-size="13" fill="#e5ebef">gmail</text>
+<line x1="162" y1="105" x2="246" y2="188" stroke="#9085e9" stroke-width="2.6" stroke-linecap="round"/>
+<text x="254" y="192" font-size="13" fill="#e5ebef">web</text>
+</svg>

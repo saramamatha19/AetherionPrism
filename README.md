@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/prism_dark.svg">
+  <img align="right" width="260" alt="A question enters a prism and splits into the 7 sources: kb, jira, confluence, slack, notion, gmail, web" src="docs/images/prism_light.svg">
+</picture>
+
 # Aetherion Prism: the Source Router
 
 **Prism decides where to search when someone asks a question at work:** the knowledge base, Jira,
@@ -32,7 +37,7 @@ still weak, so most of them go to the LLM.
 ## How I built it
 
 **Rule: build the way to measure before the thing to measure.** Every step ended with a number,
-a written decision and a commit (6–15 October 2026).
+a written decision and a commit .
 
 ```mermaid
 flowchart LR
@@ -185,7 +190,7 @@ Restart the page and the API after a promotion.
 | `data/` | `train.csv`, `eval.csv` (frozen), `provenance.csv`, retraining batches |
 | `models/` | 14 saved versions, each with a `card.json` (settings, data fingerprint, scores), plus `champion.json` (which model is live, and why) |
 | `recordings/` · `results/` | Saved LLM answers · comparison tables |
-| `docs/` | The README charts and the script that draws them (`uv run --with matplotlib python docs/make_charts.py`) |
+| `docs/` | The README charts, the prism picture and the script that draws them (`uv run --with matplotlib python docs/make_charts.py`) |
 | `src/prism/` · `tests/` | The code · 114 tests |
 | *not in git* | `.env` (key), `logs/` (real questions), `finetuned/` (large models) |
 

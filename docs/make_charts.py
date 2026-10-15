@@ -13,6 +13,7 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")  # draw to files, no window
+matplotlib.rcParams["svg.hashsalt"] = "prism"  # same ids every run (no noise in git diffs)
 import matplotlib.pyplot as plt
 
 OUT = Path("docs/images")
@@ -95,7 +96,7 @@ def systems_chart(theme: str) -> None:
     )
     ax.legend(frameon=False, labelcolor=colours["ink"], fontsize=10, loc="upper center", ncol=2)
     fig.tight_layout()
-    fig.savefig(OUT / f"systems_{theme}.svg", transparent=True)
+    fig.savefig(OUT / f"systems_{theme}.svg", transparent=True, metadata={"Date": None})
     plt.close(fig)
 
 
@@ -145,8 +146,44 @@ def curve_chart(theme: str) -> None:
                  color=colours["ink"], fontsize=12, loc="left")
     ax.legend(frameon=False, labelcolor=colours["ink"], fontsize=10, loc="lower right")
     fig.tight_layout()
-    fig.savefig(OUT / f"cost_accuracy_{theme}.svg", transparent=True)
+    fig.savefig(OUT / f"cost_accuracy_{theme}.svg", transparent=True, metadata={"Date": None})
     plt.close(fig)
+
+
+PRISM_SOURCES = ["kb", "jira", "confluence", "slack", "notion", "gmail", "web"]
+PRISM_THEMES = {
+    "light": {"ink": "#15202b", "muted": "#5b6672", "fill": "#ffffff",
+              "beams": ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6"]},
+    "dark": {"ink": "#e5ebef", "muted": "#9aa6b2", "fill": "#161b22",
+             "beams": ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#2f9e2f", "#9085e9"]},
+}
+
+
+def prism_picture(theme: str) -> None:
+    """The README's title picture: a question goes into a prism and splits into the 7 sources."""
+    colours = PRISM_THEMES[theme]
+    parts = [
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 210" width="340" height="210" '
+        'font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">',
+        f'<text x="8" y="94" font-size="12" fill="{colours["muted"]}">a question</text>',
+        f'<line x1="8" y1="105" x2="97" y2="105" stroke="{colours["muted"]}" stroke-width="2.5" '
+        'stroke-linecap="round"/>',
+        f'<polygon points="130,25 75,165 185,165" fill="{colours["fill"]}" stroke="{colours["ink"]}" '
+        'stroke-width="2" stroke-linejoin="round"/>',
+        f'<line x1="97" y1="105" x2="162" y2="105" stroke="{colours["muted"]}" stroke-width="1.5" '
+        'stroke-dasharray="3 3"/>',
+    ]
+    for i in range(len(PRISM_SOURCES)):
+        y = 20 + i * 28
+        parts.append(
+            f'<line x1="162" y1="105" x2="246" y2="{y}" stroke="{colours["beams"][i]}" '
+            'stroke-width="2.6" stroke-linecap="round"/>'
+        )
+        parts.append(
+            f'<text x="254" y="{y + 4}" font-size="13" fill="{colours["ink"]}">{PRISM_SOURCES[i]}</text>'
+        )
+    parts.append("</svg>")
+    (OUT / f"prism_{theme}.svg").write_text("\n".join(parts) + "\n")
 
 
 if __name__ == "__main__":
@@ -154,4 +191,5 @@ if __name__ == "__main__":
     for theme in THEMES:
         systems_chart(theme)
         curve_chart(theme)
+        prism_picture(theme)
         print(f"wrote {theme} charts to {OUT}/")
