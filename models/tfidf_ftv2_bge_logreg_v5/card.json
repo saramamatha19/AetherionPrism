@@ -1,0 +1,70 @@
+{
+  "version": "tfidf_ftv2_bge_logreg_v5",
+  "created": "2026-10-16 15:38",
+  "recipe": "tfidf_ftv2_bge_logreg",
+  "settings": {
+    "mode": "shadow",
+    "accuracy_floor": 0.8,
+    "seed": 42,
+    "threshold_slice_size": 500,
+    "gate_slice_size": 500,
+    "finetune_epochs": 1,
+    "finetune_batch_size": 16,
+    "finetune_augment_count": 1000,
+    "finetune_on_fit_half": true,
+    "negation_to_llm": true,
+    "llm_model": "gpt-4o-2024-11-20",
+    "llm_timeout_seconds": 10.0,
+    "llm_max_retries": 2,
+    "llm_prompt_version": "v4",
+    "llm_prices": {
+      "gpt-4o-2024-11-20": {
+        "input": 2.5,
+        "cached_input": 1.25,
+        "output": 10.0,
+        "source": "OpenRouter, checked 2026-10-12"
+      },
+      "gpt-5-2025-08-07": {
+        "input": 1.25,
+        "cached_input": 1.25,
+        "output": 10.0,
+        "source": "user, 2026-10-12 (cached price not given; caching not used yet)"
+      }
+    },
+    "prompt_practice_per_type": 28,
+    "audit_rate": 0.03,
+    "spot_check_rate": 0.05,
+    "go_live_accuracy": 0.85,
+    "go_live_min_questions": 500,
+    "retrain_min_new_rows": 150,
+    "batch_max_questions": 500
+  },
+  "train_data_fingerprint": "d343b615dcfb",
+  "thresholds": {
+    "kb": 0.6,
+    "jira": 0.45,
+    "confluence": 0.35,
+    "slack": 0.55,
+    "notion": 0.55,
+    "gmail": 0.45,
+    "web": 0.6
+  },
+  "gate": 0.18,
+  "gate_slice": {
+    "coverage": 0.746,
+    "accuracy": 0.8016085790884718
+  },
+  "eval": {
+    "all_exact": 0.6391666666666667,
+    "real_world_exact": 0.838,
+    "all_needed": 0.6883333333333334,
+    "coverage": 0.735,
+    "kept_accuracy": 0.7346938775510204
+  },
+  "learned_from_batches": [
+    "batch_2026-10-14.csv",
+    "batch_2026-10-15.csv",
+    "batch_2026-10-16.csv"
+  ],
+  "new_rows": 1288
+}

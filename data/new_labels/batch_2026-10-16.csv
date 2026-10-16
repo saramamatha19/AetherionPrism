@@ -1,0 +1,431 @@
+id,question,labels,question_type,origin,split
+n20261016_0001,Which channel has the latest update on the migration?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0002,Find the product team's quarterly planning page.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0003,Search my email for the approval to purchase test devices.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0004,Check the latest email and compare it with the project plan in Notion Summarize the evidence and owners.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0005,What changed recently regarding the dependency upgrade?,jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0006,What did the team document in Notion about team retrospectives?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0007,Which internal article covers the business continuity checklist?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0008,Find the Jira issue tracking the sprint backlog.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0009,What did the team say in Slack about the API outage?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0010,Are there conflicting updates about the Q4 reporting dashboard across our systems?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0011,Check the knowledge base procedure and the Jira ticket tracking the same request.,jira|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0012,What does the Confluence runbook say about API contracts?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0013,Where is the latest documentation for the API rate-limit change?,confluence|slack|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0014,Find the Notion page for the user testing notes.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0015,What is the current status of the incident response procedure?,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0016,"Find the Jira task, then check Slack for the latest owner update Include the most recent update.",jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0017,Find the story linked to the new export functionality.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0018,What steps should we follow to resolve the API rate-limit change?,confluence|slack|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0019,"Find the policy, the related implementation ticket, and the discussion where the exception was approved Focus on the approved decision.",jira|kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0020,"Find the product decision in Notion, its Jira implementation ticket, and the Slack discussion.",jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0021,Which open Jira ticket relates to the sprint backlog?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0022,Find the Slack discussion about the handover plan.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0023,What does the Confluence runbook say about incident postmortems?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0024,What do reliable public sources say about vendor pricing?,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0025,Locate the latest Slack update concerning the build failure.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0026,Where can I find the standard incident severity definitions?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0027,Locate the technical design page for API contracts in Confluence.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0028,Find the Notion requirements and the Confluence architecture page for the same feature Focus on the approved decision.,confluence|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0029,Summarize the evidence we have about the customer data export feature.,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0030,What steps should we follow to resolve the employee onboarding process?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0031,Compare the onboarding page in Notion with the official HR guidance in the knowledge base.,kb|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0032,What steps should we follow to resolve the support team's handover?,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0033,What is the current status of the Q4 reporting dashboard?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0034,Which source contains the latest approved details about the customer data export feature?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0035,Where is the latest documentation for the new logging standard?,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0036,Who sent the message containing the update about the invoice dispute?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0037,What changed recently regarding the database migration?,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0038,Locate the vendor's official website guidance for browser support.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0039,Find any open work and related discussion about the API rate-limit change.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0040,Find the release blocker in Jira and the approval email from the product owner.,gmail|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0041,Locate the technical design page for the queue-processing architecture in Confluence.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0042,Locate the vendor's official website guidance for vendor pricing.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0043,Find the official vendor instructions and the internal runbook used by our team Focus on the approved decision.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0044,Who owns the next action for the dependency upgrade?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0045,Find current official web documentation about browser support.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0046,Find any open work and related discussion about the payment timeout incident.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0047,Who owns the next action for the new logging standard?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0048,Which high-priority defects have no assignee?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0049,Which Confluence page lists the database migration steps?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0050,What is the status of the Jira work for the access-control enhancement?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0051,Find the decision and supporting context for the refund escalation.,gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0052,What is the latest stable version of Node.js?,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0053,Find the thread discussing the rescheduled vendor meeting.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0054,Find the decision and supporting context for the security advisory.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0055,Find any open work and related discussion about the database migration.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0056,Locate the vendor's official website guidance for the latest official Git documentation.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0057,Compare the current Jira status with the latest progress update in Slack.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0058,Find the email thread about the customer requirements.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0059,What does our internal guide say about requesting a new monitor?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0060,Summarize the evidence we have about the payment timeout incident.,confluence|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0061,Summarize the evidence we have about VPN connection failures.,kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0062,What changed recently regarding the failed staging build?,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0063,Find any open work and related discussion about the incident response procedure.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0064,Which source contains the latest approved details about the database migration?,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0065,What workaround did someone suggest in Slack for the build failure?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0066,Find the Confluence documentation for system architecture.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0067,What steps should we follow to resolve the security advisory?,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0068,Find the decision and supporting context for the mobile app release.,jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0069,Find any open work and related discussion about the mobile app release.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0070,Locate the vendor's official website guidance for the official Kubernetes upgrade guide.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0071,Compare the vendor's email instructions with its current public documentation.,gmail|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0072,What did the team document in Notion about the launch risk register?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0073,Where is the system context diagram for the payments service?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0074,Find the project roadmap page for the analytics initiative.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0075,Find the Slack discussion about the incident channel.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0076,What changed recently regarding the API rate-limit change?,confluence|slack|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0077,Who sent the message containing the update about a purchase approval?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0078,Locate the customer escalation in Slack and the related email thread.,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0079,Who owns the next action for the refund escalation?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0080,Which internal article covers password resets?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0081,Where is the latest documentation for the new authentication flow?,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0082,Find the decision and supporting context for the updated contract.,confluence|gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0083,Check the public API docs and our internal implementation notes.,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0084,Locate the technical design page for disaster recovery in Confluence.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0085,What is our standard process for requesting software access?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0086,Compare the support article with the current official documentation before suggesting a fix Identify any unresolved action items.,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0087,Find the thread where Support escalated the customer issue.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0088,Search Slack for the discussion about API rate limits.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0089,What steps should we follow to resolve the Q4 reporting dashboard?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0090,What does the Confluence runbook say about the queue-processing architecture?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0091,What is the current status of the API rate-limit change?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0092,Which open Jira ticket relates to release blockers?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0093,Who sent the message containing the update about the meeting reschedule?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0094,Find current official web documentation about the latest official Git documentation.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0095,Locate the technical design page for service deployment in Confluence.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0096,What did the team say in Slack about the database maintenance discussion?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0097,Which source contains the latest approved details about the payment timeout incident?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0098,Find the runbook for restarting the staging service.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0099,Compare the latest release date in the project notes with the date announced by email.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0100,What do reliable public sources say about browser support?,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0101,Find the Confluence documentation for the backup restoration runbook.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0102,Who sent the message containing the update about the renewal confirmation?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0103,What changed recently regarding the customer data export feature?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0104,Find the Slack discussion about the database maintenance discussion.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0105,Find the customer support procedure and the related technical runbook.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0106,What is the current status of the database migration?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0107,What is the current status of the employee onboarding process?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0108,Locate the Slack discussion and Notion notes about changing the project deadline.,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0109,Who owns the ticket about intermittent login failures?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0110,Locate the planning notes for launch readiness in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0111,Who owns the next action for the customer data export feature?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0112,Who owns the next action for the delayed vendor delivery?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0113,Are there conflicting updates about the security advisory across our systems?,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0114,Where is the latest documentation for the product launch checklist?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0115,Who emailed the updated contract draft yesterday?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0116,Find the Slack discussion about the deployment approval thread.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0117,What steps should we follow to resolve the failed staging build?,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0118,Find the Jira issue tracking unassigned critical issues.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0119,What is the status of PROJ-482?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0120,Find the decision in Slack and the detailed planning notes in Notion.,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0121,Which source contains the latest approved details about the mobile app release?,jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0122,Which knowledge article explains VPN troubleshooting?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0123,Locate the vendor's official website guidance for GitHub Actions syntax.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0124,What changed recently regarding the invoice correction request?,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0125,What steps should we follow to resolve the customer data export feature?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0126,Are there conflicting updates about the product launch checklist across our systems?,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0127,Summarize the evidence we have about the incident response procedure.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0128,What did the team document in Notion about research notes?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0129,What did the latest email say about the revised deadline?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0130,Where is the latest documentation for the support team's handover?,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0131,Find the official vendor instructions and the internal runbook used by our team Check whether the sources disagree.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0132,What deadline did the manager mention in the email about the report?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0133,Find the Jira task and related Confluence design document for the new authentication flow.,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0134,"Find the vendor's email, then verify the claim against the vendor's public website.",gmail|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0135,What changed recently regarding VPN connection failures?,kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0136,What steps should we follow to resolve the delayed vendor delivery?,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0137,Find the Slack discussion about the review request.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0138,What did the latest email say about the contract signature?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0139,Summarize the evidence we have about the new logging standard.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0140,Where is the latest documentation for the database migration?,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0141,What changed recently regarding the employee onboarding process?,kb|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0142,What is the current status of the invoice correction request?,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0143,Find the official documentation for FastAPI dependency injection.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0144,Where is the latest documentation for the employee onboarding process?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0145,Find the email thread about the contract signature.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0146,What is the status of the Jira work for the overdue documentation task?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0147,Which source contains the latest approved details about the employee onboarding process?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0148,Locate the vendor's official website guidance for the current Docker Compose reference.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0149,Summarize the evidence we have about the security advisory.,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0150,What do reliable public sources say about PostgreSQL release changes?,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0151,What did the team say in Slack about the incident channel?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0152,Find any open work and related discussion about VPN connection failures.,kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0153,"Check the internal knowledge article, customer email, and related support ticket Summarize the evidence and owners.",gmail|jira|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0154,Search Slack and Gmail for the final decision on the delivery date Check whether the sources disagree.,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0155,What does the Confluence runbook say about the event schema specification?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0156,Find the standard operating procedure for access requests.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0157,Find the customer complaint in email and the related support guidance in the knowledge base.,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0158,Where is the latest documentation for the refund escalation?,gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0159,Locate the technical design for the event ingestion pipeline.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0160,Locate the vendor's official website guidance for Python compatibility.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0161,"Find the policy, the related implementation ticket, and the discussion where the exception was approved Summarize the evidence and owners.",jira|kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0162,What was discussed in the #engineering channel about the flaky tests?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0163,Where is the latest documentation for VPN connection failures?,kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0164,What is the current status of the security advisory?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0165,What steps should we follow to resolve the mobile app release?,jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0166,Find the policy in the knowledge base and verify the relevant rule on an official website.,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0167,What is the current status of VPN connection failures?,kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0168,Find the email thread about the revised deadline.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0169,What is blocking completion of the customer import task?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0170,What is the current status of the refund escalation?,gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0171,Find any open work and related discussion about the dependency upgrade.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0172,Are there conflicting updates about the delayed vendor delivery across our systems?,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0173,What is the status of the Jira work for the sprint backlog?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0174,Find the official OpenAI API documentation about structured outputs.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0175,Who owns the next action for the API rate-limit change?,confluence|slack|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0176,What changed recently regarding the Q4 reporting dashboard?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0177,Find the Notion page for quarterly goals.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0178,Summarize the evidence we have about the invoice correction request.,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0179,Which source contains the latest approved details about the new authentication flow?,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0180,What did the latest email say about the customer requirements?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0181,What is the current status of the mobile app release?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0182,Which source contains the latest approved details about the API rate-limit change?,confluence|slack|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0183,What changed recently regarding the payment timeout incident?,confluence|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0184,What changed recently regarding the mobile app release?,jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0185,Find the decision and supporting context for the payment timeout incident.,confluence|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0186,What does the Confluence runbook say about service deployment?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0187,What does our approved knowledge-base guidance say about password resets?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0188,What does the Confluence runbook say about system architecture?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0189,What did the team document in Notion about sprint planning?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0190,Check the latest email and compare it with the project plan in Notion Focus on the approved decision.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0191,Find the original request in email and the knowledge article explaining how to fulfill it.,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0192,What steps should we follow to resolve the new authentication flow?,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0193,"Find the request in Gmail, its tracking ticket in Jira, and the team's Slack updates.",gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0194,Locate the meeting notes and the follow-up email with decisions Include the most recent update.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0195,Find the Slack discussion about the API outage.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0196,Find the decision and supporting context for the support team's handover.,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0197,Locate the meeting notes and the follow-up email with decisions Check whether the sources disagree.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0198,Find the standard operating procedure for data retention.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0199,What is the current status of the updated contract?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0200,Find any open work and related discussion about the support team's handover.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0201,Locate the technical design page for the event schema specification in Confluence.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0202,Are there conflicting updates about the support team's handover across our systems?,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0203,Are there conflicting updates about the API rate-limit change across our systems?,confluence|slack|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0204,"Compare the customer email, internal knowledge article, and Slack discussion before responding.",gmail|kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0205,Summarize the evidence we have about the refund escalation.,gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0206,What does the service-level objective document specify?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0207,Summarize the evidence we have about the updated contract.,confluence|gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0208,Find the standard operating procedure for expense reimbursement rules.,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0209,Locate the planning notes for the sprint retrospective action list in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0210,Which source contains the latest approved details about the incident response procedure?,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0211,Summarize the evidence we have about the failed staging build.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0212,Find the notes from the last cross-functional planning session.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0213,Are there conflicting updates about the database migration across our systems?,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0214,Who owns the next action for the support team's handover?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0215,What does the Confluence runbook say about database schema?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0216,Find the email thread about the customer meeting summary.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0217,Where is the draft launch checklist maintained?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0218,Which source contains the latest approved details about the updated contract?,confluence|gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0219,List the unresolved issues connected to the mobile release.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0220,Where can I find the official password reset instructions?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0221,What did the latest email say about the meeting reschedule?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0222,"Check the internal knowledge article, customer email, and related support ticket Focus on the approved decision.",gmail|jira|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0223,Who sent the message containing the update about the customer requirements?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0224,What did the team say in Slack about the handover plan?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0225,Check the Jira ticket and Confluence runbook for the steps needed to resolve the error.,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0226,Find a reputable explanation of OAuth 2.0 authorization code flow.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0227,Find the design workshop notes and the email with final stakeholder feedback.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0228,What does our approved knowledge-base guidance say about access requests?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0229,Which internal article covers incident severity?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0230,Locate the planning notes for design feedback in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0231,Where is the employee onboarding checklist documented?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0232,Who sent the message containing the update about the revised deadline?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0233,"Check the Slack discussion, then find the email confirming the final decision.",gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0234,Find the email thread about a purchase approval.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0235,Locate the planning notes for research notes in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0236,Which internal article covers equipment requests?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0237,What did the team document in Notion about design feedback?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0238,Find the decision and supporting context for the dependency upgrade.,jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0239,What steps should we follow to resolve the updated contract?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0240,Which source contains the latest approved details about the invoice correction request?,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0241,Find the Confluence documentation for service deployment.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0242,What are the current public pricing details published by the vendor?,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0243,"Use the knowledge base, Jira, and Slack to understand the recurring support problem.",jira|kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0244,Who sent the message containing the update about the security review invitation?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0245,What is the company-wide procedure for handling customer complaints?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0246,Are there conflicting updates about the new logging standard across our systems?,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0247,Find the official vendor instructions and the internal runbook used by our team Include the most recent update.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0248,What steps should we follow to resolve the payment timeout incident?,confluence|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0249,Find the Notion page for the launch risk register.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0250,What did the latest email say about the invoice dispute?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0251,Who owns the next action for the failed staging build?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0252,What changed recently regarding the new authentication flow?,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0253,Which internal article covers support escalation?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0254,Find current official web documentation about vendor pricing.,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0255,Where is the latest documentation for the updated contract?,confluence|gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0256,Find an official guide to configuring TLS for an Nginx server.,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0257,Are there conflicting updates about the refund escalation across our systems?,gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0258,What is the status of the Jira work for the flaky integration test?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0259,Locate the planning notes for the user testing notes in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0260,Find the email thread about the security review invitation.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0261,Find current official web documentation about Python compatibility.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0262,Find the Notion page for design feedback.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0263,What is the current status of the new authentication flow?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0264,What steps should we follow to resolve the dependency upgrade?,jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0265,Which source contains the latest approved details about the dependency upgrade?,jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0266,Find any open work and related discussion about the failed staging build.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0267,What is the status of the Jira work for the migration task?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0268,What is the current status of the customer data export feature?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0269,Find the official vendor instructions and the internal runbook used by our team Summarize the evidence and owners.,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0270,Find the Notion page for the customer research summary.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0271,Where did we document the proposed Q4 experiments?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0272,What is the current status of the product launch checklist?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0273,What is the approved retention period for internal support tickets?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0274,Who owns the next action for the mobile app release?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0275,What does our approved knowledge-base guidance say about expense reimbursement rules?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0276,Find the message where the client confirmed the requirements.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0277,Which open Jira ticket relates to the migration task?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0278,What do reliable public sources say about GitHub Actions syntax?,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0279,Where is the latest documentation for the Q4 reporting dashboard?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0280,Find the Jira ticket for the failed staging deployment.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0281,What does our approved knowledge-base guidance say about equipment requests?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0282,Are there conflicting updates about the customer data export feature across our systems?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0283,Check the latest email and compare it with the project plan in Notion Identify any unresolved action items.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0284,Summarize the evidence we have about the new authentication flow.,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0285,What did the team decide in Slack about the release window?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0286,What is the current status of the failed staging build?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0287,"Find the Jira task, then check Slack for the latest owner update Identify any unresolved action items.",jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0288,Who owns the next action for the product launch checklist?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0289,Locate the planning notes for team retrospectives in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0290,What is the current status of the dependency upgrade?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0291,Locate the meeting notes and the follow-up email with decisions Identify any unresolved action items.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0292,Summarize the evidence we have about the API rate-limit change.,confluence|slack|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0293,What did the team say in Slack about the review request?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0294,What changed recently regarding the incident response procedure?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0295,Who owns the next action for the database migration?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0296,Summarize the evidence we have about the product launch checklist.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0297,Where is the latest documentation for the mobile app release?,jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0298,Find the standard operating procedure for incident severity.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0299,What did the team document in Notion about quarterly goals?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0300,Did Finance reply to the reimbursement request?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0301,What steps should we follow to resolve the product launch checklist?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0302,Which open Jira ticket relates to the overdue documentation task?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0303,Find the standard operating procedure for the data classification guide.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0304,What steps should we follow to resolve the refund escalation?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0305,Find the Jira issue tracking the overdue documentation task.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0306,Find the Jira issue tracking the access-control enhancement.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0307,Find the Jira issue tracking the migration task.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0308,Locate the email containing the meeting recording link.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0309,What did the team say about moving tomorrow's stand-up?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0310,Who owns the next action for the updated contract?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0311,Are there conflicting updates about VPN connection failures across our systems?,kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0312,Where is the latest documentation for the incident response procedure?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0313,What is the status of the Jira work for the login bug?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0314,Find the Notion page for launch readiness.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0315,Check the latest email and compare it with the project plan in Notion Check whether the sources disagree.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0316,Which Jira issues are still open for the current sprint?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0317,What steps should we follow to resolve VPN connection failures?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0318,Find any open work and related discussion about the new authentication flow.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0319,What is the current status of the delayed vendor delivery?,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0320,Find any open work and related discussion about the Q4 reporting dashboard.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0321,Find the decision and supporting context for the invoice correction request.,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0322,Summarize the evidence we have about the Q4 reporting dashboard.,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0323,Find any open work and related discussion about the customer data export feature.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0324,Which internal article covers the approved vendor onboarding procedure?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0325,Find the official vendor instructions and the internal runbook used by our team Identify any unresolved action items.,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0326,Find the standard operating procedure for the approved vendor onboarding procedure.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0327,"Check the internal knowledge article, customer email, and related support ticket Check whether the sources disagree.",gmail|jira|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0328,Compare the support article with the current official documentation before suggesting a fix Focus on the approved decision.,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0329,"Check the internal knowledge article, customer email, and related support ticket Identify any unresolved action items.",gmail|jira|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0330,Are there conflicting updates about the incident response procedure across our systems?,confluence|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0331,Locate the vendor's official website guidance for PostgreSQL release changes.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0332,Are there conflicting updates about the new authentication flow across our systems?,confluence|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0333,Search Slack and Gmail for the final decision on the delivery date Identify any unresolved action items.,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0334,Locate the meeting notes and the follow-up email with decisions Focus on the approved decision.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0335,Are there conflicting updates about the mobile app release across our systems?,jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0336,Where is the latest documentation for the failed staging build?,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0337,What does our approved knowledge-base guidance say about the approved vendor onboarding procedure?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0338,Find the Jira issue for the outage and the Slack discussion about its root cause.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0339,What did the team say in Slack about the release announcement?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0340,Which open Jira ticket relates to the export feature?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0341,Locate the latest Slack update concerning the review request.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0342,Find any open work and related discussion about the employee onboarding process.,kb|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0343,What did the team document in Notion about the sprint retrospective action list?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0344,Locate the technical design page for system architecture in Confluence.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0345,Find the email where Priya shared the revised delivery date.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0346,What do reliable public sources say about Python compatibility?,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0347,"Find the customer requirements in email, the product notes in Notion, and the implementation issue in Jira.",gmail|jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0348,What is the status of the Jira work for release blockers?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0349,Summarize the evidence we have about the employee onboarding process.,kb|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0350,What did the latest email say about a purchase approval?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0351,Find the Jira issue tracking the export feature.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0352,What changed recently regarding the refund escalation?,gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0353,Who owns the next action for the payment timeout incident?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0354,"Find the Confluence design, related Jira work, and public standards it references Focus on the approved decision.",confluence|jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0355,What did the team say in Slack about the deployment approval thread?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0356,What steps should we follow to resolve the database migration?,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0357,What is the current status of the payment timeout incident?,confluence|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0358,Who owns the next action for the Q4 reporting dashboard?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0359,What decisions were captured in the team retrospective page?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0360,What does our approved knowledge-base guidance say about incident severity?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0361,Locate the planning notes for sprint planning in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0362,Search Slack and Gmail for the final decision on the delivery date Focus on the approved decision.,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0363,Find the Jira issue tracking the flaky integration test.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0364,"Find the Confluence design, related Jira work, and public standards it references Identify any unresolved action items.",confluence|jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0365,Locate the meeting notes and the follow-up email with decisions Summarize the evidence and owners.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0366,Which open Jira ticket relates to unassigned critical issues?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0367,Locate the technical design page for the backup restoration runbook in Confluence.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0368,Which source contains the latest approved details about the failed staging build?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0369,Find the Slack discussion about the weekend maintenance announcement.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0370,Find the Notion page for sprint planning.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0371,Find the Jira issue tracking release blockers.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0372,Find the post-incident review for the last availability issue.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0373,Summarize the evidence we have about the delayed vendor delivery.,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0374,Check the latest email and compare it with the project plan in Notion Include the most recent update.,gmail|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0375,Find any open work and related discussion about the new logging standard.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0376,Find any open work and related discussion about the updated contract.,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0377,Are there conflicting updates about the failed staging build across our systems?,jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0378,What steps should we follow to resolve the incident response procedure?,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0379,Summarize the evidence we have about the dependency upgrade.,jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0380,Which source contains the latest approved details about VPN connection failures?,kb|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0381,Compare the Slack proposal with the Notion decision log and the Confluence technical record.,confluence|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0382,Find the Slack discussion about the build failure.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0383,Find the email thread about the meeting reschedule.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0384,What are the approved steps for reporting a security incident?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0385,Are there conflicting updates about the updated contract across our systems?,confluence|gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0386,Summarize the evidence we have about the mobile app release.,jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0387,What is the latest comment on the database timeout issue?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0388,What is the current status of the support team's handover?,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0389,Find the standard operating procedure for the business continuity checklist.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0390,Which source contains the latest approved details about the Q4 reporting dashboard?,jira|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0391,Who volunteered to review the pull request in Slack?,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0392,Who owns the next action for the invoice correction request?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0393,Locate the planning notes for the customer research summary in Notion.,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0394,What did the latest email say about the customer meeting summary?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0395,Compare the support article with the current official documentation before suggesting a fix Summarize the evidence and owners.,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0396,Find the email thread about the renewal confirmation.,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0397,Summarize the evidence we have about the support team's handover.,notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0398,Find the Confluence documentation for database schema.,confluence,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0399,"Find the Confluence design, related Jira work, and public standards it references Summarize the evidence and owners.",confluence|jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0400,"Find the email announcement, the Notion launch plan, and the public release notes.",gmail|notion|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0401,What did the team document in Notion about launch readiness?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0402,Locate the vendor's official website guidance for OAuth security.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0403,What is the status of the Jira work for unassigned critical issues?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0404,Where is the latest documentation for the payment timeout incident?,confluence|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0405,Which source contains the latest approved details about the refund escalation?,gmail|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0406,Summarize the evidence we have about the database migration.,confluence|jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0407,Which email has the latest version of the presentation attached?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0408,Which source contains the latest approved details about the security advisory?,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0409,What is the current status of the new logging standard?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0410,"Find the launch plan, the release blocker, and the discussion explaining the blocker.",jira|notion|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0411,"Find the Jira task, then check Slack for the latest owner update Check whether the sources disagree.",jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0412,Are there conflicting updates about the payment timeout incident across our systems?,confluence|jira|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0413,Search Slack and Gmail for the final decision on the delivery date Include the most recent update.,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0414,Who sent the message containing the update about the contract signature?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0415,Which internal article covers expense reimbursement rules?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0416,Which open Jira ticket relates to the access-control enhancement?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0417,Find the Slack message where Alex shared the staging URL.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0418,Find the decision and supporting context for the delayed vendor delivery.,gmail|slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0419,Where did we record the brainstorming notes for the mobile redesign?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0420,Who sent the message containing the update about the customer meeting summary?,gmail,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0421,What action items were assigned in the design workshop notes?,notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0422,What steps should we follow to resolve the invoice correction request?,kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0423,Find the bug assigned to the payments team that is blocking release.,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0424,Find the Notion requirements and the Confluence architecture page for the same feature Check whether the sources disagree.,confluence|notion,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0425,Are there conflicting updates about the dependency upgrade across our systems?,jira|web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0426,Who owns the next action for the new authentication flow?,jira,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0427,Locate the latest Slack update concerning the API outage.,slack,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0428,Find the official documentation for GitHub Actions matrix builds.,web,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0429,Are there conflicting updates about the invoice correction request across our systems?,gmail|kb,(unknown),"shadow run round_3, reviewed by Sara",train
+n20261016_0430,Where is the latest documentation for the security advisory?,kb|web,(unknown),"shadow run round_3, reviewed by Sara",train
