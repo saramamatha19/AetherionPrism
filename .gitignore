@@ -15,6 +15,7 @@ __pycache__/
 PROJECT.md
 LOG.md
 LEARNING.md
+PRESENTATION_GUIDE.md
 
 # Fine-tuned embedding models (~130 MB each): too big for git; card.json says how to rebuild
 finetuned/

@@ -9,6 +9,9 @@
 Confluence, Slack, Notion, Gmail or the web. A small model answers most questions in milliseconds
 for free; only the hard ones go to an LLM.
 
+**Why it matters:** searching all 7 sources every time is slow and returns noise, and asking an
+LLM every time is slow and expensive. Prism picks the right sources quickly and cheaply.
+
 ```mermaid
 flowchart LR
     Q["Question"] --> M["Small model<br/>~7 ms, free"] --> G{"Confident?"}
@@ -24,20 +27,29 @@ flowchart LR
 | Answered without the LLM | 100% | 0% | **76%** |
 | Cost per 1M questions | $0 | $1,731 | **$414 (76% cheaper)** |
 
-As accurate as the LLM on normal questions, at a quarter of the cost. Hard trick questions are
-still weak, so most of them go to the LLM.
+*Real-world = questions taken from public datasets. Hard = traps, negation ("not the email…"),
+vague and multi-source questions I wrote on purpose. Exactly right = every needed source, nothing extra.*
+
+More accurate than the LLM on real-world questions, at a quarter of the cost. Hard trick questions
+are still weak, so most of them go to the LLM.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/systems_dark.svg">
   <img alt="Bar chart: exactly right on real-world vs hard questions. Small model alone 84.0% / 40.4%, LLM alone 74.6% / 71.4%, Prism 84.2% / 52.1%" src="docs/images/systems_light.svg">
 </picture>
 
+### The work behind it
+
+| 4,419 | 10 | 15 | 3 | 114 | 27 |
+|---|---|---|---|---|---|
+| questions I built and labelled | models compared (8 small, Laya, gpt-4o) | saved model versions, none overwritten | retraining rounds, run end to end | tests, all free | problems from my first prototype, each fixed |
+
 ---
 
 ## How I built it
 
 **Rule: build the way to measure before the thing to measure.** Every step ended with a number,
-a written decision and a commit .
+a written decision and a commit.
 
 ```mermaid
 flowchart LR
@@ -138,6 +150,9 @@ Each model now answers **only the questions it is confident about** (confidence 
 and sends the rest to the LLM. Two numbers belong together: **how much it answers** and **how
 often it's right when it does**. A model can look very accurate just by answering very little.
 
+<details>
+<summary><b>Show the after-gate table for every model</b></summary>
+
 | Model | Gate | All: answers / right | Real-world: answers / right | Same-topic: answers / right | Hard: answers / right |
 |---|---|---|---|---|---|
 | `tfidf_logreg_v3` | 0.11 | 61.0% / 69.5% | 67.4% / 82.5% | 69.3% / 82.5% | 53.2% / 50.7% |
@@ -148,6 +163,8 @@ often it's right when it does**. A model can look very accurate just by answerin
 | `tfidf_ftv2_bge_logreg_v1` | 0.11 | 85.8% / 69.2% | 92.0% / 88.0% | 87.9% / 91.1% | 79.8% / 43.8% |
 | `tfidf_ftsplit_bge_logreg_v1` | 0.16 | 68.6% / 71.0% | 78.4% / 87.8% | 70.7% / 85.9% | 59.3% / 46.7% |
 | **`tfidf_ftv2_bge_logreg_v2` (LIVE)** | **0.13** | **76.2% / 71.3%** | **84.0% / 89.3%** | **79.3% / 91.9%** | **68.6% / 45.6%** |
+
+</details>
 
 **How to read the live row:** on real-world questions the model answers 84% by itself and is right
 on 89.3% of those; the other 16% go to the LLM. On hard questions it is still often confidently
@@ -161,10 +178,11 @@ questions before go-live.
 - **Fine-tuning helped normal questions most** (76.0% → 84.0%) but made the model over-confident on
   hard ones. A stop rule set *before* fine-tuning (hard cases ≥ 65% right when kept) was never met,
   so hard cases are left to the LLM and the negation rule.
-- **Laya scored higher alone but only tied in the full system** (70.8% vs 70.0%), because it improved
+- **Laya scored higher alone but only tied in the full system** (70.8% vs 70.0% exactly right on
+  all 1,200 questions), because it improved
   the hard cases the LLM already handles. It was also 8× slower and 340× bigger (1.6 GB).
   **Lesson:** judge a model inside the full system, not alone.
-- **Two retrained challengers** (`_v3`, `_v4`, from the practice retraining rounds) were not promoted:
+- **Three retrained challengers** (`_v3`, `_v4`, `_v5`, from the practice retraining rounds) were not promoted:
   see [Retraining safely](#6-retraining-safely).
 
 Full tables: `results/model_comparison.md`, `results/laya_comparison.md`, `results/laya_full_system.md`.
@@ -198,7 +216,8 @@ flowchart LR
 ```
 
 Answers are judged against human-checked answers, not the LLM: when the two disagreed, the LLM was
-right only 47% of the time. **Rehearsal on the test set: NO-GO** (71.3% vs 77.1%). Real-world
+right only 47% of the time. **Rehearsal on the test set: NO-GO** (model 71.3% vs LLM 77.1% on
+the questions the model was confident about). Real-world
 questions alone would pass (89.3%); hard cases fail. The process estimated 71.3% from reviewing a
 third of the questions, and the true figure was 71.3%, so the check is honest. The real decision
 needs 500+ colleague questions.
@@ -215,8 +234,9 @@ flowchart LR
 The model never learns from its own answers. Labels come from human review or from the model and
 the LLM agreeing. Nothing is promoted automatically, and rollback is one command.
 
-**Two practice rounds** (made-up questions) both ended **not promoted**. The challengers lost a
-little on real-world questions (84.2% → 84.0% and 83.2%) and cost more. The rule worked. Next fix:
+**Three practice rounds** (made-up questions, 1,288 new labelled rows by the end) all ended **not
+promoted**. Each challenger lost a little on real-world questions (live model 84.2% vs 84.0%,
+83.2% and 83.4%) and cost more (round 3: $463 vs $414 per 1M). The rule worked every time. Next fix:
 the model *misses* sources far more than it adds wrong ones (125 vs 31).
 
 ---
@@ -256,7 +276,7 @@ Restart the page and the API after a promotion.
 |---|---|
 | `configs/` | Every setting, in one file; a missing setting is an error |
 | `data/` | `train.csv`, `eval.csv` (frozen), `provenance.csv`, retraining batches |
-| `models/` | 14 saved versions, each with a `card.json` (settings, data fingerprint, scores), plus `champion.json` (which model is live, and why) |
+| `models/` | 15 saved versions, each with a `card.json` (settings, data fingerprint, scores), plus `champion.json` (which model is live, and why) |
 | `recordings/` · `results/` | Saved LLM answers · comparison tables |
 | `docs/` | The README charts, the prism picture and the script that draws them (`uv run --with matplotlib python docs/make_charts.py`) |
 | `src/prism/` · `tests/` | The code · 114 tests |
