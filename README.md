@@ -86,6 +86,8 @@ It isn't company data, and AI-written rows are marked.
 
 ## 2. How one decision is made
 
+<img alt="One decision, step by step: the question 'is the login bug fixed yet?' becomes words + meaning, 7 judges score each source, only jira passes its mark, confidence is 0.74. No negation word and confidence is above 0.13, so the model answers (~7 ms, $0, 76% of questions); otherwise gpt-4o answers (~1.5 s, paid, 24%). The answer and a decision log come out, and only jira is searched." src="docs/images/one_decision.png">
+
 ```mermaid
 flowchart LR
     Q["Question"] --> F["Words +<br/>meaning"] --> J["7 judges<br/>score each source"] --> T["Pass marks"] --> C["Confidence"] --> G{"Negation, or<br/>below gate?"}
