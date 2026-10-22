@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 256" width="380" height="256" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<rect x="0" y="0" width="380" height="256" rx="12" fill="#F4F5F8"/>
+<text x="28" y="118" font-size="12" fill="#4A5262">question</text>
+<line x1="28" y1="132" x2="140" y2="132" stroke="#171A23" stroke-width="3"/>
+<line x1="192" y1="132" x2="285" y2="50" stroke="#D05656" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="192" y1="132" x2="285" y2="77" stroke="#E48A3C" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="192" y1="132" x2="285" y2="104" stroke="#D8B44A" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="192" y1="132" x2="285" y2="131" stroke="#4E9D63" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="192" y1="132" x2="285" y2="159" stroke="#4A9AB5" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="192" y1="132" x2="285" y2="186" stroke="#5153D3" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="192" y1="132" x2="285" y2="213" stroke="#9159CC" stroke-width="2.6" stroke-linecap="round"/>
+<polygon points="170,58 116,189 225,189" fill="#E6E7FB" fill-opacity="0.85" stroke="#4F52D4" stroke-width="2.4" stroke-linejoin="round"/>
+<text x="293" y="54" font-size="12" fill="#4A5262">kb</text>
+<text x="293" y="81" font-size="12" fill="#4A5262">jira</text>
+<text x="293" y="108" font-size="12" fill="#4A5262">confluence</text>
+<text x="293" y="135" font-size="12" fill="#4A5262">slack</text>
+<text x="293" y="163" font-size="12" fill="#4A5262">notion</text>
+<text x="293" y="190" font-size="12" fill="#4A5262">gmail</text>
+<text x="293" y="217" font-size="12" fill="#4A5262">web</text>
+</svg>
