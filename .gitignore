@@ -17,8 +17,11 @@ LOG.md
 LEARNING.md
 PRESENTATION_GUIDE.md
 
-# Fine-tuned embedding models (~130 MB each): too big for git; card.json says how to rebuild
-finetuned/
+# Fine-tuned embedding models: kept out of git, EXCEPT bge_ft_v2 (the one the live model uses).
+# Its 133 MB model.safetensors is over GitHub's 100 MB file limit, so it goes through Git LFS
+# (see .gitattributes). The Laya models (1.6 GB each) and bge_ft_v1 / v3 stay out.
+finetuned/*
+!finetuned/bge_ft_v2/
 
 # Decision logs: real user questions, never in git
 logs/

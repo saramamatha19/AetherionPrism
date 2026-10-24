@@ -1,0 +1,17 @@
+{
+  "version": "bge_ft_v2",
+  "created": "2026-10-11 02:17",
+  "base_model": "BAAI/bge-small-en-v1.5",
+  "trained_on": "fit slice",
+  "epochs": 1,
+  "batch_size": 16,
+  "augment_count": 1000,
+  "seed": 42,
+  "pairs": {
+    "same": 2214,
+    "different": 2219,
+    "tricky": 456,
+    "augmented": 2000
+  },
+  "train_data_fingerprint": "d343b615dcfb"
+}
