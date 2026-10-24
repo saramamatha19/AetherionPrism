@@ -57,3 +57,7 @@ retrain_min_new_rows: 150
 # Batch (the page's Batch tab): the most questions routed in one go
 # (in shadow mode ~ $0.002 and ~1.5 s each → 500 ≈ $1 and ~12 minutes)
 batch_max_questions: 500
+
+# Aetherion platform intake (POST /intake): the most questions the platform's cron may send at once
+# (more → it sends several batches). There is NO limit on how long one question is.
+intake_max_questions: 500

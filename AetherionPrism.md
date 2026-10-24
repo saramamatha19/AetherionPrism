@@ -3,13 +3,9 @@
 **From:** Sara Mamatha · **Date:** 22 October 2026
 **Code:** https://github.com/saramamatha19/AetherionPrism
 
-<p align="center"><img width="420" alt="A question enters a prism and splits into the 7 sources: kb, jira, confluence, slack, notion, gmail, web" src="images/prism_hero.svg"></p>
-
-<p align="center"><i>Like a prism splitting light, Prism splits each question toward the sources where its answer lives.</i></p>
-
 ---
 
-## In one minute
+## Source Routing
 
 When someone asks a work assistant a question such as *"is the login bug fixed yet?"*, the
 assistant first has to decide **where to look**: the knowledge base, Jira, Confluence, Slack,
@@ -32,6 +28,37 @@ the whole dataset), and a chance to run Prism in shadow mode on real questions i
 
 ---
 
+## Aetherion already uses Jev. Why use  ML model?
+
+There are two ways Jev could do this job, so I looked at both.
+
+**Option 1: Jev does the whole job by itself.** Every question goes to Jev, and Jev decides where
+to search. I expect Prism to do this job better:
+
+- **This job has to be learned.** The line between sources (Notion notes vs Confluence docs, the
+  knowledge base vs Confluence) is specific to how we work. I tested Laya, a ready-made model
+  that works the same way as Jev. Used as it comes, it got **fewer than half** of the real-world
+  questions right (43.8%). It only became competitive **after fine-tuning on my labels** (85.8%).
+- **Jev cannot be fine-tuned.** TypeSafe's documentation says all customers share the same model,
+  and you can only change how you word the questions. Prism is trained on our labels and keeps
+  learning from real questions.
+- **Jev's known weak spots are this task's hardest questions.** TypeSafe's documentation says Jev
+  reads negations literally and is less reliable with indirect wording. Questions like "not in
+  Slack" or "anything except Jira" are exactly where routing goes wrong.
+- **Prism is faster.** About 7 ms on our own server, against about 100 ms for each call to Jev.
+
+**Option 2: Jev as the backup.** Prism answers the 3 in 4 questions it is sure about, and only the
+unsure ones go to Jev, instead of to gpt-4o as today. This is what I'd recommend. Each model
+does what it's best at: Prism handles our everyday questions quickly, and Jev handles the rest
+at a fraction of gpt-4o's cost (see section 6).
+
+I couldn't test Jev directly, so I tested Laya, a model that works the same way. Out of the box it got only 43.8% of everyday questions right; after training on my labels it reached 85.8%. That tells me this task depends on learning our own labels. Jev can't be trained that way, so I expect it to be weaker at choosing sources for us, while still being a great fit for general judgments where no special labels are needed.
+
+Both options are based on my Laya results, because I haven't had access to Jev yet. Testing both
+options on my 1,200 test questions costs about 5 cents, and it's the first thing I'd like to do.
+
+---
+
 ## 1. The problem
 
 Every assistant that answers from company data has to pick its sources first. There are three
@@ -43,8 +70,6 @@ ways to do it:
 | Ask an LLM every time | About 1.5 s and a paid call on every question, even "thanks!" |
 | **Prism: small model first, LLM only when unsure** | Fast and free for most questions, with the LLM kept for the hard ones |
 
-A simple way to picture it: Prism works like a triage nurse. It handles the routine cases
-straight away and sends only the difficult ones to the specialist.
 
 ## 2. The main idea behind the project
 
@@ -71,8 +96,6 @@ flowchart LR
     A --> R["Decision log:<br/>who decided, why, cost"]
 ```
 
-![One decision, step by step](images/one_decision.png)
-
 - **Words and meaning.** The model reads the exact words (TF-IDF) and the meaning of the sentence
   (a small BGE model that I fine-tuned on my own labels).
 - **7 yes/no judges, one per source.** This lets one question need several sources, or none at
@@ -86,7 +109,10 @@ flowchart LR
 
 ## 4. How I built it, from start to end
 
-![How I built it in 10 steps: research, dataset (4,419 questions), marking scheme (keywords 29.2%), small model (68.8%), confidence gate (live gate 0.13), better models (84.0%, 8 models), LLM fallback ($14 spent total), live router (~7 ms, 114 tests), shadow mode (rehearsal NO-GO), safe retraining (3 rounds, 0 promoted). A better model, once approved, becomes the live one.](images/build_steps.png)
+```mermaid
+flowchart LR
+    R["Research"] --> D["Dataset<br/>4,419 questions"] --> E["Scoring<br/>system"] --> S["Small model<br/>+ gate"] --> B["Better<br/>models"] --> L["LLM<br/>fallback"] --> RT["Live app<br/>+ API"] --> SH["Shadow<br/>mode"] --> RE["Safe<br/>retraining"]
+```
 
 **The dataset.** No public dataset fits this task, so I built one with **4,419 questions**:
 3,219 for training and 1,200 for testing. The test set is frozen and was never used for training
@@ -242,7 +268,22 @@ test, which costs about 1 cent on the 1,200 test questions.
 4. **One comparison table:** accuracy, speed and cost for every setup.
 5. **Decide** using the numbers.
 
-## 7. Built to be trusted
+## 7. What it takes to run
+
+The small model runs on an ordinary, cheap server. No GPU is needed.
+
+| | What I measured on my laptop (CPU only) |
+|---|---|
+| Memory | ~670 MB |
+| Time per question | ~5 ms (I expect 10–20 ms on a cloud server) |
+| GPU | Not needed |
+| Server | 1–2 CPU cores, 2 GB memory, about $5–15 a month |
+| Retraining | Runs on a laptop, only after 500+ new reviewed questions |
+
+The server price stays the same whether it routes a thousand questions or a million. Jev needs no
+server of our own, but every question goes over the network to TypeSafe (about 100 ms per call).
+
+## 8. Built to be trusted - Retraining
 
 ```mermaid
 flowchart LR
@@ -281,12 +322,12 @@ adds wrong ones (125 vs 31), so that's the next thing to fix before adding more 
 - **No company data.** All data is public or written by me, AI-written rows are marked, and every
   row can be traced back to its source.
 
-## 8. What isn't solved yet
+## 9. What isn't solved yet
 
 
 - **Go-live needs real questions:** 500+ from colleagues, run through shadow mode.
 
-## 9. Where this could go on Aetherion
+## 10. Where this could go on Aetherion
 
 The pattern behind Prism is a small fast model first, a stronger model only when unsure, and
 everything measured. It isn't limited to choosing search sources. If it works on the platform,
@@ -299,7 +340,7 @@ the same approach could be applied to:
 - **Combining with Jev:** Prism-style trained models where our own labels matter, and Jev where a
   general judgment is enough.
 
-## 10. What I need to take it further
+## 11. What I need to take it further
 
 1. **Jev API access**, to run the head-to-head test (a few cents).
 2. **500+ real questions from colleagues**, for the shadow-mode go-live check.

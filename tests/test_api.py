@@ -7,18 +7,24 @@ from test_router import FakeLog
 
 from prism.api import create_app
 from prism.config import load_settings
+from prism.intakeStore import IntakeStore
 from prism.registry import read_champion
 from prism.router import Router
 
 
 @pytest.fixture(scope="module")
-def client():
+def client(tmp_path_factory):
     def make_router():
         settings = load_settings().model_copy(update={"mode": "model_only"})
         fake_llm = FakeClient(reply=fake_reply('{"sources": ["slack"]}'))
         return Router(settings=settings, llm_client=fake_llm, log=FakeLog())
 
-    with TestClient(create_app(make_router)) as test_client:  # "with" runs the start-up (lifespan)
+    def make_store():
+        return IntakeStore(tmp_path_factory.mktemp("intake") / "prism.db")  # never the real file
+
+    with TestClient(
+        create_app(make_router, make_store)
+    ) as test_client:  # "with" runs the start-up (lifespan)
         yield test_client
 
 

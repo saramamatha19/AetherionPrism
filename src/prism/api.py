@@ -3,6 +3,8 @@
 POST /route   {"question": "...", "mode": "shadow" | "gated" | "model_only" (optional)}
               → the DecisionRecord as JSON (and the decision is logged, as always)
 GET  /health  → is it running, which model is live, the default mode
+POST /intake  → Router 1: real questions from the Aetherion platform's cron (see intakeRouter.py)
+GET  /prediction/{question_id} → Router 2: Prism's prediction for one of them (see answerRouter.py)
 
 Run:  uv run uvicorn prism.api:app --port 8000
 Try:  http://localhost:8000/docs   (FastAPI makes a test page automatically)
@@ -14,7 +16,10 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
+from prism.answerRouter import answer_router
 from prism.decisionLog import DecisionLog
+from prism.intakeRouter import intake_router
+from prism.intakeStore import IntakeStore
 from prism.router import Router
 
 
@@ -25,21 +30,29 @@ class RouteRequest(BaseModel):
     mode: Literal["shadow", "gated", "model_only"] | None = None  # None = the default from the YAML
 
 
-def create_app(make_router=None) -> FastAPI:
-    """Build the API. Tests pass their own router (fake LLM, no real log); normally the real one."""
+def create_app(make_router=None, make_store=None) -> FastAPI:
+    """Build the API. Tests pass their own router (fake LLM, no real log) and store (a temporary
+    file); normally the real ones."""
     if make_router is None:
 
         def make_router():
             return Router(log=DecisionLog())
+
+    if make_store is None:
+        make_store = IntakeStore  # intake/prism.db
 
     state = {}
 
     @asynccontextmanager
     async def lifespan(app):
         state["router"] = make_router()  # load ONCE when the API starts (~36 s)
+        app.state.router = state["router"]  # the routers in other files find them here
+        app.state.store = make_store()
         yield
 
     app = FastAPI(title="Aetherion Prism", lifespan=lifespan)
+    app.include_router(intake_router)  # Router 1: POST /intake
+    app.include_router(answer_router)  # Router 2: GET /prediction/{question_id}
 
     @app.get("/health")
     def health():

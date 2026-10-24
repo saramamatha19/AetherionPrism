@@ -22,3 +22,6 @@ finetuned/
 
 # Decision logs: real user questions, never in git
 logs/
+
+# Intake store: real client questions from the Aetherion platform, never in git
+intake/

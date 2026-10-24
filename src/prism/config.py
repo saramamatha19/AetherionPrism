@@ -47,6 +47,7 @@ class Settings(BaseModel):
     go_live_min_questions: int = Field(ge=1)  # minimum shadow questions before deciding
     retrain_min_new_rows: int = Field(ge=1)  # new reviewed rows needed before retraining
     batch_max_questions: int = Field(ge=1)  # most questions routed in one batch
+    intake_max_questions: int = Field(ge=1)  # most questions in one send to POST /intake
 
 
 def load_settings(path: str | Path = "configs/default.yaml") -> Settings:
