@@ -18,12 +18,23 @@ dependencies = [
     "scikit-learn>=1.9.1",
     "sentence-transformers[train]>=6.1.0",
     "streamlit>=1.65.0",
+    "torch>=2.14.1",  # listed so the CPU-only rule below can apply (it comes with sentence-transformers)
     "uvicorn>=0.54.0",
 ]
 
 [build-system]
 requires = ["uv_build>=0.12.2,<0.13.0"]
 build-backend = "uv_build"
+
+# Docker (Linux): CPU-only PyTorch. The normal Linux one adds ~3 GB of NVIDIA GPU code Prism never
+# uses. On the Mac nothing changes (the rule only applies on Linux).
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true  # only torch comes from here; everything else from the normal place
 
 [dependency-groups]
 dev = [

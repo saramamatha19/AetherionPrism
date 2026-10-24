@@ -1,0 +1,15 @@
+# What may go INTO the Docker image. Everything is left out (*), then only what Prism needs to run
+# is let back in (!). So secrets (.env), real questions (logs/, intake/), data and the big Laya
+# models can never slip in by accident.
+*
+!pyproject.toml
+!uv.lock
+!.python-version
+!src/
+!configs/
+!models/
+!finetuned/bge_ft_v2/
+!recordings/
+
+# Even inside those folders: no Python caches
+**/__pycache__

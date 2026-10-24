@@ -5,7 +5,7 @@ from fastapi.testclient import TestClient
 from fakes import FakeClient, fake_reply
 from test_router import FakeLog
 
-from prism.api import create_app
+from prism.api import create_app, load_api_settings
 from prism.config import load_settings
 from prism.intakeStore import IntakeStore
 from prism.registry import read_champion
@@ -50,3 +50,19 @@ def test_wrong_mode_is_refused(client):
 def test_empty_question_is_refused(client):
     reply = client.post("/route", json={"question": "   "})
     assert reply.status_code == 400
+
+
+def test_prism_mode_replaces_the_yaml_mode(monkeypatch):
+    monkeypatch.setenv("PRISM_MODE", "model_only")  # what Docker sets
+    assert load_api_settings().mode == "model_only"
+
+
+def test_no_prism_mode_keeps_the_yaml_mode(monkeypatch):
+    monkeypatch.delenv("PRISM_MODE", raising=False)
+    assert load_api_settings().mode == load_settings().mode
+
+
+def test_wrong_prism_mode_is_refused(monkeypatch):
+    monkeypatch.setenv("PRISM_MODE", "modelonly")
+    with pytest.raises(ValueError, match="PRISM_MODE"):
+        load_api_settings()
