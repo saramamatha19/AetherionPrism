@@ -48,6 +48,7 @@ class Settings(BaseModel):
     retrain_min_new_rows: int = Field(ge=1)  # new reviewed rows needed before retraining
     batch_max_questions: int = Field(ge=1)  # most questions routed in one batch
     intake_max_questions: int = Field(ge=1)  # most questions in one send to POST /intake
+    platform_source_names: dict[str, str]  # the platform's source name → ours
 
 
 def load_settings(path: str | Path = "configs/default.yaml") -> Settings:

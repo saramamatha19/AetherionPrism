@@ -4,7 +4,7 @@ intake/prism.db   one row per question: the question, the platform's intent answ
                   model has run) Prism's answer. Never in git: these are real client questions.
 
 This is the ONLY file that knows WHERE questions are kept. The routers and the report just call
-save_question, get_unpredicted, save_prediction and get_prediction. Moving to a real database later
+save_question, get_unpredicted, save_prediction, get_prediction and get_predicted. Moving to a real database later
 means changing only this file.
 """
 
@@ -118,3 +118,25 @@ class IntakeStore:
             found["prism_answer"] = json.loads(found["prism_answer"])
             found["model_sure"] = found["model_sure"] == 1
         return found
+
+    def get_predicted(self, since: str | None = None) -> list[dict]:
+        """Every question the model HAS answered, oldest first, with lists as lists (for the export).
+        since = only questions received on or after this date, e.g. "2026-11-10"."""
+        if since is None:
+            rows, _ = self.run(
+                "SELECT * FROM questions WHERE prism_answer IS NOT NULL ORDER BY received_at"
+            )
+        else:
+            rows, _ = self.run(
+                "SELECT * FROM questions WHERE prism_answer IS NOT NULL AND received_at >= ? "
+                "ORDER BY received_at",
+                (since,),
+            )
+        questions = []
+        for row in rows:
+            found = dict(row)
+            found["intent_answer"] = json.loads(found["intent_answer"])
+            found["prism_answer"] = json.loads(found["prism_answer"])
+            found["model_sure"] = found["model_sure"] == 1
+            questions.append(found)
+        return questions

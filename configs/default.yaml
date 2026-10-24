@@ -61,3 +61,15 @@ batch_max_questions: 500
 # Aetherion platform intake (POST /intake): the most questions the platform's cron may send at once
 # (more → it sends several batches). There is NO limit on how long one question is.
 intake_max_questions: 500
+
+# The platform's source names → ours (used only when comparing; prism.db keeps his names as sent).
+# Same names for now. If his intent prompt says e.g. "knowledge_base", change that line to
+# knowledge_base: kb. A name NOT listed here = a source Prism doesn't know (counted, not compared).
+platform_source_names:
+  kb: kb
+  jira: jira
+  confluence: confluence
+  slack: slack
+  notion: notion
+  gmail: gmail
+  web: web
