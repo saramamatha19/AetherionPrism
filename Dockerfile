@@ -1,7 +1,9 @@
 # Prism in a box: the API (POST /intake, GET /prediction, /health, /route) with the live model.
 # No secrets inside: it runs the model only (PRISM_MODE=model_only), so it needs no API key.
 #
-# Build (on the laptop, where finetuned/ is):  docker build --platform linux/amd64 -t prism:v1 .
+# Build:  docker build --platform linux/amd64 -t prism:v1 .
+#         needs the real finetuned/bge_ft_v2 (Git LFS): on a fresh clone, install Git LFS first
+#         or run `git lfs pull`, otherwise the image gets a tiny pointer file instead of the model
 # Run:   docker run -p 8000:8000 -v <server folder>:/app/intake prism:v1
 #        the -v folder keeps prism.db (the real questions) safe when the container is replaced
 

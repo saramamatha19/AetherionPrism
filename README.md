@@ -252,9 +252,15 @@ uv run uvicorn prism.api:app --port 8000  # API: POST /route, GET /health
 uv run pytest                             # 114 tests, free (fake LLM)
 ```
 
-**Fresh laptop:** rebuild the fine-tuned model (it's not in git) by setting
-`finetune_on_fit_half: false` in `configs/default.yaml`, then running
-`uv run python -m prism.finetune`.
+**Fresh laptop: install Git LFS before cloning.** The fine-tuned meaning model the live model uses
+(`finetuned/bge_ft_v2/model.safetensors`, 133 MB) is over GitHub's 100 MB file limit, so it's stored
+with Git LFS. Without it, you get a tiny pointer file instead of the model and Prism won't start.
+
+```bash
+brew install git-lfs && git lfs install   # once per laptop (other systems: git-lfs.com)
+git clone https://github.com/saramamatha19/AetherionPrism.git
+git lfs pull                              # only if you cloned before installing Git LFS
+```
 
 <details>
 <summary><b>All commands: evaluation, shadow mode, retraining</b></summary>
@@ -282,7 +288,8 @@ Restart the page and the API after a promotion.
 | `recordings/` · `results/` | Saved LLM answers · comparison tables |
 | `docs/` | The README charts, the prism picture and the script that draws them (`uv run --with matplotlib python docs/make_charts.py`) |
 | `src/prism/` · `tests/` | The code · 114 tests |
-| *not in git* | `.env` (key), `logs/` (real questions), `finetuned/` (large models) |
+| `finetuned/bge_ft_v2/` | The fine-tuned meaning model the live model uses (its 133 MB weights through Git LFS) |
+| *not in git* | `.env` (key), `logs/` and `intake/` (real questions), other `finetuned/` models (large, not live) |
 
 <details>
 <summary><b>Every code file</b></summary>
@@ -306,7 +313,7 @@ Every decision is one row in `logs/decisions_<date>.csv`, so start there.
 | What you see | Look at |
 |---|---|
 | Setting error at start-up | `configs/default.yaml` |
-| Model not found | `models/champion.json`; rebuild `finetuned/bge_ft_v2` |
+| Model not found | `models/champion.json`; is `finetuned/bge_ft_v2/model.safetensors` 133 MB? If it's tiny, run `git lfs pull` |
 | Wrong source picked | The row's `model_scores` vs the pass marks in `card.json`; `logreg.top_words()` |
 | Too many questions go to the LLM | The row's `reason`; the gate in `card.json`; `ruleNegation.py` |
 | LLM failed / cost looks wrong | `llm_error` / `cost_spent`, `cost_if_llm`; prices in the YAML |
