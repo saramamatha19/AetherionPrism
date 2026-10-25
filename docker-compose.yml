@@ -1,0 +1,25 @@
+# Prism on the server: how to run the image, kept in a file so nobody has to retype a long command.
+#
+# Start or update:  docker compose up -d
+# See its output:   docker compose logs -f
+# Stop:             docker compose down        (the questions in the data folder are kept)
+#
+# Full guide: DEPLOY.md
+
+services:
+  prism:
+    image: ghcr.io/saramamatha19/prism:v1   # a new version = change v1 → v2, then `docker compose up -d`
+    container_name: prism
+    restart: unless-stopped                  # starts again by itself after a crash or a server reboot
+    ports:
+      - "8000:8000"                          # server port 8000 → Prism
+    volumes:
+      # The data folder: prism.db (the questions) lives here, on the server's disk, so it survives
+      # updates and restarts. Default /data/prism; another folder: PRISM_DATA_DIR=/my/folder docker compose up -d
+      - ${PRISM_DATA_DIR:-/data/prism}:/app/intake
+    healthcheck:                             # `docker ps` shows "healthy" once the model has loaded
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      start_period: 120s                     # loading the model takes ~40 s; don't call it unhealthy before
+      retries: 3
