@@ -40,7 +40,7 @@ are still weak, so most of them go to the LLM.
 
 ### The work behind it
 
-| 4,419 | 10 | 15 | 3 | 114 | 27 |
+| 4,419 | 10 | 15 | 3 | 143 | 27 |
 |---|---|---|---|---|---|
 | questions I built and labelled | models compared (8 small, Laya, gpt-4o) | saved model versions, none overwritten | retraining rounds, run end to end | tests, all free | problems from my first prototype, each fixed |
 
@@ -53,7 +53,7 @@ a written decision and a commit.
 
 ```mermaid
 flowchart LR
-    R["Research"] --> D["Dataset"] --> E["Marking<br/>scheme"] --> S["Small model<br/>+ gate"] --> B["Better<br/>models"] --> L["LLM<br/>fallback"] --> RT["Live<br/>router"] --> SH["Shadow<br/>mode"] --> RE["Retraining"]
+    R["Research"] --> D["Dataset"] --> E["Marking<br/>scheme"] --> S["Small model<br/>+ gate"] --> B["Better<br/>models"] --> L["LLM<br/>fallback"] --> RT["Live<br/>router"] --> SH["Shadow<br/>mode"] --> RE["Retraining"] --> PL["Platform<br/>deploy"]
 ```
 
 It's a rebuild of my first prototype, which proved the idea but had 27 real problems (the gate
@@ -222,7 +222,7 @@ right only 47% of the time. **Rehearsal on the test set: NO-GO** (model 71.3% vs
 the questions the model was confident about). Real-world
 questions alone would pass (89.3%); hard cases fail. The process estimated 71.3% from reviewing a
 third of the questions, and the true figure was 71.3%, so the check is honest. The real decision
-needs 500+ colleague questions.
+needs 500+ real questions, collected on the Aetherion platform ([section 7](#7-on-the-aetherion-platform-real-questions-zero-risk)).
 
 ## 6. Retraining safely
 
@@ -241,6 +241,34 @@ promoted**. Each challenger lost a little on real-world questions (live model 84
 83.2% and 83.4%) and cost more (round 3: $463 vs $414 per 1M). The rule worked every time. Next fix:
 the model *misses* sources far more than it adds wrong ones (125 vs 31).
 
+## 7. On the Aetherion platform: real questions, zero risk
+
+Prism runs **next to** the live Aetherion platform in shadow mode. It gets **copies** of real client
+questions together with the answer the platform's own intent prompt gave, and never answers a client.
+
+```mermaid
+flowchart LR
+    C["Client"] --> P["Platform +<br/>intent prompt"] --> A["Answer to client<br/>(unchanged)"]
+    P --> DB["Platform<br/>database"] --> CR["Cron<br/>every 15 min"] --> I["Prism<br/>POST /intake"] --> S["prism.db<br/>question + intent answer<br/>+ Prism's answer"]
+    S --> E["Copy → export →<br/>review → go-live check<br/>→ retrain"]
+```
+
+- **Never in the client's path.** The cron sends copies after clients are answered. If Prism is slow
+  or down, nothing on the platform changes, and the cron simply resends next time.
+- **Two endpoints:** `POST /intake` saves each question and lets the model predict it right away;
+  `GET /prediction/{question_id}` reads a saved prediction. A resent question is skipped by its id,
+  so retries never create duplicates.
+- **The model only, no LLM:** the platform's intent prompt already is the LLM side, so Prism needs no
+  API key and costs nothing to run.
+- **Compared with the tools above:** `intakeExport` turns `prism.db` into the same decision log the
+  shadow report reads, with the intent prompt in the "LLM" role. Review, go-live and retraining
+  work unchanged.
+- **Packaged in Docker:** a public image, `ghcr.io/saramamatha19/prism:v1` (no secrets or data
+  inside). The questions live in one SQLite file in a server folder, so they survive updates.
+
+How it all fits together, every decision and the round from 500 questions to a new version:
+**[PLATFORM.md](PLATFORM.md)**. Deploying it and building the cron: **[DEPLOY.md](DEPLOY.md)**.
+
 ---
 
 ## Run it
@@ -248,8 +276,15 @@ the model *misses* sources far more than it adds wrong ones (125 vs 31).
 ```bash
 uv sync && cp .env.example .env           # then put OPENAI_API_KEY in .env (never in git)
 uv run streamlit run src/prism/app.py     # web page: ask, batch, live model, models
-uv run uvicorn prism.api:app --port 8000  # API: POST /route, GET /health
-uv run pytest                             # 114 tests, free (fake LLM)
+uv run uvicorn prism.api:app --port 8000  # API: /route, /health, /intake, /prediction/{id}; test page at /docs
+uv run pytest                             # 143 tests, free (fake LLM)
+```
+
+**In Docker** (the same API, the model only, no key needed):
+
+```bash
+docker run -d --name prism -p 8000:8000 -v ~/prism-data:/app/intake ghcr.io/saramamatha19/prism:v1
+# build it yourself instead: docker build --platform linux/amd64 -t prism:v1 .
 ```
 
 **Fresh laptop: install Git LFS before cloning.** The fine-tuned meaning model the live model uses
@@ -274,6 +309,8 @@ git lfs pull                              # only if you cloned before installing
 | Shadow report + review file / go-live check | `uv run python -m prism.shadowReport logs/<run> [golive]` |
 | Retrain | `uv run python -m prism.retrain collect logs/<run>` → `train` → `promote <version> "<what>" "<why>"` |
 | Which model is live / undo | `uv run python -m prism.retrain show` · `rollback "<why>"` |
+| Platform questions → shadow tools | `uv run python -m prism.intakeExport --db <copy of prism.db> [--since YYYY-MM-DD]` |
+| New image after a promotion | `docker build --platform linux/amd64 -t prism:v2 .` → `docker tag prism:v2 ghcr.io/saramamatha19/prism:v2` → `docker push ghcr.io/saramamatha19/prism:v2` |
 
 Restart the page and the API after a promotion.
 </details>
@@ -287,7 +324,9 @@ Restart the page and the API after a promotion.
 | `models/` | 15 saved versions, each with a `card.json` (settings, data fingerprint, scores), plus `champion.json` (which model is live, and why) |
 | `recordings/` · `results/` | Saved LLM answers · comparison tables |
 | `docs/` | The README charts, the prism picture and the script that draws them (`uv run --with matplotlib python docs/make_charts.py`) |
-| `src/prism/` · `tests/` | The code · 114 tests |
+| `src/prism/` · `tests/` | The code · 143 tests |
+| `Dockerfile` · `.dockerignore` · `docker-compose.yml` | The image recipe · what may go in it (a whitelist) · how the server runs it |
+| `DEPLOY.md` · `PLATFORM.md` | Deploy guide and cron spec · how the platform setup works |
 | `finetuned/bge_ft_v2/` | The fine-tuned meaning model the live model uses (its 133 MB weights through Git LFS) |
 | *not in git* | `.env` (key), `logs/` and `intake/` (real questions), other `finetuned/` models (large, not live) |
 
@@ -302,6 +341,7 @@ Restart the page and the API after a promotion.
 | LLM | `llm.py` (prompts, retries, backup plan) · `cost.py` · `llm_answer_eval.py` (record/replay) · `llm_failures.py` · `llm_report.py` |
 | Live | `router.py` (`route()` in 3 modes) · `decisionRecord.py` (19-field receipt) · `decisionLog.py` · `app.py` · `batch.py` · `api.py` |
 | Learning | `shadow.py` · `shadowReport.py` · `retrain.py` |
+| Platform | `intakeStore.py` (prism.db, the only file that knows where questions are kept) · `intakeRouter.py` (`POST /intake`) · `answerRouter.py` (`GET /prediction`) · `intakeExport.py` (prism.db → shadow tools) |
 | Experiments | `laya_sources.py` · `laya_finetune.py` (kept as evidence) |
 </details>
 
@@ -319,6 +359,10 @@ Every decision is one row in `logs/decisions_<date>.csv`, so start there.
 | LLM failed / cost looks wrong | `llm_error` / `cost_spent`, `cost_if_llm`; prices in the YAML |
 | A test score changed | The prompt fingerprint in the recording name; the fingerprints in `card.json` |
 | Page shows the old model | Restart it after a promotion |
+| Container won't start / stays unhealthy | `docker logs prism`; the model takes ~40 s to load |
+| Questions disappear after a restart | The container was started without `-v <folder>:/app/intake` |
+| `/intake` replies 422 | The cron sent the wrong shape: `question_id`, `question`, `intent_answer` (a list) |
+| Export skips questions | "unknown platform names": add them to `platform_source_names` in the YAML |
 </details>
 
 <details>
@@ -345,4 +389,5 @@ personal data in git.
 ## Status
 
 ✅ Beats every baseline · ✅ 76% of questions skip the LLM, 76% cheaper · ✅ ~7 ms per decision ·
-❌ hard cases and missed sources need work · ⏳ go-live waits on 500+ real colleague questions.
+✅ Docker image and deploy guide ready for the Aetherion platform ·
+❌ hard cases and missed sources need work · ⏳ go-live waits on 500+ real questions from the platform.
