@@ -140,7 +140,9 @@ real-world questions pass, tricky ones don't. Real questions will show where it 
 
 ## Still being agreed with the platform
 
-Marked **TO CONFIRM** in [DEPLOY.md](DEPLOY.md): the platform's source names and answer format,
+Confirmed: the intent prompt uses the same 7 source names as Prism, so no translation is needed.
+
+Marked **TO CONFIRM** in [DEPLOY.md](DEPLOY.md): the answer format (a list, and `[]` for no source),
 whether message ids are unique and permanent, the server's chip type and data folder, how often the
 cron runs, whether port 8000 stays inside the network (if not, `/intake` gets a secret key), how the
 collected questions reach the Prism team, and whether the Prism team can update the server itself

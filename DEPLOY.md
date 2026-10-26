@@ -104,7 +104,7 @@ Content-Type: application/json
 |---|---|
 | `question_id` | the platform's own id for this message. **Must be unique and never change** (TO CONFIRM) |
 | `question` | the client's question, as asked. No length limit |
-| `intent_answer` | the sources the intent prompt chose, as a **list**, using the platform's own names. `[]` = no source. **TO CONFIRM:** the platform's source names, and what it sends for "no source" |
+| `intent_answer` | the sources the intent prompt chose, as a **list**: `kb`, `jira`, `confluence`, `slack`, `notion`, `gmail`, `web` (the same names Prism uses, confirmed). `[]` = no source. **TO CONFIRM:** that it's sent as a list, and that "no source" is `[]` |
 
 Try it from the server:
 
